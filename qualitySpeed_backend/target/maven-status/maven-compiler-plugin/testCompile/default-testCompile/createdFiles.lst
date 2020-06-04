@@ -1,0 +1,6 @@
+com/rogerioopaiva/qualitySpeed/model/repository/UsuarioRepositoryTest.class
+com/rogerioopaiva/qualitySpeed/model/repository/LancamentoRepositoryTest.class
+com/rogerioopaiva/qualitySpeed/api/resource/UsuarioResourceTest.class
+com/rogerioopaiva/qualitySpeed/QualitySpeedApplicationTests.class
+com/rogerioopaiva/qualitySpeed/service/LancamentoServiceTest.class
+com/rogerioopaiva/qualitySpeed/service/UsuarioServiceTest.class
