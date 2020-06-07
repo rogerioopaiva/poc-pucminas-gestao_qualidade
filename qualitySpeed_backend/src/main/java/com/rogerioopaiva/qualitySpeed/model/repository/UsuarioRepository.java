@@ -1,13 +1,12 @@
 package com.rogerioopaiva.qualitySpeed.model.repository;	
 
-import java.util.Optional;
-
+import com.rogerioopaiva.qualitySpeed.model.entity.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.rogerioopaiva.qualitySpeed.model.entity.Usuario;
+import java.util.Optional;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
-	
+
 	boolean existsByEmail(String email);
 
 	Optional<Usuario> findByEmail(String email);

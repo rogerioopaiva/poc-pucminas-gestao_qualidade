@@ -26,7 +26,36 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac8f8563-6427-4f61-8b3e-bfd2cc09f7e7" name="Default Changelist" comment="" />
+    <list default="true" id="ac8f8563-6427-4f61-8b3e-bfd2cc09f7e7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/api/dto/ColaboradorDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/api/resource/ColaboradorResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/exception/ErroAutenticacao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/rogerioopaiva/qualitySpeed/model/repository/ColaboradorRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/rogerioopaiva/qualitySpeed/service/ColaboradorServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/rogeriooliveiradepaiva.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/rogeriooliveiradepaiva.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qualitySpeed.iml" beforeDir="false" afterPath="$PROJECT_DIR$/qualitySpeed.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/api/dto/UsuarioDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/api/dto/UsuarioDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/api/resource/ColaboradoresResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rogerioopaiva/qualitySpeed/api/resource/UsuarioResourceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/api/resource/UsuarioResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/api/resource/UsuarioResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/model/entity/Colaborador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/model/entity/Colaborador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/model/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/model/entity/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/model/repository/ColaboradorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/model/repository/ColaboradorRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/model/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/model/repository/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/service/ColaboradorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/service/ColaboradorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/service/impl/ColaboradorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/service/impl/ColaboradorServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/qualitySpeed.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/QualitySpeedApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/QualitySpeedApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/dto/UsuarioDTO$UsuarioDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/dto/UsuarioDTO$UsuarioDTOBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/dto/UsuarioDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/dto/UsuarioDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/resource/UsuarioResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/resource/UsuarioResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/Colaborador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/Colaborador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/Usuario$UsuarioBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/Usuario$UsuarioBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/Usuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/service/impl/UsuarioServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/service/impl/UsuarioServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/rogerioopaiva/qualitySpeed/service/UsuarioServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/rogerioopaiva/qualitySpeed/service/UsuarioServiceTest.class" afterDir="false" />
+    </list>
     <list id="fa6f5e7d-e749-46be-8926-75ab63a16d20" name="Revert &quot;Alteracoes no repositorio do backend&quot;" comment="Revert &quot;Alteracoes no repositorio do backend&quot;&#10;&#10;This reverts commit 2fcf24f8" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,9 +76,10 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1cgpbqFRajxSj4BB2zfcgeWt736" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -61,6 +91,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
@@ -82,8 +113,8 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.QualitySpeedApplication">
-    <configuration name="UsuarioRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.UsuarioResourceTest">
+    <configuration name="ColaboradorRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="qualitySpeed" />
       <extension name="coverage">
         <pattern>
@@ -92,45 +123,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.rogerioopaiva.qualitySpeed.model.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.rogerioopaiva.qualitySpeed.model.repository.UsuarioRepositoryTest" />
+      <option name="MAIN_CLASS_NAME" value="com.rogerioopaiva.qualitySpeed.model.repository.ColaboradorRepositoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UsuarioRepositoryTest.deveRetornarFalsoQuandoNaoHouverUsuarioCadastradoComEmail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="qualitySpeed" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.rogerioopaiva.qualitySpeed.model.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.rogerioopaiva.qualitySpeed.model.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.rogerioopaiva.qualitySpeed.model.repository.UsuarioRepositoryTest" />
-      <option name="METHOD_NAME" value="deveRetornarFalsoQuandoNaoHouverUsuarioCadastradoComEmail" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UsuarioRepositoryTest.deveVerificarAExistenciaDeUmEmail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="qualitySpeed" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.rogerioopaiva.qualitySpeed.model.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.rogerioopaiva.qualitySpeed.model.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.rogerioopaiva.qualitySpeed.model.repository.UsuarioRepositoryTest" />
-      <option name="METHOD_NAME" value="deveVerificarAExistenciaDeUmEmail" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UsuarioServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ColaboradorServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="qualitySpeed" />
       <extension name="coverage">
         <pattern>
@@ -139,13 +138,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.rogerioopaiva.qualitySpeed.service" />
-      <option name="MAIN_CLASS_NAME" value="com.rogerioopaiva.qualitySpeed.service.UsuarioServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="com.rogerioopaiva.qualitySpeed.service.ColaboradorServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UsuarioServiceTest.deveValidarEmail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ColaboradorServiceTest.deveSalvarUmColaborador" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="qualitySpeed" />
       <extension name="coverage">
         <pattern>
@@ -154,9 +153,40 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.rogerioopaiva.qualitySpeed.service" />
-      <option name="MAIN_CLASS_NAME" value="com.rogerioopaiva.qualitySpeed.service.UsuarioServiceTest" />
-      <option name="METHOD_NAME" value="deveValidarEmail" />
+      <option name="MAIN_CLASS_NAME" value="com.rogerioopaiva.qualitySpeed.service.ColaboradorServiceTest" />
+      <option name="METHOD_NAME" value="deveSalvarUmColaborador" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ColaboradorServiceTest.naoDeveSalvarUmColaboradorQuandoHouverErroDeValidacao" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="qualitySpeed" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rogerioopaiva.qualitySpeed.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.rogerioopaiva.qualitySpeed.service" />
+      <option name="MAIN_CLASS_NAME" value="com.rogerioopaiva.qualitySpeed.service.ColaboradorServiceTest" />
+      <option name="METHOD_NAME" value="naoDeveSalvarUmColaboradorQuandoHouverErroDeValidacao" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UsuarioResourceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="qualitySpeed" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rogerioopaiva.qualitySpeed.api.resource.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.rogerioopaiva.qualitySpeed.api.resource" />
+      <option name="MAIN_CLASS_NAME" value="com.rogerioopaiva.qualitySpeed.api.resource.UsuarioResourceTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -170,11 +200,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UsuarioServiceTest" />
-        <item itemvalue="JUnit.UsuarioRepositoryTest" />
-        <item itemvalue="JUnit.UsuarioServiceTest.deveValidarEmail" />
-        <item itemvalue="JUnit.UsuarioRepositoryTest.deveRetornarFalsoQuandoNaoHouverUsuarioCadastradoComEmail" />
-        <item itemvalue="JUnit.UsuarioRepositoryTest.deveVerificarAExistenciaDeUmEmail" />
+        <item itemvalue="JUnit.UsuarioResourceTest" />
+        <item itemvalue="JUnit.ColaboradorRepositoryTest" />
+        <item itemvalue="JUnit.ColaboradorServiceTest" />
+        <item itemvalue="JUnit.ColaboradorServiceTest.naoDeveSalvarUmColaboradorQuandoHouverErroDeValidacao" />
+        <item itemvalue="JUnit.ColaboradorServiceTest.deveSalvarUmColaborador" />
       </list>
     </recent_temporary>
   </component>
@@ -196,6 +226,9 @@
       <workItem from="1591138586540" duration="19933000" />
       <workItem from="1591219247622" duration="16481000" />
       <workItem from="1591246025468" duration="156000" />
+      <workItem from="1591314954902" duration="4438000" />
+      <workItem from="1591398544402" duration="4044000" />
+      <workItem from="1591449495751" duration="36661000" />
     </task>
     <task id="LOCAL-00001" summary="Atualizando usuario e criando service colaboradores">
       <created>1591240509102</created>
@@ -256,11 +289,17 @@
       <screen x="1440" y="23" width="1600" height="823" />
     </state>
     <state x="2158" y="344" key="#Notifications/0.23.1440.877/1440.23.1600.823@1440.23.1600.823" timestamp="1591242134863" />
-    <state x="2035" y="153" key="#com.intellij.ide.util.MemberChooser" timestamp="1591237592765">
-      <screen x="1440" y="0" width="1600" height="900" />
+    <state x="2036" y="172" key="#com.intellij.ide.util.MemberChooser" timestamp="1591463364125">
+      <screen x="1440" y="23" width="1600" height="877" />
     </state>
     <state x="2035" y="153" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900/1440.0.1600.900@1440.0.1600.900" timestamp="1591237592765" />
+    <state x="536" y="162" key="#com.intellij.ide.util.MemberChooser/0.23.1440.816/1440.23.1600.877@0.23.1440.816" timestamp="1591401213174" />
+    <state x="2036" y="172" key="#com.intellij.ide.util.MemberChooser/0.23.1440.821/1440.23.1600.877@1440.23.1600.877" timestamp="1591463364125" />
     <state x="2035" y="162" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877/1440.23.1600.817@1440.23.1600.817" timestamp="1591069338331" />
+    <state x="1647" y="370" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1591534086282">
+      <screen x="1440" y="23" width="1600" height="877" />
+    </state>
+    <state x="1647" y="370" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.23.1440.822/1440.23.1600.877@1440.23.1600.877" timestamp="1591534086282" />
     <state x="468" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591055961497">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -275,12 +314,13 @@
       <screen x="1440" y="23" width="1600" height="823" />
     </state>
     <state x="1667" y="183" width="1200" height="582" key="DiffContextDialog/0.23.1440.877/1440.23.1600.823@1440.23.1600.823" timestamp="1591242412761" />
-    <state width="1558" height="236" key="GridCell.Tab.0.bottom" timestamp="1591239647493">
+    <state width="1558" height="208" key="GridCell.Tab.0.bottom" timestamp="1591557055423">
       <screen x="1440" y="0" width="1600" height="900" />
     </state>
     <state width="1398" height="219" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1591223910667" />
-    <state width="1558" height="236" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1600.900@1440.0.1600.900" timestamp="1591239647493" />
-    <state width="1358" height="248" key="GridCell.Tab.0.bottom/0.23.1440.822/1440.23.1600.877@1440.23.1600.877" timestamp="1591159824243" />
+    <state width="1558" height="208" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1600.900@1440.0.1600.900" timestamp="1591557055423" />
+    <state width="1358" height="227" key="GridCell.Tab.0.bottom/0.23.1440.821/1440.23.1600.877@1440.23.1600.877" timestamp="1591464844345" />
+    <state width="1358" height="208" key="GridCell.Tab.0.bottom/0.23.1440.822/1440.23.1600.877@1440.23.1600.877" timestamp="1591545138317" />
     <state width="1358" height="219" key="GridCell.Tab.0.bottom/0.23.1440.825/1440.23.1600.877@1440.23.1600.877" timestamp="1591223007185" />
     <state width="1358" height="101" key="GridCell.Tab.0.bottom/0.23.1440.826/1440.23.1600.877@1440.23.1600.877" timestamp="1591229945476" />
     <state width="1358" height="159" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1600.816@1440.23.1600.816" timestamp="1591066636947" />
@@ -289,12 +329,13 @@
     <state width="1358" height="258" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1600.819@0.23.1440.877" timestamp="1591061507106" />
     <state width="1358" height="329" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1600.819@1440.23.1600.819" timestamp="1591062867603" />
     <state width="1358" height="178" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1600.877@1440.23.1600.877" timestamp="1591150222492" />
-    <state width="1558" height="236" key="GridCell.Tab.0.center" timestamp="1591239647491">
+    <state width="1558" height="208" key="GridCell.Tab.0.center" timestamp="1591557055420">
       <screen x="1440" y="0" width="1600" height="900" />
     </state>
     <state width="1398" height="219" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1591223910665" />
-    <state width="1558" height="236" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1600.900@1440.0.1600.900" timestamp="1591239647491" />
-    <state width="1358" height="248" key="GridCell.Tab.0.center/0.23.1440.822/1440.23.1600.877@1440.23.1600.877" timestamp="1591159824242" />
+    <state width="1558" height="208" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1600.900@1440.0.1600.900" timestamp="1591557055420" />
+    <state width="1358" height="227" key="GridCell.Tab.0.center/0.23.1440.821/1440.23.1600.877@1440.23.1600.877" timestamp="1591464844345" />
+    <state width="1358" height="208" key="GridCell.Tab.0.center/0.23.1440.822/1440.23.1600.877@1440.23.1600.877" timestamp="1591545138316" />
     <state width="1358" height="219" key="GridCell.Tab.0.center/0.23.1440.825/1440.23.1600.877@1440.23.1600.877" timestamp="1591223007184" />
     <state width="1358" height="101" key="GridCell.Tab.0.center/0.23.1440.826/1440.23.1600.877@1440.23.1600.877" timestamp="1591229945475" />
     <state width="1358" height="159" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1600.816@1440.23.1600.816" timestamp="1591066636947" />
@@ -303,12 +344,13 @@
     <state width="1358" height="258" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1600.819@0.23.1440.877" timestamp="1591061507105" />
     <state width="1358" height="329" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1600.819@1440.23.1600.819" timestamp="1591062867600" />
     <state width="1358" height="178" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1600.877@1440.23.1600.877" timestamp="1591150222491" />
-    <state width="1558" height="236" key="GridCell.Tab.0.left" timestamp="1591239647490">
+    <state width="1558" height="208" key="GridCell.Tab.0.left" timestamp="1591557055419">
       <screen x="1440" y="0" width="1600" height="900" />
     </state>
     <state width="1398" height="219" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1591223910664" />
-    <state width="1558" height="236" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1600.900@1440.0.1600.900" timestamp="1591239647490" />
-    <state width="1358" height="248" key="GridCell.Tab.0.left/0.23.1440.822/1440.23.1600.877@1440.23.1600.877" timestamp="1591159824242" />
+    <state width="1558" height="208" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1600.900@1440.0.1600.900" timestamp="1591557055419" />
+    <state width="1358" height="227" key="GridCell.Tab.0.left/0.23.1440.821/1440.23.1600.877@1440.23.1600.877" timestamp="1591464844344" />
+    <state width="1358" height="208" key="GridCell.Tab.0.left/0.23.1440.822/1440.23.1600.877@1440.23.1600.877" timestamp="1591545138315" />
     <state width="1358" height="219" key="GridCell.Tab.0.left/0.23.1440.825/1440.23.1600.877@1440.23.1600.877" timestamp="1591223007183" />
     <state width="1358" height="101" key="GridCell.Tab.0.left/0.23.1440.826/1440.23.1600.877@1440.23.1600.877" timestamp="1591229945475" />
     <state width="1358" height="159" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1600.816@1440.23.1600.816" timestamp="1591066636946" />
@@ -317,12 +359,13 @@
     <state width="1358" height="258" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1600.819@0.23.1440.877" timestamp="1591061507104" />
     <state width="1358" height="329" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1600.819@1440.23.1600.819" timestamp="1591062867599" />
     <state width="1358" height="178" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1600.877@1440.23.1600.877" timestamp="1591150222490" />
-    <state width="1558" height="236" key="GridCell.Tab.0.right" timestamp="1591239647492">
+    <state width="1558" height="208" key="GridCell.Tab.0.right" timestamp="1591557055421">
       <screen x="1440" y="0" width="1600" height="900" />
     </state>
     <state width="1398" height="219" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1591223910666" />
-    <state width="1558" height="236" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1600.900@1440.0.1600.900" timestamp="1591239647492" />
-    <state width="1358" height="248" key="GridCell.Tab.0.right/0.23.1440.822/1440.23.1600.877@1440.23.1600.877" timestamp="1591159824243" />
+    <state width="1558" height="208" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1600.900@1440.0.1600.900" timestamp="1591557055421" />
+    <state width="1358" height="227" key="GridCell.Tab.0.right/0.23.1440.821/1440.23.1600.877@1440.23.1600.877" timestamp="1591464844345" />
+    <state width="1358" height="208" key="GridCell.Tab.0.right/0.23.1440.822/1440.23.1600.877@1440.23.1600.877" timestamp="1591545138316" />
     <state width="1358" height="219" key="GridCell.Tab.0.right/0.23.1440.825/1440.23.1600.877@1440.23.1600.877" timestamp="1591223007184" />
     <state width="1358" height="101" key="GridCell.Tab.0.right/0.23.1440.826/1440.23.1600.877@1440.23.1600.877" timestamp="1591229945476" />
     <state width="1358" height="159" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1600.816@1440.23.1600.816" timestamp="1591066636947" />
@@ -331,12 +374,13 @@
     <state width="1358" height="258" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1600.819@0.23.1440.877" timestamp="1591061507106" />
     <state width="1358" height="329" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1600.819@1440.23.1600.819" timestamp="1591062867602" />
     <state width="1358" height="178" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1600.877@1440.23.1600.877" timestamp="1591150222492" />
-    <state width="1558" height="236" key="GridCell.Tab.1.bottom" timestamp="1591239647497">
-      <screen x="1440" y="0" width="1600" height="900" />
+    <state width="1358" height="248" key="GridCell.Tab.1.bottom" timestamp="1591545008234">
+      <screen x="1440" y="23" width="1600" height="877" />
     </state>
     <state width="1398" height="219" key="GridCell.Tab.1.bottom/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1591223910672" />
     <state width="1558" height="236" key="GridCell.Tab.1.bottom/0.0.1440.900/1440.0.1600.900@1440.0.1600.900" timestamp="1591239647497" />
-    <state width="1358" height="248" key="GridCell.Tab.1.bottom/0.23.1440.822/1440.23.1600.877@1440.23.1600.877" timestamp="1591159824245" />
+    <state width="1358" height="227" key="GridCell.Tab.1.bottom/0.23.1440.821/1440.23.1600.877@1440.23.1600.877" timestamp="1591464844347" />
+    <state width="1358" height="248" key="GridCell.Tab.1.bottom/0.23.1440.822/1440.23.1600.877@1440.23.1600.877" timestamp="1591545008234" />
     <state width="1358" height="219" key="GridCell.Tab.1.bottom/0.23.1440.825/1440.23.1600.877@1440.23.1600.877" timestamp="1591223007187" />
     <state width="1358" height="101" key="GridCell.Tab.1.bottom/0.23.1440.826/1440.23.1600.877@1440.23.1600.877" timestamp="1591229945478" />
     <state width="1358" height="159" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.23.1600.816@1440.23.1600.816" timestamp="1591066636949" />
@@ -345,12 +389,13 @@
     <state width="1358" height="258" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.23.1600.819@0.23.1440.877" timestamp="1591061507113" />
     <state width="1358" height="329" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.23.1600.819@1440.23.1600.819" timestamp="1591062867605" />
     <state width="679" height="159" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.23.1600.877@1440.23.1600.877" timestamp="1591065272344" />
-    <state width="1558" height="236" key="GridCell.Tab.1.center" timestamp="1591239647495">
-      <screen x="1440" y="0" width="1600" height="900" />
+    <state width="1358" height="248" key="GridCell.Tab.1.center" timestamp="1591545008233">
+      <screen x="1440" y="23" width="1600" height="877" />
     </state>
     <state width="1398" height="219" key="GridCell.Tab.1.center/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1591223910670" />
     <state width="1558" height="236" key="GridCell.Tab.1.center/0.0.1440.900/1440.0.1600.900@1440.0.1600.900" timestamp="1591239647495" />
-    <state width="1358" height="248" key="GridCell.Tab.1.center/0.23.1440.822/1440.23.1600.877@1440.23.1600.877" timestamp="1591159824244" />
+    <state width="1358" height="227" key="GridCell.Tab.1.center/0.23.1440.821/1440.23.1600.877@1440.23.1600.877" timestamp="1591464844346" />
+    <state width="1358" height="248" key="GridCell.Tab.1.center/0.23.1440.822/1440.23.1600.877@1440.23.1600.877" timestamp="1591545008233" />
     <state width="1358" height="219" key="GridCell.Tab.1.center/0.23.1440.825/1440.23.1600.877@1440.23.1600.877" timestamp="1591223007186" />
     <state width="1358" height="101" key="GridCell.Tab.1.center/0.23.1440.826/1440.23.1600.877@1440.23.1600.877" timestamp="1591229945477" />
     <state width="1358" height="159" key="GridCell.Tab.1.center/0.23.1440.877/1440.23.1600.816@1440.23.1600.816" timestamp="1591066636948" />
@@ -359,12 +404,13 @@
     <state width="1358" height="258" key="GridCell.Tab.1.center/0.23.1440.877/1440.23.1600.819@0.23.1440.877" timestamp="1591061507108" />
     <state width="1358" height="329" key="GridCell.Tab.1.center/0.23.1440.877/1440.23.1600.819@1440.23.1600.819" timestamp="1591062867604" />
     <state width="679" height="159" key="GridCell.Tab.1.center/0.23.1440.877/1440.23.1600.877@1440.23.1600.877" timestamp="1591065272343" />
-    <state width="1558" height="236" key="GridCell.Tab.1.left" timestamp="1591239647494">
-      <screen x="1440" y="0" width="1600" height="900" />
+    <state width="1358" height="248" key="GridCell.Tab.1.left" timestamp="1591545008232">
+      <screen x="1440" y="23" width="1600" height="877" />
     </state>
     <state width="1398" height="219" key="GridCell.Tab.1.left/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1591223910668" />
     <state width="1558" height="236" key="GridCell.Tab.1.left/0.0.1440.900/1440.0.1600.900@1440.0.1600.900" timestamp="1591239647494" />
-    <state width="1358" height="248" key="GridCell.Tab.1.left/0.23.1440.822/1440.23.1600.877@1440.23.1600.877" timestamp="1591159824244" />
+    <state width="1358" height="227" key="GridCell.Tab.1.left/0.23.1440.821/1440.23.1600.877@1440.23.1600.877" timestamp="1591464844346" />
+    <state width="1358" height="248" key="GridCell.Tab.1.left/0.23.1440.822/1440.23.1600.877@1440.23.1600.877" timestamp="1591545008232" />
     <state width="1358" height="219" key="GridCell.Tab.1.left/0.23.1440.825/1440.23.1600.877@1440.23.1600.877" timestamp="1591223007186" />
     <state width="1358" height="101" key="GridCell.Tab.1.left/0.23.1440.826/1440.23.1600.877@1440.23.1600.877" timestamp="1591229945476" />
     <state width="1358" height="159" key="GridCell.Tab.1.left/0.23.1440.877/1440.23.1600.816@1440.23.1600.816" timestamp="1591066636948" />
@@ -373,12 +419,13 @@
     <state width="1358" height="258" key="GridCell.Tab.1.left/0.23.1440.877/1440.23.1600.819@0.23.1440.877" timestamp="1591061507107" />
     <state width="1358" height="329" key="GridCell.Tab.1.left/0.23.1440.877/1440.23.1600.819@1440.23.1600.819" timestamp="1591062867603" />
     <state width="679" height="159" key="GridCell.Tab.1.left/0.23.1440.877/1440.23.1600.877@1440.23.1600.877" timestamp="1591065272343" />
-    <state width="1558" height="236" key="GridCell.Tab.1.right" timestamp="1591239647496">
-      <screen x="1440" y="0" width="1600" height="900" />
+    <state width="1358" height="248" key="GridCell.Tab.1.right" timestamp="1591545008233">
+      <screen x="1440" y="23" width="1600" height="877" />
     </state>
     <state width="1398" height="219" key="GridCell.Tab.1.right/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1591223910671" />
     <state width="1558" height="236" key="GridCell.Tab.1.right/0.0.1440.900/1440.0.1600.900@1440.0.1600.900" timestamp="1591239647496" />
-    <state width="1358" height="248" key="GridCell.Tab.1.right/0.23.1440.822/1440.23.1600.877@1440.23.1600.877" timestamp="1591159824244" />
+    <state width="1358" height="227" key="GridCell.Tab.1.right/0.23.1440.821/1440.23.1600.877@1440.23.1600.877" timestamp="1591464844347" />
+    <state width="1358" height="248" key="GridCell.Tab.1.right/0.23.1440.822/1440.23.1600.877@1440.23.1600.877" timestamp="1591545008233" />
     <state width="1358" height="219" key="GridCell.Tab.1.right/0.23.1440.825/1440.23.1600.877@1440.23.1600.877" timestamp="1591223007187" />
     <state width="1358" height="101" key="GridCell.Tab.1.right/0.23.1440.826/1440.23.1600.877@1440.23.1600.877" timestamp="1591229945477" />
     <state width="1358" height="159" key="GridCell.Tab.1.right/0.23.1440.877/1440.23.1600.816@1440.23.1600.816" timestamp="1591066636949" />
@@ -424,20 +471,38 @@
       <screen x="1440" y="23" width="1600" height="823" />
     </state>
     <state x="1969" y="215" key="VcsDiffUtil.ChangesDialog/0.23.1440.877/1440.23.1600.823@1440.23.1600.823" timestamp="1591242385444" />
+    <state x="1863" y="67" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1591552630534">
+      <screen x="1440" y="0" width="1600" height="900" />
+    </state>
+    <state x="1863" y="67" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1440.900/1440.0.1600.900@1440.0.1600.900" timestamp="1591552630534" />
     <state x="442" y="122" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1590967855971">
       <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state x="442" y="122" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.23.1440.823/1440.23.1600.877@0.23.1440.823" timestamp="1590967855971" />
+    <state x="1978" y="195" key="extract.method.dialog" timestamp="1591553338663">
+      <screen x="1440" y="0" width="1600" height="900" />
+    </state>
+    <state x="1978" y="195" key="extract.method.dialog/0.0.1440.900/1440.0.1600.900@1440.0.1600.900" timestamp="1591553338663" />
     <state x="107" y="94" key="new project wizard" timestamp="1591053295861">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="107" y="94" key="new project wizard/0.23.1440.877/1440.23.1600.819@0.23.1440.877" timestamp="1591053295861" />
-    <state x="2197" y="123" width="745" height="719" key="search.everywhere.popup" timestamp="1591141923941">
+    <state x="1893" y="199" key="run.anything.popup" timestamp="1591476775548">
       <screen x="1440" y="23" width="1600" height="877" />
     </state>
+    <state x="1893" y="199" key="run.anything.popup/0.23.1440.822/1440.23.1600.877@1440.23.1600.877" timestamp="1591476775548" />
+    <state x="681" y="116" width="671" height="669" key="search.everywhere.popup" timestamp="1591401809936">
+      <screen x="0" y="23" width="1440" height="816" />
+    </state>
+    <state x="681" y="116" width="671" height="669" key="search.everywhere.popup/0.23.1440.816/1440.23.1600.877@0.23.1440.816" timestamp="1591401809936" />
     <state x="2197" y="123" width="745" height="719" key="search.everywhere.popup/0.23.1440.822/1440.23.1600.877@1440.23.1600.877" timestamp="1591141923941" />
     <state x="385" y="171" width="670" height="675" key="search.everywhere.popup/0.23.1440.823/1440.23.1600.877@0.23.1440.823" timestamp="1590962437323" />
     <state x="681" y="117" width="670" height="676" key="search.everywhere.popup/0.23.1440.825/1440.23.1600.877@0.23.1440.825" timestamp="1590964863883" />
     <state x="385" y="172" width="670" height="677" key="search.everywhere.popup/0.23.1440.826/1440.23.1600.877@0.23.1440.826" timestamp="1590962048731" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/qualitySpeed$UsuarioResourceTest.ic" NAME="UsuarioResourceTest Coverage Results" MODIFIED="1591556870765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.rogerioopaiva.qualitySpeed.api.resource.*</FILTER>
+    </SUITE>
   </component>
 </project>

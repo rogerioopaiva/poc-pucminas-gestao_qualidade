@@ -3,6 +3,7 @@ package com.rogerioopaiva.qualitySpeed.service;
 import com.rogerioopaiva.qualitySpeed.model.entity.Colaborador;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface ColaboradorService {
 
@@ -15,4 +16,7 @@ public interface ColaboradorService {
     List<Colaborador> buscar( Colaborador colaboradorFiltro);
 
     void validar(Colaborador colaborador);
+
+    Optional<Colaborador>obterPorId(Long id);
+
 }

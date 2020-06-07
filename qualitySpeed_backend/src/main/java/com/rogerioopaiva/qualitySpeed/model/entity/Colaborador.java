@@ -1,14 +1,19 @@
 package com.rogerioopaiva.qualitySpeed.model.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
 @Data
 @Table(name = "colaborador", schema = "qualidade")
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Colaborador {
 
     @Id

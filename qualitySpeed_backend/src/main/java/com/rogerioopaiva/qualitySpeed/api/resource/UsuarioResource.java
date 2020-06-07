@@ -1,32 +1,29 @@
 package com.rogerioopaiva.qualitySpeed.api.resource;
 
 import com.rogerioopaiva.qualitySpeed.api.dto.UsuarioDTO;
+import com.rogerioopaiva.qualitySpeed.exception.ErroAutenticacao;
 import com.rogerioopaiva.qualitySpeed.exception.RegraNegocioException;
 import com.rogerioopaiva.qualitySpeed.model.entity.Usuario;
 import com.rogerioopaiva.qualitySpeed.service.UsuarioService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/usuarios")
+@RequiredArgsConstructor
 public class UsuarioResource {
 
-        private UsuarioService service;
+        private final UsuarioService service;
 
-        public UsuarioResource( UsuarioService service ) {
-            this.service = service;
-        }
 
         @PostMapping("/autenticar")
-        public ResponseEntity autenticar( @RequestBody UsuarioDTO dto) {
+        public ResponseEntity autenticar(@RequestBody UsuarioDTO dto) {
             try {
                 Usuario usuarioAutenticado = service.autenticar(dto.getEmail(), dto.getSenha());
                 return ResponseEntity.ok(usuarioAutenticado);
-            }catch (RegraNegocioException e) {
+            }catch (ErroAutenticacao e) {
                 return ResponseEntity.badRequest().body(e.getMessage());
             }
         }
@@ -46,4 +43,4 @@ public class UsuarioResource {
                 return ResponseEntity.badRequest().body(e.getMessage());
             }
         }
-    }
+}

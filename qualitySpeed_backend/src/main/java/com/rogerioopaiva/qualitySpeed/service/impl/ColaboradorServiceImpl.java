@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 @Service
 public class ColaboradorServiceImpl implements ColaboradorService {
@@ -25,6 +26,7 @@ public class ColaboradorServiceImpl implements ColaboradorService {
     @Override
     @Transactional
     public Colaborador salvar(Colaborador colaborador) {
+        validar(colaborador);
         return repository.save(colaborador);
     }
 
@@ -32,6 +34,7 @@ public class ColaboradorServiceImpl implements ColaboradorService {
     @Transactional
     public Colaborador atualizar(Colaborador colaborador) {
         Objects.requireNonNull(colaborador.getId());
+        validar(colaborador);
         return repository.save(colaborador);
     }
 
@@ -68,6 +71,11 @@ public class ColaboradorServiceImpl implements ColaboradorService {
         if (colaborador.getDataadmissao() == null || colaborador.getDataadmissao().toString().equals("")) {
             throw new RegraNegocioException("Informe a Data de Admissão.");
         }
+    }
+
+    @Override
+    public Optional<Colaborador> obterPorId(Long id) {
+        return repository.findById(id);
     }
 
 }
