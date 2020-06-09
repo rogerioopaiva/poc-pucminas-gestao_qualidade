@@ -1,13 +1,21 @@
 package com.rogerioopaiva.qualitySpeed.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.rogerioopaiva.qualitySpeed.model.enums.StatusDocumento;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @Data
 @Table(name = "documento", schema = "qualidade")
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Documento {
 
     @Id
@@ -25,19 +33,24 @@ public class Documento {
     private String classificacao;
 
     @ManyToOne
-    @JoinColumn(name = "responsavel_id")
+    @JoinColumn(name = "id_colaborador")
     private Colaborador colaborador;
 
     @Column(name = "revisoes")
-    private Integer revisoes;
+    private Long revisoes;
 
     @Column(name = "ultimarevisao")
-    private Date ultimarevisao;
+    @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
+    private LocalDate ultimarevisao;
 
     @Column(name = "proxrevisao")
-    private Date proxrevisao;
+    @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
+    private LocalDate proxrevisao;
 
     @Column(name = "status")
-    private String status;
+    @Enumerated(value = EnumType.STRING)
+    private StatusDocumento status;
+
+
 
 }

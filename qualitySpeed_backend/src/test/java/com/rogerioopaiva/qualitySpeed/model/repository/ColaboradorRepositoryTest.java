@@ -11,7 +11,6 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.sql.Date;
 import java.util.Optional;
 
 @RunWith(SpringRunner.class)
@@ -68,7 +67,6 @@ public class ColaboradorRepositoryTest {
                 .nomecolaborador("Clara Moreira")
                 .setor("Financeiro")
                 .cargo("Analista de Controladoria")
-                .dataadmissao(Date.valueOf("2015-05-04"))
                 .build();
     }
 }

@@ -1,9 +1,10 @@
 package com.rogerioopaiva.qualitySpeed.api.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Builder;
 import lombok.Data;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Data
 @Builder
@@ -13,6 +14,7 @@ public class ColaboradorDTO {
     private String nomecolaborador;
     private String setor;
     private String cargo;
-    private Date dataadmissao;
+    @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
+    private LocalDate dataadmissao;
 
 }

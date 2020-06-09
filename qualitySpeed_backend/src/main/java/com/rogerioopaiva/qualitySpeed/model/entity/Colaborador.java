@@ -1,12 +1,13 @@
 package com.rogerioopaiva.qualitySpeed.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @Data
@@ -31,5 +32,7 @@ public class Colaborador {
     private String cargo;
 
     @Column(name = "dataadmissao")
-    private Date dataadmissao;
+    @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
+    private LocalDate dataadmissao;
+
 }

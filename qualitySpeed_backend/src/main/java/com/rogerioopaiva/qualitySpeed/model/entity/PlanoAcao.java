@@ -1,9 +1,11 @@
 package com.rogerioopaiva.qualitySpeed.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.rogerioopaiva.qualitySpeed.model.enums.StatusPlanoAcao;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @Data
@@ -16,7 +18,8 @@ public class PlanoAcao {
     private Long id;
 
     @Column(name = "dataocorrencia")
-    private Date dataocorrencia;
+    @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
+    private LocalDate dataocorrencia;
 
     @Column(name = "oque")
     private String oque;
@@ -31,7 +34,8 @@ public class PlanoAcao {
     private String quem;
 
     @Column(name = "quando")
-    private Date quando;
+    @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
+    private LocalDate quando;
 
     @Column(name = "como")
     private String como;
@@ -40,22 +44,26 @@ public class PlanoAcao {
     private Double quantocusta;
 
     @Column(name = "inicio")
-    private Date inicio;
+    @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
+    private LocalDate inicio;
 
     @Column(name = "termino")
-    private Date termino;
+    @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
+    private LocalDate termino;
 
     @Column(name = "novoprazo")
-    private Date novoprazo;
+    @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
+    private LocalDate novoprazo;
 
     @Column(name = "status")
-    private String status;
+    @Enumerated(value = EnumType.STRING)
+    private StatusPlanoAcao status;
 
     @ManyToOne
-    @JoinColumn(name = "naoconformidade_id")
+    @JoinColumn(name = "id_naoconformidade")
     private NaoConformidade naoconformidade;
 
     @ManyToOne
-    @JoinColumn(name = "responsavelacao_id")
+    @JoinColumn(name = "id_responsavelacao")
     private Colaborador colaborador;
 }

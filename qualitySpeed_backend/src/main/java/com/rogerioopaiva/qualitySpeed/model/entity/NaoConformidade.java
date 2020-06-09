@@ -1,9 +1,11 @@
 package com.rogerioopaiva.qualitySpeed.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.rogerioopaiva.qualitySpeed.model.enums.StatusNaoConformidade;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @Data
@@ -16,17 +18,18 @@ public class NaoConformidade {
     private Long id;
 
     @Column(name = "dataocorrencia")
-    private Date dataocorrencia;
+    @JsonFormat(pattern="dd-MM-yyyy")
+    private LocalDate dataocorrencia;
 
     @Column(name = "descricao")
-    private String descricacao;
+    private String descricao;
 
     @Column(name = "setor")
     private String setor;
 
     @ManyToOne
-    @JoinColumn(name = "responsavelcorretiva_id")
-    private Colaborador colaborador;
+    @JoinColumn(name = "colaboradorcorretiva_id")
+    private Colaborador colaboradorcorretiva;
 
     @Column(name = "causa")
     private String causa;
@@ -35,8 +38,10 @@ public class NaoConformidade {
     private String acaocorretiva;
 
     @Column(name = "status")
-    private String status;
+    @Enumerated(value = EnumType.STRING)
+    private StatusNaoConformidade status;
 
     @Column(name = "prazoconclusao")
-    private Date prazoconclusao;
+    @JsonFormat(pattern="dd-MM-yyyy")
+    private LocalDate prazoconclusao;
 }
