@@ -67,10 +67,6 @@ public class ColaboradorServiceImpl implements ColaboradorService {
         if (colaborador.getCargo() == null || colaborador.getCargo().trim().equals("")) {
             throw new RegraNegocioException("Informe o cargo.");
         }
-
-        if (colaborador.getDataadmissao() == null || colaborador.getDataadmissao().toString().equals("")) {
-            throw new RegraNegocioException("Informe a Data de Admissão.");
-        }
     }
 
     @Override

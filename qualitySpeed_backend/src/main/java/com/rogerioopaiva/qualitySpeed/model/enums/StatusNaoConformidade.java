@@ -4,5 +4,5 @@ public enum StatusNaoConformidade {
 
     PENDENTE,
     EMANALISE,
-    CANCELADO
+    FINALIZADO
 }
