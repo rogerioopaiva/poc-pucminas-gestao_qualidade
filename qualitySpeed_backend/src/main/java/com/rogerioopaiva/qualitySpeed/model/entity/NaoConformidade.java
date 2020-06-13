@@ -5,7 +5,7 @@ import com.rogerioopaiva.qualitySpeed.model.enums.StatusNaoConformidade;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 @Data
@@ -19,7 +19,7 @@ public class NaoConformidade {
 
     @Column(name = "dataocorrencia")
     @JsonFormat(pattern="dd-MM-yyyy")
-    private LocalDate dataocorrencia;
+    private Date dataocorrencia;
 
     @Column(name = "descricao")
     private String descricao;
@@ -43,5 +43,5 @@ public class NaoConformidade {
 
     @Column(name = "prazoconclusao")
     @JsonFormat(pattern="dd-MM-yyyy")
-    private LocalDate prazoconclusao;
+    private Date prazoconclusao;
 }

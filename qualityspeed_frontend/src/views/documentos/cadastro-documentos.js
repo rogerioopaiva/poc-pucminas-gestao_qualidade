@@ -2,19 +2,21 @@ import React from 'react'
 
 import Card from '../../components/card'
 
+import { Calendar } from 'primereact/calendar';
 import { withRouter } from 'react-router-dom'
 import FormGroup from '../../components/form-group'
-import SelectMenu from '../../components/selectMenu'
 import * as messages from '../../components/toastr'
 import DocumentoService from '../../app/service/documentoService'
-import LocalSotrageService from '../../app/service/localstorageService'
+//import SelectMenu from '../../components/selectMenu'
+import { ptBr } from '../../app/service/dateConfig'
 
 class CadastroDocumentos extends React.Component {
 
     state = {
         id: null,
         descricao: '',
-        nomedocumento: '', 
+        nomedocumento: '',
+        nomeresponsavel: '',
         classificacao: '',
         revisoes: '',
         status: '',
@@ -45,10 +47,9 @@ class CadastroDocumentos extends React.Component {
     }
 
     submit = () => {
-        const usuarioLogado = LocalSotrageService.obterItem('_usuario_logado')
         
-        const { descricao, nomedocumento, classificacao, revisoes} = this.state;
-        const documento = { descricao, nomedocumento, classificacao, revisoes, usuario: usuarioLogado.id };
+        const { descricao, nomedocumento, classificacao, revisoes, ultimarevisao, proximarevisao} = this.state;
+        const documento = { descricao, nomedocumento, classificacao, revisoes, ultimarevisao, proximarevisao };
 
         try{
             this.service.validar(documento)
@@ -61,7 +62,7 @@ class CadastroDocumentos extends React.Component {
         this.service
             .salvar(documento)
             .then(response => {
-                this.props.history.push('/consulta-documentos')
+              this.props.history.push('/cadastro-documentos')
                 messages.mensagemSucesso('Documento cadastrado com sucesso!')
             }).catch(error => {
                 messages.mensagemErro(error.response.data)
@@ -127,7 +128,7 @@ class CadastroDocumentos extends React.Component {
                   />
                 </FormGroup>
               </div>
-              <div className="col-=md-6">
+              <div className="col-md-6">
                 <FormGroup id="inputClassificacao" label="Classificação: *">
                   <input
                     id="inputClassificacao"
@@ -136,6 +137,51 @@ class CadastroDocumentos extends React.Component {
                     value={this.state.classificacao}
                     onChange={this.handleChange}
                     className="form-control"
+                  />
+                </FormGroup>
+              </div>
+              {/* <div className="col-md-6">
+                <FormGroup id="inputRevisao" label="Revisão: *">
+                  <input
+                    id="inputRevisao"
+                    type="text"
+                    name="revisao"
+                    value={this.state.revisao}
+                    onChange={this.handleChange}
+                    className="form-control"
+                  />
+                </FormGroup>
+              </div> */}
+              {/* <div className="col-md-6">
+                <FormGroup id="inputResponsavel" label=" Nome do Responsável: *">
+                  <SelectMenu
+                    id="inputquem"
+                    name="quem"
+                    value={this.state.quem}
+                    onChange={this.handleChange}
+                    className="form-control"
+                  />
+                </FormGroup>
+              </div> */}
+              <div className="col-md-3" >
+                <FormGroup id="inputProximaRevisao" label="Próxima revisão: *">
+                  <Calendar
+                    value={this.state.proximarevisao}
+                    onChange={(e) => this.setState({ proximarevisao: e.value })}
+                    showIcon={true}
+                    dateFormat="dd/mm/yy"
+                    locale={ptBr}
+                  />
+                </FormGroup>
+              </div>
+              <div className="col-md-3" >
+                <FormGroup id="inputProximaRevisao" label="Próxima revisão: *">
+                  <Calendar
+                    value={this.state.ultimarevisao}
+                    onChange={(e) => this.setState({ ultimarevisao: e.value })}
+                    showIcon={true}
+                    dateFormat="dd/mm/yy"
+                    locale={ptBr}
                   />
                 </FormGroup>
               </div>

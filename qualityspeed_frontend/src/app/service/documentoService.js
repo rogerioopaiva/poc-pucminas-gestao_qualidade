@@ -1,10 +1,9 @@
 import ApiService from '../apiservice'
-
 import ErroValidacao from '../exception/erroValidacao'
 
 export default class documentoService extends ApiService {
                  constructor() {
-                   super("/api/documento");
+                   super("/api/documentos");
                  }
 
                 obterPorId(id) {
@@ -35,12 +34,12 @@ export default class documentoService extends ApiService {
                 }
             }
 
-                 salvar(documento) {
-                   return this.post("/", documento);
+                 salvar(documentos) {
+                   return this.post("/", documentos);
                  }
 
-                 atualizar(documento) {
-                   return this.put(`/${documento.id}`, documento);
+                 atualizar(documentos) {
+                   return this.put(`/${documentos.id}`, documentos);
                  }
 
                  consultar(documentoFiltro) {

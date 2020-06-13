@@ -19,4 +19,6 @@ public interface ColaboradorService {
 
     Optional<Colaborador>obterPorId(Long id);
 
+    List<Colaborador>obterNomeColaborador(String colaborador);
+
 }

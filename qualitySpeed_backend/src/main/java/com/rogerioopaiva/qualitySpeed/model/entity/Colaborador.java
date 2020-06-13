@@ -7,7 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 @Data
@@ -33,6 +33,6 @@ public class Colaborador {
 
     @Column(name = "dataadmissao")
     @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
-    private LocalDate dataadmissao;
+    private Date dataadmissao;
 
 }

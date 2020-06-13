@@ -2,18 +2,22 @@ package com.rogerioopaiva.qualitySpeed.api.dto;
 
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class NaoConformidadeDTO {
 
     private Long id;
     @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
-    private LocalDate dataocorrencia;
+    private Date dataocorrencia;
     private String descricao;
     private String setor;
     private Long id_colaboradorcorretiva;
@@ -21,5 +25,5 @@ public class NaoConformidadeDTO {
     private String acaocorretiva;
     private String status;
     @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
-    private LocalDate prazoconclusao;
+    private Date prazoconclusao;
 }

@@ -15,7 +15,7 @@ import { Button } from 'primereact/button'
 class ConsultaColaboradores extends React.Component{
 
     state = {
-        nome: '',
+        nomecolaborador: '',
         setor: '',
         cargo: '',
         showConfirmDialog: false,
@@ -29,14 +29,14 @@ class ConsultaColaboradores extends React.Component{
     }
 
     buscar = () => {
-        if(!this.state.nome){
-            messages.mensagemErro('O preenchimento do campo Nome é obrigatório.')
+        if(!this.state.nomecolaborador){
+            messages.mensagemErro('O preenchimento do campo Nome do colaborador é obrigatório.')
             return false;
         }
         const usuarioLogado = LocalStorageService.obterItem('_usuario_logado');
 
         const colaboradorFiltro = {
-            nome: this.state.nome,
+            nomecolaborador: this.state.nomecolaborador,
             setor: this.state.setor,
             cargo: this.state.cargo,
             usuario: usuarioLogado.id
@@ -120,8 +120,8 @@ class ConsultaColaboradores extends React.Component{
                       type="text"
                       className="form-control"
                       id="inputNome"
-                      value={this.state.nome}
-                      onChange={(e) => this.setState({ nome: e.target.value })}
+                      value={this.state.nomecolaborador}
+                      onChange={(e) => this.setState({ nomecolaborador: e.target.value })}
                       placeholder="Digite o Nome"
                     />
                   </FormGroup>

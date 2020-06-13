@@ -1,13 +1,17 @@
 package com.rogerioopaiva.qualitySpeed.api.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class DocumentoDTO {
 
     private Long id;
@@ -17,9 +21,9 @@ public class DocumentoDTO {
     private Long id_colaborador;
     private Long revisoes;
     @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
-    private LocalDate ultimarevisao;
+    private Date ultimarevisao;
     @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
-    private LocalDate proxrevisao;
+    private Date proxrevisao;
     private String status;
 
 }

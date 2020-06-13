@@ -8,7 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 @Data
@@ -41,11 +41,11 @@ public class Documento {
 
     @Column(name = "ultimarevisao")
     @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
-    private LocalDate ultimarevisao;
+    private Date ultimarevisao;
 
     @Column(name = "proxrevisao")
     @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
-    private LocalDate proxrevisao;
+    private Date proxrevisao;
 
     @Column(name = "status")
     @Enumerated(value = EnumType.STRING)

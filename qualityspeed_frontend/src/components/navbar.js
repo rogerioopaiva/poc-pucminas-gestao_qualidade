@@ -21,6 +21,8 @@ function Navbar(props){
                 <NavbarItem render={props.isUsuarioAutenticado} href="#/cadastro-usuarios" label="Usuários" />
                 <NavbarItem render={props.isUsuarioAutenticado} href="#/consulta-colaboradores" label="Colaboradores" />
                 <NavbarItem render={props.isUsuarioAutenticado} href="#/consulta-documentos" label="Documentos" />
+                <NavbarItem render={props.isUsuarioAutenticado} href="#/consulta-naoconformidades" label="Não Conformidades" />
+                <NavbarItem render={props.isUsuarioAutenticado} href="#/consulta-planosacao" label="Planos de Ação" />
                 <NavbarItem render={props.isUsuarioAutenticado} onClick={props.deslogar} href="#/login" label="Sair" />
 
             </ul>

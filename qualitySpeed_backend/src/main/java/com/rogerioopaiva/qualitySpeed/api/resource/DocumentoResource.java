@@ -102,6 +102,7 @@ public class DocumentoResource {
                 new ResponseEntity("Documento não encontrado na base de dados.", HttpStatus.BAD_REQUEST));
     }
 
+
     private Documento converter(DocumentoDTO dto) {
         Documento documento = new Documento();
         documento.setDescricao(dto.getDescricao());

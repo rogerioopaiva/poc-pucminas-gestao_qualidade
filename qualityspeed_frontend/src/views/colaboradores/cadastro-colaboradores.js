@@ -2,24 +2,23 @@ import React from 'react'
 
 import Card from '../../components/card'
 
+import { Calendar } from 'primereact/calendar';
 import { withRouter } from 'react-router-dom'
 import FormGroup from '../../components/form-group'
-import SelectMenu from '../../components/selectMenu'
 import * as messages from '../../components/toastr'
 import ColaboradorService from '../../app/service/colaboradorService'
-import LocalSotrageService from '../../app/service/localstorageService'
+import { ptBr } from '../../app/service/dateConfig'
 
 class CadastroColaboradores extends React.Component {
 
     state = {
         id: null,
-        nome: '',
+        nomecolaborador: '',
         setor: '', 
         cargo: '',
+        dataadmissao: new Date('2018-06-09T00:00:00.000Z'),
         status: '',
-        usuario: null,
         atualizando: false,
-        date: null
     }
 
     constructor(){
@@ -29,7 +28,7 @@ class CadastroColaboradores extends React.Component {
 
     componentDidMount(){
         const params = this.props.match.params
-
+        console.log(params)
         if(params.id){
             this.service
             .obterPorId(params.id)
@@ -43,10 +42,9 @@ class CadastroColaboradores extends React.Component {
     }
 
     submit = () => {
-        const usuarioLogado = LocalSotrageService.obterItem('_usuario_logado')
         
-        const { nome, setor, cargo, nivel} = this.state;
-        const colaborador = { nome, setor, cargo, nivel, usuario: usuarioLogado.id };
+      const { nomecolaborador, setor, cargo, dataadmissao} = this.state;
+      const colaborador = { nomecolaborador, setor, cargo, dataadmissao};
 
         try{
             this.service.validar(colaborador)
@@ -59,7 +57,7 @@ class CadastroColaboradores extends React.Component {
         this.service
             .salvar(colaborador)
             .then(response => {
-                this.props.history.push('/consulta-colaboradores')
+                this.props.history.push('/cadastro-colaboradores')
                 messages.mensagemSucesso('Colaborador cadastrado com sucesso!')
             }).catch(error => {
                 messages.mensagemErro(error.response.data)
@@ -67,8 +65,8 @@ class CadastroColaboradores extends React.Component {
     }
 
     atualizar = () => {
-        const { nome, setor, cargo, status, usuario, id} = this.state;
-        const colaborador = { nome, setor, cargo, usuario, status, id };
+      const { nomecolaborador, setor, cargo, dataadmissao, id} = this.state;
+      const colaborador = { nomecolaborador, setor, cargo, dataadmissao, id};
 
         this.service
           .atualizar(colaborador)
@@ -105,8 +103,8 @@ class CadastroColaboradores extends React.Component {
                     id="inputnome"
                     type="text"
                     className="form-control"
-                    name="nome"
-                    value={this.state.nome}
+                    name="nomecolaborador"
+                    value={this.state.nomecolaborador}
                     onChange={this.handleChange}
                   />
                 </FormGroup>
@@ -125,17 +123,34 @@ class CadastroColaboradores extends React.Component {
                   />
                 </FormGroup>
               </div>
-              <div className="col-=md-6">
+              <div className="col-md-4">
                 <FormGroup id="inputCargo" label="Cargo: *">
-                  <SelectMenu
+                  <input
                     id="inputCargo"
+                    type="text"
+                    name="cargo"
                     value={this.state.cargo}
                     onChange={this.handleChange}
-                    name="cargo"
                     className="form-control"
                   />
                 </FormGroup>
               </div>
+              {console.log(this.state)}
+              {
+                !this.state.atualizando && (
+                <div className="col-md-3" >
+                  <FormGroup id="inputDataadmissao" label="Data de admissão: *">
+                    <Calendar
+                        value={this.state.dataadmissao}
+                        onChange={(e) => this.setState({ dataadmissao: e.value.toLocaleDateString().replace(/\//g, '-') })}
+                      showIcon={true}
+                      dateFormat="dd/mm/yy"
+                      locale={ptBr}
+                    />
+                  </FormGroup>
+                </div>
+                )
+              }
             </div>
             <div className="row">
               <div className="col-md-6">

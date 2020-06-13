@@ -8,22 +8,22 @@ export default props => {
             <tr key={documento.id}>
                 <td>{documento.descricao}</td>
                 <td>{ currencyFormatter.format(documento.valor, { locale: 'pt-BR'})}</td>
-                <td>{documento.tipo}</td>
-                <td>{documento.mes}</td>
+                <td>{documento.nomedocumento}</td>
+                <td>{documento.classificacao}</td>
                 <td>{documento.status}</td>
                 <td>
-                    <button className="btn btn-success" title="Efetivar"
+                    <button className="btn btn-success" title="Aprovar"
                             disabled={ documento.status !== 'PENDENTE'}
-                            onClick={e => props.alterarStatus(documento, 'EFETIVADO')}
+                            onClick={e => props.alterarStatus(documento, 'APROVADO')}
                             type="button">
                             <i className="pi pi-check"></i>
                     </button>
-                    <button className="btn btn-warning" title="Cancelar"
+                    {/* <button className="btn btn-warning" title="Cancelar"
                             disabled={ documento.status !== 'PENDENTE'}
                             onClick={e => props.alterarStatus(documento, 'CANCELADO')}
                             type="button">
                             <i className="pi pi-times"></i>
-                    </button>
+                    </button> */}
                     <button type="button" 
                             className="btn btn-primary" title="Editar"
                             onClick={e => props.editarAction(documento.id)}>
@@ -44,11 +44,10 @@ export default props => {
             <thead>
                 <tr>
                     <th scope="col">Descrição</th>
-                    <th scope="col">Valor</th>
-                    <th scope="col">Tipo</th>
-                    <th scope="col">Data</th>
-                    <th scope="col">Situação</th>
-                    <th scope="col">Ações</th>
+                    <th scope="col">Nome do documento</th>
+                    {/* <th scope="col">Data</th> */}
+                    <th scope="col">Classificação</th>
+                    <th scope="col">Responsável documento</th>
                 </tr>
             </thead>
         <tbody>

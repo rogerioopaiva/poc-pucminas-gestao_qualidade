@@ -1,16 +1,16 @@
 import React from 'react'
-import currencyFormatter from 'currency-formatter'
+//import currencyFormatter from 'currency-formatter'
 
 export default props => {
 
     const rows = props.colaboradores.map( colaborador => {
         return (
             <tr key={colaborador.id}>
-                <td>{colaborador.nome}</td>
-                <td>{ currencyFormatter.format(colaborador.valor, { locale: 'pt-BR'})}</td>
+            <td>{colaborador.nomecolaborador}</td>
+                {/* <td>{ currencyFormatter.format(colaborador.valor, { locale: 'pt-BR'})}</td> */}
                 <td>{colaborador.setor}</td>
                 <td>{colaborador.cargo}</td>
-                <td>{colaborador.status}</td>
+                <td>{colaborador.dataadmissao}</td>
                 <td>
                     <button className="btn btn-success" title="Efetivar"
                             disabled={ colaborador.status !== 'PENDENTE'}
@@ -47,8 +47,8 @@ export default props => {
             <th scope="col">Setor</th>
             <th scope="col">Cargo</th>
             <th scope="col">Data admissão</th>
-            <th scope="col">Situação</th>
-            <th scope="col">Ações</th>
+            {/* <th scope="col">Situação</th>
+            <th scope="col">Ações</th> */}
           </tr>
         </thead>
         <tbody>{rows}</tbody>

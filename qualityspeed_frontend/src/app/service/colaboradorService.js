@@ -7,41 +7,33 @@ export default class colaboradorService extends ApiService {
                    super("/api/colaborador");
                  }
 
-                obterPorId(id) {
+                 obterPorId(id) {
                    return this.get(`/${id}`);
                  }
 
-                alterarStatus(id, status){
-                    return this.put(`/${id}/atualiza-status`, { status })
-                }
+                 alterarStatus(id, status) {
+                   return this.put(`/${id}/atualiza-status`, { status });
+                 }
 
-                validar(colaborador){
-                    const erros = [];
+                 validar(colaborador) {
+                   const erros = [];
 
-                if (!colaborador.nome) {
-                    erros.push("Informe o nome do colaborador.")
-                }
+                   if (!colaborador.nomecolaborador) {
+                     erros.push("Informe o nome do colaborador.");
+                   }
 
-                if (!colaborador.setor) {
-                    erros.push("Informe o Setor.");
-                }
+                   if (!colaborador.setor) {
+                     erros.push("Informe o Setor.");
+                   }
 
-                if (!colaborador.cargo) {
-                    erros.push("Informe o cargo.");
-                }
+                   if (!colaborador.cargo) {
+                     erros.push("Informe o cargo.");
+                   }
 
-                // if (!colaborador.valor) {
-                //     erros.push("Informe o Valor.");
-                // }
-
-                if (!colaborador.nivel) {
-                    erros.push("Informe o Nível do colaborador.");
-                }
-                
-                if(erros && erros.length > 0){
-                    throw new ErroValidacao(erros);
-                }
-            }
+                   if (erros && erros.length > 0) {
+                     throw new ErroValidacao(erros);
+                   }
+                 }
 
                  salvar(colaboradores) {
                    return this.post("/", colaboradores);
@@ -52,26 +44,14 @@ export default class colaboradorService extends ApiService {
                  }
 
                  consultar(colaboradorFiltro) {
-                   let params = `?ano=${colaboradorFiltro.ano}`;
+                   let params = `?nomecolaborador=${colaboradorFiltro.nomecolaborador}`;
 
-                   if (colaboradorFiltro.mes) {
-                     params = `${params}&mes=${colaboradorFiltro.mes}`;
+                   if (colaboradorFiltro.setor) {
+                     params = `${params}&setor=${colaboradorFiltro.setor}`;
                    }
 
-                   if (colaboradorFiltro.nivelColaborador) {
-                     params = `${params}&tipo=${colaboradorFiltro.nivelColaborador}`;
-                   }
-
-                   if (colaboradorFiltro.status) {
-                     params = `${params}&status=${colaboradorFiltro.status}`;
-                   }
-
-                   if (colaboradorFiltro.usuario) {
-                     params = `${params}&usuario=${colaboradorFiltro.usuario}`;
-                   }
-
-                   if (colaboradorFiltro.descricao) {
-                     params = `${params}&descricao=${colaboradorFiltro.descricao}`;
+                   if (colaboradorFiltro.cargo) {
+                     params = `${params}&cargo=${colaboradorFiltro.cargo}`;
                    }
 
                    return this.get(params);

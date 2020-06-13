@@ -3,7 +3,6 @@ import { withRouter } from 'react-router-dom'
 
 import Card from '../../components/card'
 import FormGroup from '../../components/form-group'
-import SelectMenu from '../../components/selectMenu'
 import DocumentosTable from './documentoTable'
 import documentoService from '../../app/service/documentoService'
 import LocalStorageService from '../../app/service/localstorageService'
@@ -30,7 +29,7 @@ class ConsultaDocumentos extends React.Component{
     }
 
     buscar = () => {
-        if(!this.state.ano){
+        if(!this.state.descricao){
             messages.mensagemErro('O preenchimento do campo Descrição é obrigatório.')
             return false;
         }
@@ -39,7 +38,7 @@ class ConsultaDocumentos extends React.Component{
         const documentoFiltro = {
             ano: this.state.descricao,
             mes: this.state.nomedocumento,
-            tipo: this.state.classificacao,
+            tipo: this.state.nomedocumento,
             descricao: this.state.descricao,
             usuario: usuarioLogado.id
         }
@@ -103,8 +102,6 @@ class ConsultaDocumentos extends React.Component{
     }
 
     render(){
-        const meses = this.service.obterListaMeses();
-        const tipos = this.service.obterListaDocumentos();
 
         const confirmDialogFooter = (
             <div>
@@ -128,12 +125,13 @@ class ConsultaDocumentos extends React.Component{
                                     placeholder="Digite a Descrição" />
                             </FormGroup>
 
-                            <FormGroup htmlFor="inputNomeDocumento" label="Nome: ">
-                                <SelectMenu id="inputNomeDocumento"
-                                            value={this.state.nomedocumento}
-                                            onChange={e => this.setState({ nomedocumento: e.target.value })}
-                                            className="form-control" 
-                                            lista={meses} />
+                            <FormGroup htmlFor="inputClass" label="Nome do documento: *">
+                                <input type="text"
+                                    className="form-control"
+                                    id="inputClass"
+                                    value={this.state.nomedocumento}
+                                    onChange={e => this.setState({nomedocumento: e.target.value})}
+                                    placeholder="Digite o nome do documento" />
                             </FormGroup>
 
                             <FormGroup htmlFor="inputClass" label="Classificação: *">
@@ -141,16 +139,8 @@ class ConsultaDocumentos extends React.Component{
                                     className="form-control"
                                     id="inputClass"
                                     value={this.state.classificacao}
-                                    onChange={e => this.setState({classificacao: e.target.value})}
-                                    placeholder="Digite a descrição" />
-                            </FormGroup>
-
-                            <FormGroup htmlFor="inputTipoDocumentos" label="Tipo de Documentos: ">
-                                <SelectMenu id="inputTipoDocumentos"
-                                                value={this.state.tipo}
-                                                onChange={e => this.setState({ tipo: e.target.value })}
-                                                className="form-control" 
-                                                lista={tipos} />
+                                    onChange={e => this.setState({ classificacao: e.target.value })}
+                                    placeholder="Digite a classificacao" />
                             </FormGroup>
 
                             <button onClick={this.buscar} 

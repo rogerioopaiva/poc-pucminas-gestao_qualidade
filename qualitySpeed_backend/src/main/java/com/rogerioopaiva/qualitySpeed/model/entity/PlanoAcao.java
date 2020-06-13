@@ -5,7 +5,7 @@ import com.rogerioopaiva.qualitySpeed.model.enums.StatusPlanoAcao;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 @Data
@@ -19,7 +19,7 @@ public class PlanoAcao {
 
     @Column(name = "dataocorrencia")
     @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
-    private LocalDate dataocorrencia;
+    private Date dataocorrencia;
 
     @Column(name = "oque")
     private String oque;
@@ -35,7 +35,7 @@ public class PlanoAcao {
 
     @Column(name = "quando")
     @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
-    private LocalDate quando;
+    private Date quando;
 
     @Column(name = "como")
     private String como;
@@ -45,15 +45,15 @@ public class PlanoAcao {
 
     @Column(name = "inicio")
     @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
-    private LocalDate inicio;
+    private Date inicio;
 
     @Column(name = "termino")
     @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
-    private LocalDate termino;
+    private Date termino;
 
     @Column(name = "novoprazo")
     @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
-    private LocalDate novoprazo;
+    private Date novoprazo;
 
     @Column(name = "status")
     @Enumerated(value = EnumType.STRING)

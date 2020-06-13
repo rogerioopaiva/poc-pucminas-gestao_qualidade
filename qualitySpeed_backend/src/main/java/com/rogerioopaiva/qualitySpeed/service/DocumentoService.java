@@ -21,4 +21,5 @@ public interface DocumentoService {
     void validar(Documento documento);
 
     Optional<Documento>obterPorId(Long id);
+
 }

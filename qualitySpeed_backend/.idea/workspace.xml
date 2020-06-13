@@ -27,14 +27,63 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac8f8563-6427-4f61-8b3e-bfd2cc09f7e7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/rogeriooliveiradepaiva.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/rogeriooliveiradepaiva.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/QualitySpeedApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/QualitySpeedApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/model/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/model/entity/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/model/enums/StatusNaoConformidade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/model/enums/StatusNaoConformidade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/api/dto/ColaboradorDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/api/dto/ColaboradorDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/api/dto/DocumentoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/api/dto/DocumentoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/api/dto/NaoConformidadeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/api/dto/NaoConformidadeDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/api/dto/PlanoacaoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/api/dto/PlanoacaoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/api/resource/ColaboradorResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/api/resource/ColaboradorResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/api/resource/DocumentoResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/api/resource/DocumentoResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/model/entity/Colaborador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/model/entity/Colaborador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/model/entity/Documento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/model/entity/Documento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/model/entity/NaoConformidade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/model/entity/NaoConformidade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/model/entity/PlanoAcao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/model/entity/PlanoAcao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/model/repository/ColaboradorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/model/repository/ColaboradorRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/service/ColaboradorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/service/ColaboradorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/service/DocumentoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/service/DocumentoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/service/impl/ColaboradorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/service/impl/ColaboradorServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/QualitySpeedApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/QualitySpeedApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/Usuario$UsuarioBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/Usuario$UsuarioBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/Usuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/service/impl/DocumentoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogerioopaiva/qualitySpeed/service/impl/DocumentoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/rogerioopaiva/qualitySpeed/model/repository/DocumentoRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rogerioopaiva/qualitySpeed/model/repository/DocumentoRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/dto/ColaboradorDTO$ColaboradorDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/dto/ColaboradorDTO$ColaboradorDTOBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/dto/ColaboradorDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/dto/ColaboradorDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/dto/DocumentoDTO$DocumentoDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/dto/DocumentoDTO$DocumentoDTOBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/dto/DocumentoDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/dto/DocumentoDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/dto/NaoConformidadeDTO$NaoConformidadeDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/dto/NaoConformidadeDTO$NaoConformidadeDTOBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/dto/NaoConformidadeDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/dto/NaoConformidadeDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/dto/PlanoacaoDTO$PlanoacaoDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/dto/PlanoacaoDTO$PlanoacaoDTOBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/dto/PlanoacaoDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/dto/PlanoacaoDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/resource/ColaboradorResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/resource/ColaboradorResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/resource/DocumentoResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/resource/DocumentoResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/resource/NaoConformidadeResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/resource/NaoConformidadeResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/resource/PlanoAcaoResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/resource/PlanoAcaoResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/Colaborador$ColaboradorBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/Colaborador$ColaboradorBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/Colaborador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/Colaborador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/Documento$DocumentoBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/Documento$DocumentoBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/Documento.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/Documento.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/NaoConformidade.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/NaoConformidade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/PlanoAcao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/PlanoAcao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/enums/StatusNaoConformidade.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/enums/StatusNaoConformidade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/service/ColaboradorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/service/ColaboradorService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/service/impl/ColaboradorServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/service/impl/ColaboradorServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/service/impl/DocumentoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/service/impl/DocumentoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/service/impl/PlanoAcaoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/service/impl/PlanoAcaoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/rogerioopaiva/qualitySpeed/model/repository/DocumentoRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/rogerioopaiva/qualitySpeed/model/repository/DocumentoRepositoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qualityspeed_frontend/src/app/service/colaboradorService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../qualityspeed_frontend/src/app/service/colaboradorService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qualityspeed_frontend/src/app/service/documentoService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../qualityspeed_frontend/src/app/service/documentoService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qualityspeed_frontend/src/app/service/usuarioService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../qualityspeed_frontend/src/app/service/usuarioService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qualityspeed_frontend/src/components/calendar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qualityspeed_frontend/src/components/navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../qualityspeed_frontend/src/components/navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qualityspeed_frontend/src/main/rotas.js" beforeDir="false" afterPath="$PROJECT_DIR$/../qualityspeed_frontend/src/main/rotas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qualityspeed_frontend/src/views/colaboradores/cadastro-colaboradores.js" beforeDir="false" afterPath="$PROJECT_DIR$/../qualityspeed_frontend/src/views/colaboradores/cadastro-colaboradores.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qualityspeed_frontend/src/views/colaboradores/colaboradoresTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/../qualityspeed_frontend/src/views/colaboradores/colaboradoresTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qualityspeed_frontend/src/views/colaboradores/consulta-colaboradores.js" beforeDir="false" afterPath="$PROJECT_DIR$/../qualityspeed_frontend/src/views/colaboradores/consulta-colaboradores.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qualityspeed_frontend/src/views/documentos/cadastro-documentos.js" beforeDir="false" afterPath="$PROJECT_DIR$/../qualityspeed_frontend/src/views/documentos/cadastro-documentos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qualityspeed_frontend/src/views/documentos/consulta-documentos.js" beforeDir="false" afterPath="$PROJECT_DIR$/../qualityspeed_frontend/src/views/documentos/consulta-documentos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qualityspeed_frontend/src/views/documentos/documentoTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/../qualityspeed_frontend/src/views/documentos/documentoTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qualityspeed_frontend/src/views/naoConformidade/cadastro-naoconformidade.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qualityspeed_frontend/src/views/naoConformidade/consulta-naoconformidade.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qualityspeed_frontend/src/views/naoConformidade/naoConformidadeTable.js" beforeDir="false" />
     </list>
     <list id="fa6f5e7d-e749-46be-8926-75ab63a16d20" name="Revert &quot;Alteracoes no repositorio do backend&quot;" comment="Revert &quot;Alteracoes no repositorio do backend&quot;&#10;&#10;This reverts commit 2fcf24f8" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,22 +143,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.QualitySpeedApplication">
-    <configuration name="ColaboradorServiceTest.deveFiltrarColaborador" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="qualitySpeed" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.rogerioopaiva.qualitySpeed.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.rogerioopaiva.qualitySpeed.service" />
-      <option name="MAIN_CLASS_NAME" value="com.rogerioopaiva.qualitySpeed.service.ColaboradorServiceTest" />
-      <option name="METHOD_NAME" value="deveFiltrarColaborador" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ColaboradorServiceTest.deveLancarErrosAoValidarUmCadastro" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="qualitySpeed" />
       <extension name="coverage">
@@ -174,6 +207,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="QualitySpeedApplicationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="qualitySpeed" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rogerioopaiva.qualitySpeed.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.rogerioopaiva.qualitySpeed" />
+      <option name="MAIN_CLASS_NAME" value="com.rogerioopaiva.qualitySpeed.QualitySpeedApplicationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="QualitySpeedApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="qualitySpeed" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.rogerioopaiva.qualitySpeed.QualitySpeedApplication" />
@@ -183,11 +231,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.QualitySpeedApplicationTest" />
         <item itemvalue="JUnit.DocumentoRepositoryTest.deveSalvarUmDocumento" />
         <item itemvalue="JUnit.ColaboradorServiceTest.deveLancarErrosAoValidarUmCadastro" />
         <item itemvalue="JUnit.ColaboradorServiceTest.deveRetornarVazioQuandoOColaboradorNaoExiste" />
         <item itemvalue="JUnit.ColaboradorServiceTest.deveObterUmColaboradorPorID" />
-        <item itemvalue="JUnit.ColaboradorServiceTest.deveFiltrarColaborador" />
       </list>
     </recent_temporary>
   </component>
@@ -213,7 +261,11 @@
       <workItem from="1591398544402" duration="4044000" />
       <workItem from="1591449495751" duration="86055000" />
       <workItem from="1591716273053" duration="15357000" />
-      <workItem from="1591823074728" duration="721000" />
+      <workItem from="1591823074728" duration="18472000" />
+      <workItem from="1591937115727" duration="618000" />
+      <workItem from="1591938000336" duration="6610000" />
+      <workItem from="1591960188250" duration="2833000" />
+      <workItem from="1591968139120" duration="12183000" />
     </task>
     <task id="LOCAL-00001" summary="Atualizando usuario e criando service colaboradores">
       <created>1591240509102</created>
@@ -274,9 +326,14 @@
       <screen x="1440" y="23" width="1600" height="823" />
     </state>
     <state x="2158" y="344" key="#Notifications/0.23.1440.877/1440.23.1600.823@1440.23.1600.823" timestamp="1591242134863" />
-    <state x="2035" y="172" key="#com.intellij.ide.util.MemberChooser" timestamp="1591655517852">
-      <screen x="1440" y="23" width="1600" height="877" />
+    <state x="1969" y="193" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1591922033051">
+      <screen x="1440" y="23" width="1600" height="817" />
     </state>
+    <state x="1969" y="193" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1440.877/1440.23.1600.817@1440.23.1600.817" timestamp="1591922033051" />
+    <state x="536" y="153" key="#com.intellij.ide.util.MemberChooser" timestamp="1592009336157">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="536" y="153" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1592009336157" />
     <state x="2035" y="153" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900/1440.0.1600.900@1440.0.1600.900" timestamp="1591589688070" />
     <state x="536" y="162" key="#com.intellij.ide.util.MemberChooser/0.23.1440.816/1440.23.1600.877@0.23.1440.816" timestamp="1591401213174" />
     <state x="2036" y="172" key="#com.intellij.ide.util.MemberChooser/0.23.1440.821/1440.23.1600.877@1440.23.1600.877" timestamp="1591463364125" />
@@ -301,139 +358,163 @@
     </state>
     <state x="1667" y="175" width="1200" height="637" key="DiffContextDialog/0.0.1440.900/1440.0.1600.900@1440.0.1600.900" timestamp="1591716726998" />
     <state x="1667" y="183" width="1200" height="582" key="DiffContextDialog/0.23.1440.877/1440.23.1600.823@1440.23.1600.823" timestamp="1591242412761" />
-    <state width="1558" height="168" key="GridCell.Tab.0.bottom" timestamp="1591769159298">
-      <screen x="1440" y="23" width="1600" height="817" />
+    <state width="1398" height="224" key="GridCell.Tab.0.bottom" timestamp="1592012336788">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="219" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1591223910667" />
+    <state width="1398" height="224" key="GridCell.Tab.0.bottom/0.0.1440.844/1440.23.1600.877@0.0.1440.844" timestamp="1591939662019" />
+    <state width="1398" height="224" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1592012336788" />
     <state width="1558" height="180" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1600.900@1440.0.1600.900" timestamp="1591740293627" />
+    <state width="1398" height="224" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.23.1600.877@0.0.1440.900" timestamp="1591944763347" />
     <state width="1558" height="180" key="GridCell.Tab.0.bottom/0.23.1440.821/1440.23.1600.877@1440.23.1600.877" timestamp="1591717551408" />
     <state width="1358" height="180" key="GridCell.Tab.0.bottom/0.23.1440.822/1440.23.1600.877@1440.23.1600.877" timestamp="1591662997826" />
     <state width="1558" height="180" key="GridCell.Tab.0.bottom/0.23.1440.823/1440.23.1600.877@1440.23.1600.877" timestamp="1591745768128" />
     <state width="1358" height="219" key="GridCell.Tab.0.bottom/0.23.1440.825/1440.23.1600.877@1440.23.1600.877" timestamp="1591223007185" />
     <state width="1358" height="101" key="GridCell.Tab.0.bottom/0.23.1440.826/1440.23.1600.877@1440.23.1600.877" timestamp="1591229945476" />
     <state width="1558" height="180" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.0.1600.900@1440.0.1600.900" timestamp="1591717055845" />
-    <state width="1358" height="180" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1600.816@1440.23.1600.816" timestamp="1591667616072" />
+    <state width="1398" height="192" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1600.816@0.23.1440.877" timestamp="1591936499944" />
+    <state width="1398" height="192" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1600.816@1440.23.1600.816" timestamp="1591931424622" />
     <state width="1358" height="199" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1600.817@0.23.1440.877" timestamp="1590981820299" />
-    <state width="1558" height="168" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1600.817@1440.23.1600.817" timestamp="1591769159298" />
+    <state width="1398" height="267" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1600.817@1440.23.1600.817" timestamp="1591922126502" />
     <state width="1358" height="258" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1600.819@0.23.1440.877" timestamp="1591061507106" />
     <state width="1358" height="329" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1600.819@1440.23.1600.819" timestamp="1591062867603" />
     <state width="1558" height="168" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1600.877@1440.23.1600.877" timestamp="1591749458668" />
-    <state width="1558" height="168" key="GridCell.Tab.0.center" timestamp="1591769159297">
-      <screen x="1440" y="23" width="1600" height="817" />
+    <state width="1398" height="224" key="GridCell.Tab.0.center" timestamp="1592012336786">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="219" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1591223910665" />
+    <state width="1398" height="224" key="GridCell.Tab.0.center/0.0.1440.844/1440.23.1600.877@0.0.1440.844" timestamp="1591939662018" />
+    <state width="1398" height="224" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1592012336786" />
     <state width="1558" height="180" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1600.900@1440.0.1600.900" timestamp="1591740293625" />
+    <state width="1398" height="224" key="GridCell.Tab.0.center/0.0.1440.900/1440.23.1600.877@0.0.1440.900" timestamp="1591944763345" />
     <state width="1558" height="180" key="GridCell.Tab.0.center/0.23.1440.821/1440.23.1600.877@1440.23.1600.877" timestamp="1591717551406" />
     <state width="1358" height="180" key="GridCell.Tab.0.center/0.23.1440.822/1440.23.1600.877@1440.23.1600.877" timestamp="1591662997825" />
     <state width="1558" height="180" key="GridCell.Tab.0.center/0.23.1440.823/1440.23.1600.877@1440.23.1600.877" timestamp="1591745768127" />
     <state width="1358" height="219" key="GridCell.Tab.0.center/0.23.1440.825/1440.23.1600.877@1440.23.1600.877" timestamp="1591223007184" />
     <state width="1358" height="101" key="GridCell.Tab.0.center/0.23.1440.826/1440.23.1600.877@1440.23.1600.877" timestamp="1591229945475" />
     <state width="1558" height="180" key="GridCell.Tab.0.center/0.23.1440.877/1440.0.1600.900@1440.0.1600.900" timestamp="1591717055843" />
-    <state width="1358" height="180" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1600.816@1440.23.1600.816" timestamp="1591667616053" />
+    <state width="1398" height="192" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1600.816@0.23.1440.877" timestamp="1591936499942" />
+    <state width="1398" height="192" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1600.816@1440.23.1600.816" timestamp="1591931424621" />
     <state width="1358" height="199" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1600.817@0.23.1440.877" timestamp="1590981820299" />
-    <state width="1558" height="168" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1600.817@1440.23.1600.817" timestamp="1591769159297" />
+    <state width="1398" height="267" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1600.817@1440.23.1600.817" timestamp="1591922126501" />
     <state width="1358" height="258" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1600.819@0.23.1440.877" timestamp="1591061507105" />
     <state width="1358" height="329" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1600.819@1440.23.1600.819" timestamp="1591062867600" />
     <state width="1558" height="168" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1600.877@1440.23.1600.877" timestamp="1591749458667" />
-    <state width="1558" height="168" key="GridCell.Tab.0.left" timestamp="1591769159297">
-      <screen x="1440" y="23" width="1600" height="817" />
+    <state width="1398" height="224" key="GridCell.Tab.0.left" timestamp="1592012336785">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="219" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1591223910664" />
+    <state width="1398" height="224" key="GridCell.Tab.0.left/0.0.1440.844/1440.23.1600.877@0.0.1440.844" timestamp="1591939662017" />
+    <state width="1398" height="224" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1592012336785" />
     <state width="1558" height="180" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1600.900@1440.0.1600.900" timestamp="1591740293624" />
+    <state width="1398" height="224" key="GridCell.Tab.0.left/0.0.1440.900/1440.23.1600.877@0.0.1440.900" timestamp="1591944763344" />
     <state width="1558" height="180" key="GridCell.Tab.0.left/0.23.1440.821/1440.23.1600.877@1440.23.1600.877" timestamp="1591717551405" />
     <state width="1358" height="180" key="GridCell.Tab.0.left/0.23.1440.822/1440.23.1600.877@1440.23.1600.877" timestamp="1591662997824" />
     <state width="1558" height="180" key="GridCell.Tab.0.left/0.23.1440.823/1440.23.1600.877@1440.23.1600.877" timestamp="1591745768126" />
     <state width="1358" height="219" key="GridCell.Tab.0.left/0.23.1440.825/1440.23.1600.877@1440.23.1600.877" timestamp="1591223007183" />
     <state width="1358" height="101" key="GridCell.Tab.0.left/0.23.1440.826/1440.23.1600.877@1440.23.1600.877" timestamp="1591229945475" />
     <state width="1558" height="180" key="GridCell.Tab.0.left/0.23.1440.877/1440.0.1600.900@1440.0.1600.900" timestamp="1591717055842" />
-    <state width="1358" height="180" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1600.816@1440.23.1600.816" timestamp="1591667616051" />
+    <state width="1398" height="192" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1600.816@0.23.1440.877" timestamp="1591936499942" />
+    <state width="1398" height="192" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1600.816@1440.23.1600.816" timestamp="1591931424620" />
     <state width="1358" height="199" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1600.817@0.23.1440.877" timestamp="1590981820298" />
-    <state width="1558" height="168" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1600.817@1440.23.1600.817" timestamp="1591769159297" />
+    <state width="1398" height="267" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1600.817@1440.23.1600.817" timestamp="1591922126500" />
     <state width="1358" height="258" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1600.819@0.23.1440.877" timestamp="1591061507104" />
     <state width="1358" height="329" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1600.819@1440.23.1600.819" timestamp="1591062867599" />
     <state width="1558" height="168" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1600.877@1440.23.1600.877" timestamp="1591749458667" />
-    <state width="1558" height="168" key="GridCell.Tab.0.right" timestamp="1591769159297">
-      <screen x="1440" y="23" width="1600" height="817" />
+    <state width="1398" height="224" key="GridCell.Tab.0.right" timestamp="1592012336787">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="219" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1591223910666" />
+    <state width="1398" height="224" key="GridCell.Tab.0.right/0.0.1440.844/1440.23.1600.877@0.0.1440.844" timestamp="1591939662019" />
+    <state width="1398" height="224" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1592012336787" />
     <state width="1558" height="180" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1600.900@1440.0.1600.900" timestamp="1591740293626" />
+    <state width="1398" height="224" key="GridCell.Tab.0.right/0.0.1440.900/1440.23.1600.877@0.0.1440.900" timestamp="1591944763346" />
     <state width="1558" height="180" key="GridCell.Tab.0.right/0.23.1440.821/1440.23.1600.877@1440.23.1600.877" timestamp="1591717551407" />
     <state width="1358" height="180" key="GridCell.Tab.0.right/0.23.1440.822/1440.23.1600.877@1440.23.1600.877" timestamp="1591662997825" />
     <state width="1558" height="180" key="GridCell.Tab.0.right/0.23.1440.823/1440.23.1600.877@1440.23.1600.877" timestamp="1591745768127" />
     <state width="1358" height="219" key="GridCell.Tab.0.right/0.23.1440.825/1440.23.1600.877@1440.23.1600.877" timestamp="1591223007184" />
     <state width="1358" height="101" key="GridCell.Tab.0.right/0.23.1440.826/1440.23.1600.877@1440.23.1600.877" timestamp="1591229945476" />
     <state width="1558" height="180" key="GridCell.Tab.0.right/0.23.1440.877/1440.0.1600.900@1440.0.1600.900" timestamp="1591717055844" />
-    <state width="1358" height="180" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1600.816@1440.23.1600.816" timestamp="1591667616061" />
+    <state width="1398" height="192" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1600.816@0.23.1440.877" timestamp="1591936499943" />
+    <state width="1398" height="192" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1600.816@1440.23.1600.816" timestamp="1591931424622" />
     <state width="1358" height="199" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1600.817@0.23.1440.877" timestamp="1590981820299" />
-    <state width="1558" height="168" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1600.817@1440.23.1600.817" timestamp="1591769159297" />
+    <state width="1398" height="267" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1600.817@1440.23.1600.817" timestamp="1591922126501" />
     <state width="1358" height="258" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1600.819@0.23.1440.877" timestamp="1591061507106" />
     <state width="1358" height="329" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1600.819@1440.23.1600.819" timestamp="1591062867602" />
     <state width="1558" height="168" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1600.877@1440.23.1600.877" timestamp="1591749458668" />
-    <state width="1558" height="168" key="GridCell.Tab.1.bottom" timestamp="1591769159299">
-      <screen x="1440" y="23" width="1600" height="817" />
+    <state width="1398" height="224" key="GridCell.Tab.1.bottom" timestamp="1592012336792">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="219" key="GridCell.Tab.1.bottom/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1591223910672" />
+    <state width="1398" height="224" key="GridCell.Tab.1.bottom/0.0.1440.844/1440.23.1600.877@0.0.1440.844" timestamp="1591939662023" />
+    <state width="1398" height="224" key="GridCell.Tab.1.bottom/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1592012336792" />
     <state width="1558" height="180" key="GridCell.Tab.1.bottom/0.0.1440.900/1440.0.1600.900@1440.0.1600.900" timestamp="1591740293630" />
+    <state width="1398" height="224" key="GridCell.Tab.1.bottom/0.0.1440.900/1440.23.1600.877@0.0.1440.900" timestamp="1591944763350" />
     <state width="1558" height="180" key="GridCell.Tab.1.bottom/0.23.1440.821/1440.23.1600.877@1440.23.1600.877" timestamp="1591717551415" />
     <state width="1358" height="180" key="GridCell.Tab.1.bottom/0.23.1440.822/1440.23.1600.877@1440.23.1600.877" timestamp="1591662997832" />
     <state width="1558" height="180" key="GridCell.Tab.1.bottom/0.23.1440.823/1440.23.1600.877@1440.23.1600.877" timestamp="1591745768130" />
     <state width="1358" height="219" key="GridCell.Tab.1.bottom/0.23.1440.825/1440.23.1600.877@1440.23.1600.877" timestamp="1591223007187" />
     <state width="1358" height="101" key="GridCell.Tab.1.bottom/0.23.1440.826/1440.23.1600.877@1440.23.1600.877" timestamp="1591229945478" />
     <state width="1558" height="180" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.0.1600.900@1440.0.1600.900" timestamp="1591717055851" />
-    <state width="1358" height="180" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.23.1600.816@1440.23.1600.816" timestamp="1591667616091" />
+    <state width="1398" height="192" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.23.1600.816@0.23.1440.877" timestamp="1591936499945" />
+    <state width="1398" height="192" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.23.1600.816@1440.23.1600.816" timestamp="1591931424625" />
     <state width="1358" height="199" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.23.1600.817@0.23.1440.877" timestamp="1590981820301" />
-    <state width="1558" height="168" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.23.1600.817@1440.23.1600.817" timestamp="1591769159299" />
+    <state width="1398" height="267" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.23.1600.817@1440.23.1600.817" timestamp="1591922103823" />
     <state width="1358" height="258" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.23.1600.819@0.23.1440.877" timestamp="1591061507113" />
     <state width="1358" height="329" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.23.1600.819@1440.23.1600.819" timestamp="1591062867605" />
     <state width="1558" height="168" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.23.1600.877@1440.23.1600.877" timestamp="1591749458670" />
-    <state width="1558" height="168" key="GridCell.Tab.1.center" timestamp="1591769159299">
-      <screen x="1440" y="23" width="1600" height="817" />
+    <state width="1398" height="224" key="GridCell.Tab.1.center" timestamp="1592012336790">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="219" key="GridCell.Tab.1.center/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1591223910670" />
+    <state width="1398" height="224" key="GridCell.Tab.1.center/0.0.1440.844/1440.23.1600.877@0.0.1440.844" timestamp="1591939662021" />
+    <state width="1398" height="224" key="GridCell.Tab.1.center/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1592012336790" />
     <state width="1558" height="180" key="GridCell.Tab.1.center/0.0.1440.900/1440.0.1600.900@1440.0.1600.900" timestamp="1591740293629" />
+    <state width="1398" height="224" key="GridCell.Tab.1.center/0.0.1440.900/1440.23.1600.877@0.0.1440.900" timestamp="1591944763348" />
     <state width="1558" height="180" key="GridCell.Tab.1.center/0.23.1440.821/1440.23.1600.877@1440.23.1600.877" timestamp="1591717551412" />
     <state width="1358" height="180" key="GridCell.Tab.1.center/0.23.1440.822/1440.23.1600.877@1440.23.1600.877" timestamp="1591662997830" />
     <state width="1558" height="180" key="GridCell.Tab.1.center/0.23.1440.823/1440.23.1600.877@1440.23.1600.877" timestamp="1591745768129" />
     <state width="1358" height="219" key="GridCell.Tab.1.center/0.23.1440.825/1440.23.1600.877@1440.23.1600.877" timestamp="1591223007186" />
     <state width="1358" height="101" key="GridCell.Tab.1.center/0.23.1440.826/1440.23.1600.877@1440.23.1600.877" timestamp="1591229945477" />
     <state width="1558" height="180" key="GridCell.Tab.1.center/0.23.1440.877/1440.0.1600.900@1440.0.1600.900" timestamp="1591717055848" />
-    <state width="1358" height="180" key="GridCell.Tab.1.center/0.23.1440.877/1440.23.1600.816@1440.23.1600.816" timestamp="1591667616080" />
+    <state width="1398" height="192" key="GridCell.Tab.1.center/0.23.1440.877/1440.23.1600.816@0.23.1440.877" timestamp="1591936499945" />
+    <state width="1398" height="192" key="GridCell.Tab.1.center/0.23.1440.877/1440.23.1600.816@1440.23.1600.816" timestamp="1591931424623" />
     <state width="1358" height="199" key="GridCell.Tab.1.center/0.23.1440.877/1440.23.1600.817@0.23.1440.877" timestamp="1590981820300" />
-    <state width="1558" height="168" key="GridCell.Tab.1.center/0.23.1440.877/1440.23.1600.817@1440.23.1600.817" timestamp="1591769159299" />
+    <state width="1398" height="267" key="GridCell.Tab.1.center/0.23.1440.877/1440.23.1600.817@1440.23.1600.817" timestamp="1591922103821" />
     <state width="1358" height="258" key="GridCell.Tab.1.center/0.23.1440.877/1440.23.1600.819@0.23.1440.877" timestamp="1591061507108" />
     <state width="1358" height="329" key="GridCell.Tab.1.center/0.23.1440.877/1440.23.1600.819@1440.23.1600.819" timestamp="1591062867604" />
     <state width="1558" height="168" key="GridCell.Tab.1.center/0.23.1440.877/1440.23.1600.877@1440.23.1600.877" timestamp="1591749458669" />
-    <state width="1558" height="168" key="GridCell.Tab.1.left" timestamp="1591769159298">
-      <screen x="1440" y="23" width="1600" height="817" />
+    <state width="1398" height="224" key="GridCell.Tab.1.left" timestamp="1592012336789">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="219" key="GridCell.Tab.1.left/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1591223910668" />
+    <state width="1398" height="224" key="GridCell.Tab.1.left/0.0.1440.844/1440.23.1600.877@0.0.1440.844" timestamp="1591939662020" />
+    <state width="1398" height="224" key="GridCell.Tab.1.left/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1592012336789" />
     <state width="1558" height="180" key="GridCell.Tab.1.left/0.0.1440.900/1440.0.1600.900@1440.0.1600.900" timestamp="1591740293628" />
+    <state width="1398" height="224" key="GridCell.Tab.1.left/0.0.1440.900/1440.23.1600.877@0.0.1440.900" timestamp="1591944763347" />
     <state width="1558" height="180" key="GridCell.Tab.1.left/0.23.1440.821/1440.23.1600.877@1440.23.1600.877" timestamp="1591717551410" />
     <state width="1358" height="180" key="GridCell.Tab.1.left/0.23.1440.822/1440.23.1600.877@1440.23.1600.877" timestamp="1591662997827" />
     <state width="1558" height="180" key="GridCell.Tab.1.left/0.23.1440.823/1440.23.1600.877@1440.23.1600.877" timestamp="1591745768128" />
     <state width="1358" height="219" key="GridCell.Tab.1.left/0.23.1440.825/1440.23.1600.877@1440.23.1600.877" timestamp="1591223007186" />
     <state width="1358" height="101" key="GridCell.Tab.1.left/0.23.1440.826/1440.23.1600.877@1440.23.1600.877" timestamp="1591229945476" />
     <state width="1558" height="180" key="GridCell.Tab.1.left/0.23.1440.877/1440.0.1600.900@1440.0.1600.900" timestamp="1591717055847" />
-    <state width="1358" height="180" key="GridCell.Tab.1.left/0.23.1440.877/1440.23.1600.816@1440.23.1600.816" timestamp="1591667616076" />
+    <state width="1398" height="192" key="GridCell.Tab.1.left/0.23.1440.877/1440.23.1600.816@0.23.1440.877" timestamp="1591936499944" />
+    <state width="1398" height="192" key="GridCell.Tab.1.left/0.23.1440.877/1440.23.1600.816@1440.23.1600.816" timestamp="1591931424623" />
     <state width="1358" height="199" key="GridCell.Tab.1.left/0.23.1440.877/1440.23.1600.817@0.23.1440.877" timestamp="1590981820300" />
-    <state width="1558" height="168" key="GridCell.Tab.1.left/0.23.1440.877/1440.23.1600.817@1440.23.1600.817" timestamp="1591769159298" />
+    <state width="1398" height="267" key="GridCell.Tab.1.left/0.23.1440.877/1440.23.1600.817@1440.23.1600.817" timestamp="1591922103821" />
     <state width="1358" height="258" key="GridCell.Tab.1.left/0.23.1440.877/1440.23.1600.819@0.23.1440.877" timestamp="1591061507107" />
     <state width="1358" height="329" key="GridCell.Tab.1.left/0.23.1440.877/1440.23.1600.819@1440.23.1600.819" timestamp="1591062867603" />
     <state width="1558" height="168" key="GridCell.Tab.1.left/0.23.1440.877/1440.23.1600.877@1440.23.1600.877" timestamp="1591749458669" />
-    <state width="1558" height="168" key="GridCell.Tab.1.right" timestamp="1591769159299">
-      <screen x="1440" y="23" width="1600" height="817" />
+    <state width="1398" height="224" key="GridCell.Tab.1.right" timestamp="1592012336791">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="219" key="GridCell.Tab.1.right/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1591223910671" />
+    <state width="1398" height="224" key="GridCell.Tab.1.right/0.0.1440.844/1440.23.1600.877@0.0.1440.844" timestamp="1591939662022" />
+    <state width="1398" height="224" key="GridCell.Tab.1.right/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1592012336791" />
     <state width="1558" height="180" key="GridCell.Tab.1.right/0.0.1440.900/1440.0.1600.900@1440.0.1600.900" timestamp="1591740293629" />
+    <state width="1398" height="224" key="GridCell.Tab.1.right/0.0.1440.900/1440.23.1600.877@0.0.1440.900" timestamp="1591944763349" />
     <state width="1558" height="180" key="GridCell.Tab.1.right/0.23.1440.821/1440.23.1600.877@1440.23.1600.877" timestamp="1591717551414" />
     <state width="1358" height="180" key="GridCell.Tab.1.right/0.23.1440.822/1440.23.1600.877@1440.23.1600.877" timestamp="1591662997831" />
     <state width="1558" height="180" key="GridCell.Tab.1.right/0.23.1440.823/1440.23.1600.877@1440.23.1600.877" timestamp="1591745768130" />
     <state width="1358" height="219" key="GridCell.Tab.1.right/0.23.1440.825/1440.23.1600.877@1440.23.1600.877" timestamp="1591223007187" />
     <state width="1358" height="101" key="GridCell.Tab.1.right/0.23.1440.826/1440.23.1600.877@1440.23.1600.877" timestamp="1591229945477" />
     <state width="1558" height="180" key="GridCell.Tab.1.right/0.23.1440.877/1440.0.1600.900@1440.0.1600.900" timestamp="1591717055850" />
-    <state width="1358" height="180" key="GridCell.Tab.1.right/0.23.1440.877/1440.23.1600.816@1440.23.1600.816" timestamp="1591667616086" />
+    <state width="1398" height="192" key="GridCell.Tab.1.right/0.23.1440.877/1440.23.1600.816@0.23.1440.877" timestamp="1591936499945" />
+    <state width="1398" height="192" key="GridCell.Tab.1.right/0.23.1440.877/1440.23.1600.816@1440.23.1600.816" timestamp="1591931424624" />
     <state width="1358" height="199" key="GridCell.Tab.1.right/0.23.1440.877/1440.23.1600.817@0.23.1440.877" timestamp="1590981820301" />
-    <state width="1558" height="168" key="GridCell.Tab.1.right/0.23.1440.877/1440.23.1600.817@1440.23.1600.817" timestamp="1591769159299" />
+    <state width="1398" height="267" key="GridCell.Tab.1.right/0.23.1440.877/1440.23.1600.817@1440.23.1600.817" timestamp="1591922103822" />
     <state width="1358" height="258" key="GridCell.Tab.1.right/0.23.1440.877/1440.23.1600.819@0.23.1440.877" timestamp="1591061507110" />
     <state width="1358" height="329" key="GridCell.Tab.1.right/0.23.1440.877/1440.23.1600.819@1440.23.1600.819" timestamp="1591062867605" />
     <state width="1558" height="168" key="GridCell.Tab.1.right/0.23.1440.877/1440.23.1600.877@1440.23.1600.877" timestamp="1591749458669" />
@@ -490,18 +571,24 @@
       <screen x="1440" y="0" width="1600" height="900" />
     </state>
     <state x="1978" y="195" key="extract.method.dialog/0.0.1440.900/1440.0.1600.900@1440.0.1600.900" timestamp="1591553338663" />
+    <state width="600" height="428" key="javadoc.popup" timestamp="1592000039087">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="600" height="428" key="javadoc.popup/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1592000039087" />
     <state x="107" y="94" key="new project wizard" timestamp="1591053295861">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="107" y="94" key="new project wizard/0.23.1440.877/1440.23.1600.819@0.23.1440.877" timestamp="1591053295861" />
-    <state x="1949" y="250" key="refactoring.ChangeSignatureDialog" timestamp="1591657341999">
-      <screen x="1440" y="23" width="1600" height="877" />
+    <state x="458" y="233" key="refactoring.ChangeSignatureDialog" timestamp="1592010002365">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="458" y="233" key="refactoring.ChangeSignatureDialog/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1592010002365" />
     <state x="1949" y="233" key="refactoring.ChangeSignatureDialog/0.0.1440.900/1440.0.1600.900@1440.0.1600.900" timestamp="1591566053256" />
     <state x="1949" y="250" key="refactoring.ChangeSignatureDialog/0.23.1440.823/1440.23.1600.877@1440.23.1600.877" timestamp="1591657341999" />
-    <state x="1893" y="199" key="run.anything.popup" timestamp="1591476775548">
-      <screen x="1440" y="23" width="1600" height="877" />
+    <state x="408" y="181" key="run.anything.popup" timestamp="1592009411217">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="408" y="181" key="run.anything.popup/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1592009411217" />
     <state x="1893" y="199" key="run.anything.popup/0.23.1440.822/1440.23.1600.877@1440.23.1600.877" timestamp="1591476775548" />
     <state x="681" y="116" width="671" height="669" key="search.everywhere.popup" timestamp="1591401809936">
       <screen x="0" y="23" width="1440" height="816" />

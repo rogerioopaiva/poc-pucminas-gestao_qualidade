@@ -11,7 +11,8 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.time.LocalDate;
+import java.time.Instant;
+import java.util.Date;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
@@ -31,8 +32,8 @@ public class DocumentoRepositoryTest {
                                     .nomedocumento("Documento de licitação")
                                     .classificacao("Recursos Humanos")
                                     .revisoes(Long.valueOf(1))
-                                    .ultimarevisao(LocalDate.of(2020, 02, 10))
-                                    .proxrevisao(LocalDate.of(2019,05,03))
+                                    .ultimarevisao(Date.from(Instant.parse("2020-09-03")))
+                                    .proxrevisao(Date.from(Instant.parse("2020-03-09")))
                                     .status(StatusDocumento.PENDENTE)
                                     .build();
 

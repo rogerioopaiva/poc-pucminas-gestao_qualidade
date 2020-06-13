@@ -67,6 +67,16 @@ public class ColaboradorResource {
                 new ResponseEntity("Colaborador não encontrado na base de dados.", HttpStatus.BAD_REQUEST));
     }
 
+    @GetMapping("{id}")
+    public ResponseEntity getPorId( @PathVariable("id") Long id ) {
+       if(service.obterPorId(id).isPresent()) {
+           return new ResponseEntity(service.obterPorId(id).get(), HttpStatus.ACCEPTED);
+       }else {
+          return new ResponseEntity("Colaborador não encontrado na base de dados.", HttpStatus.BAD_REQUEST);
+       }
+    }
+
+
     private Colaborador converter(ColaboradorDTO dto) {
         Colaborador colaborador = new Colaborador();
         colaborador.setId(dto.getId());

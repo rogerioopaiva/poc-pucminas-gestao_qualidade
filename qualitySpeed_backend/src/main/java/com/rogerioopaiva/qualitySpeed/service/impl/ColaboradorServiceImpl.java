@@ -50,6 +50,7 @@ public class ColaboradorServiceImpl implements ColaboradorService {
                 ExampleMatcher.matching()
                     .withIgnoreCase()
                     .withStringMatcher(ExampleMatcher.StringMatcher.CONTAINING) );
+        System.out.println(colaboradorFiltro.getCargo());
         return repository.findAll(example);
     }
 
@@ -74,4 +75,8 @@ public class ColaboradorServiceImpl implements ColaboradorService {
         return repository.findById(id);
     }
 
+    @Override
+    public List<Colaborador> obterNomeColaborador(String nomecolaborador) {
+        return repository.findAll();
+    }
 }
