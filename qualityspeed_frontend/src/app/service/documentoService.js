@@ -8,7 +8,7 @@ export default class documentoService extends ApiService {
 
                 obterPorId(id) {
                    return this.get(`/${id}`);
-                 }
+                 }       
 
                 alterarStatus(id, status){
                     return this.put(`/${id}/atualiza-status`, { status })

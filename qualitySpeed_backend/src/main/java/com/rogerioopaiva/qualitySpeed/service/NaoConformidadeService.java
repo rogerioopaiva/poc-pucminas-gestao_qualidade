@@ -18,6 +18,8 @@ public interface NaoConformidadeService {
 
     void validar(NaoConformidade naoConformidade);
 
+    List<NaoConformidade> buscarTodos();
+
     void atualizarStatus(NaoConformidade naoConformidade, StatusNaoConformidade status);
 
     Optional<NaoConformidade> obterPorId(Long id);

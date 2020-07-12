@@ -2,10 +2,12 @@ import React from 'react'
 
 export default (props) => {
 
-    const options = props.lista.map( (option, index) => {
+    const options = props.lista.map( (option, item) => {
         return (
-            <option key={index} value={option.value}>{option.label}</option>
-        )
+          <option key={item.id} value={item.valor}>
+            {option.nomecolaborador}
+          </option>
+        );
     })
 
     return (    

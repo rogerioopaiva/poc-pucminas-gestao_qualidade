@@ -5,7 +5,7 @@ import Card from '../../components/card'
 import FormGroup from '../../components/form-group'
 import DocumentosTable from './documentoTable'
 import documentoService from '../../app/service/documentoService'
-import LocalStorageService from '../../app/service/localstorageService'
+//import LocalStorageService from '../../app/service/localstorageService'
 
 import * as messages from '../../components/toastr'
 
@@ -33,14 +33,11 @@ class ConsultaDocumentos extends React.Component{
             messages.mensagemErro('O preenchimento do campo Descrição é obrigatório.')
             return false;
         }
-        const usuarioLogado = LocalStorageService.obterItem('_usuario_logado');
 
         const documentoFiltro = {
-            ano: this.state.descricao,
-            mes: this.state.nomedocumento,
-            tipo: this.state.nomedocumento,
             descricao: this.state.descricao,
-            usuario: usuarioLogado.id
+            nomedocumento: this.state.nomedocumento,
+            classificacao: this.state.classificacao
         }
 
         this.service

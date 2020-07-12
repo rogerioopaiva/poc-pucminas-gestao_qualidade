@@ -11,6 +11,10 @@ export default class colaboradorService extends ApiService {
                    return this.get(`/${id}`);
                  }
 
+                 obterPorResponsaveis() {
+                   return this.get('/');
+                 }
+
                  alterarStatus(id, status) {
                    return this.put(`/${id}/atualiza-status`, { status });
                  }

@@ -28,7 +28,7 @@ public class NaoConformidade {
     private String setor;
 
     @ManyToOne
-    @JoinColumn(name = "colaboradorcorretiva_id")
+    @JoinColumn(name = "id_colaboradorcorretiva")
     private Colaborador colaboradorcorretiva;
 
     @Column(name = "causa")

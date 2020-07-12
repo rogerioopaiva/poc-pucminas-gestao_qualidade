@@ -26,11 +26,7 @@ public class PlanoacaoDTO {
     private String como;
     private Double quantocusta;
     @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
-    private Date inicio;
-    @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
     private Date termino;
-    @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
-    private Date novoprazo;
     private String Status;
     private Long id_naoconformidade;
     private Long id_responsavelacao;

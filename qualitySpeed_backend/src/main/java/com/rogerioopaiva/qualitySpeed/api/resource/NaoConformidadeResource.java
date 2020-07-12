@@ -30,7 +30,7 @@ public class NaoConformidadeResource {
             @RequestParam(value = "descricao", required = false) String descricao,
             @RequestParam(value = "setor", required = false) String setor,
             @RequestParam(value = "acaocorretiva", required = false) String acaocorretiva,
-            @RequestParam("colaboradorcorretiva_id") Long idColaborador
+            @RequestParam("id_colaboradorcorretiva") Long idColaborador
     ) {
         NaoConformidade naoConformidadeFiltro = new NaoConformidade();
         naoConformidadeFiltro.setDescricao(descricao);
@@ -101,6 +101,13 @@ public class NaoConformidadeResource {
             return new ResponseEntity( HttpStatus.NO_CONTENT);
         }).orElseGet( () ->
                 new ResponseEntity("Não conformidade não encontrada na base de dados.", HttpStatus.BAD_REQUEST));
+    }
+
+    @GetMapping("/")
+    public ResponseEntity getListaNaoConformidade(
+    ) {
+        List<NaoConformidade> naoConformidades = service.buscarTodos();
+        return ResponseEntity.ok(naoConformidades);
     }
 
     private NaoConformidade converter(NaoConformidadeDTO dto) {

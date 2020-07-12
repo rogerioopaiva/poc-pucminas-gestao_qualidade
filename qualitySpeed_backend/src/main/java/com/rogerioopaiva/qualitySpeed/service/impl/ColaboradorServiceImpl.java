@@ -55,6 +55,11 @@ public class ColaboradorServiceImpl implements ColaboradorService {
     }
 
     @Override
+    public List<Colaborador> buscarTodos() {
+        return repository.findAll();
+    }
+
+    @Override
     public void validar(Colaborador colaborador) {
 
         if(colaborador.getNomecolaborador() == null || colaborador.getNomecolaborador().trim().equals("")) {
@@ -72,11 +77,8 @@ public class ColaboradorServiceImpl implements ColaboradorService {
 
     @Override
     public Optional<Colaborador> obterPorId(Long id) {
+
         return repository.findById(id);
     }
 
-    @Override
-    public List<Colaborador> obterNomeColaborador(String nomecolaborador) {
-        return repository.findAll();
-    }
 }

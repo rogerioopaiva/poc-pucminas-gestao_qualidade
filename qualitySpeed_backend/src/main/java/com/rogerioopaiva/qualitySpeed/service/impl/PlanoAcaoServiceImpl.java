@@ -88,16 +88,8 @@ public class PlanoAcaoServiceImpl implements PlanoAcaoService {
             throw new RegraNegocioException("Informe quanto custa.");
         }
 
-        if (planoAcao.getInicio() == null || planoAcao.getInicio().toString().equals("")) {
-            throw new RegraNegocioException("Informe a data de ínicio.");
-        }
-
         if (planoAcao.getTermino() == null || planoAcao.getTermino().toString().equals("")) {
             throw new RegraNegocioException("Informe a data de término.");
-        }
-
-        if (planoAcao.getNovoprazo() == null || planoAcao.getNovoprazo().toString().equals("")) {
-            throw new RegraNegocioException("Informe a data do novo prazo de término.");
         }
     }
 
@@ -105,5 +97,10 @@ public class PlanoAcaoServiceImpl implements PlanoAcaoService {
     @Override
     public Optional<PlanoAcao> obterPorId(Long id) {
         return repository.findById(id);
+    }
+
+    @Override
+    public List<PlanoAcao> buscarTodos() {
+        return repository.findAll();
     }
 }

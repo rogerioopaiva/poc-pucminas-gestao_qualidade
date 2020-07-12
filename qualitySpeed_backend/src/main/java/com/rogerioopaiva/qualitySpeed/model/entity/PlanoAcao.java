@@ -43,17 +43,9 @@ public class PlanoAcao {
     @Column(name = "quantocusta")
     private Double quantocusta;
 
-    @Column(name = "inicio")
-    @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
-    private Date inicio;
-
     @Column(name = "termino")
     @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
     private Date termino;
-
-    @Column(name = "novoprazo")
-    @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
-    private Date novoprazo;
 
     @Column(name = "status")
     @Enumerated(value = EnumType.STRING)

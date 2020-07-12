@@ -80,4 +80,9 @@ public class NaoConformidadeServiceImpl implements NaoConformidadeService {
     public Optional<NaoConformidade> obterPorId(Long id) {
         return repository.findById(id);
     }
+
+    @Override
+    public List<NaoConformidade> buscarTodos() {
+        return repository.findAll();
+    }
 }

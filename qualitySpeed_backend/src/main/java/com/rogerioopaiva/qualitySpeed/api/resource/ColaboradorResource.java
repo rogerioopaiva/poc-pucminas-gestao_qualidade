@@ -76,6 +76,12 @@ public class ColaboradorResource {
        }
     }
 
+    @GetMapping("/")
+    public ResponseEntity getListaColaborador(
+    ) {
+        List<Colaborador> colaboradores = service.buscarTodos();
+        return ResponseEntity.ok(colaboradores);
+    }
 
     private Colaborador converter(ColaboradorDTO dto) {
         Colaborador colaborador = new Colaborador();

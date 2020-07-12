@@ -108,9 +108,7 @@ public class PlanoAcaoResource {
         planoAcao.setQuando(dto.getQuando());
         planoAcao.setComo(dto.getComo());
         planoAcao.setQuantocusta(dto.getQuantocusta());
-        planoAcao.setInicio(dto.getInicio());
         planoAcao.setTermino(dto.getTermino());
-        planoAcao.setNovoprazo(dto.getNovoprazo());
 
         Colaborador colaborador = colaboradorService
                 .obterPorId(dto.getId_responsavelacao())

@@ -13,6 +13,8 @@ public interface PlanoAcaoService {
 
     void deletar(PlanoAcao planoAcao);
 
+    List<PlanoAcao> buscarTodos();
+
     List<PlanoAcao> buscar(PlanoAcao planoAcaoFiltro);
 
     void validar(PlanoAcao planoAcao);

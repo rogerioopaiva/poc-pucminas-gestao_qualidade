@@ -5,7 +5,7 @@ import Card from '../../components/card'
 import FormGroup from '../../components/form-group'
 import ColaboradoresTable from './colaboradoresTable'
 import ColaboradorService from '../../app/service/colaboradorService'
-import LocalStorageService from '../../app/service/localstorageService'
+
 
 import * as messages from '../../components/toastr'
 
@@ -33,13 +33,11 @@ class ConsultaColaboradores extends React.Component{
             messages.mensagemErro('O preenchimento do campo Nome do colaborador é obrigatório.')
             return false;
         }
-        const usuarioLogado = LocalStorageService.obterItem('_usuario_logado');
 
         const colaboradorFiltro = {
             nomecolaborador: this.state.nomecolaborador,
             setor: this.state.setor,
             cargo: this.state.cargo,
-            usuario: usuarioLogado.id
         }
 
         this.service

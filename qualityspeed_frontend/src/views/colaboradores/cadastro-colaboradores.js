@@ -16,7 +16,7 @@ class CadastroColaboradores extends React.Component {
         nomecolaborador: '',
         setor: '', 
         cargo: '',
-        dataadmissao: new Date('2018-06-09T00:00:00.000Z'),
+        dataadmissao: new Date('2020-06-09T00:00:00.000Z'),
         status: '',
         atualizando: false,
     }

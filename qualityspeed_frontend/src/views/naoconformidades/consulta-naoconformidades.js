@@ -37,8 +37,8 @@ class ConsultaNaoConformidade extends React.Component {
 
         const naoConformidadeFiltro = {
             descricao: this.state.descricao,
-            nomenaoconformidade: this.state.nomenaoconformidade,
-            tipo: this.state.classificacao,
+            setor: this.state.setor,
+            acaocorretiva: this.state.acaocorretiva,
             usuario: usuarioLogado.id
         }
 
@@ -123,10 +123,7 @@ class ConsultaNaoConformidade extends React.Component {
                                     onChange={e => this.setState({ descricao: e.target.value })}
                                     placeholder="Digite a Descrição" />
                             </FormGroup>
-
-                      
-
-                            <FormGroup htmlFor="inputClass" label="Classificação: *">
+                            <FormGroup htmlFor="inputClass" label="Setor: *">
                                 <input type="text"
                                     className="form-control"
                                     id="inputClass"
@@ -134,6 +131,15 @@ class ConsultaNaoConformidade extends React.Component {
                                     onChange={e => this.setState({ classificacao: e.target.value })}
                                     placeholder="Digite a descrição" />
                             </FormGroup>
+                             <FormGroup htmlFor="inputClass" label="Ação Corretiva: *">
+                                <input type="text"
+                                    className="form-control"
+                                    id="inputClass"
+                                    value={this.state.classificacao}
+                                    onChange={e => this.setState({ classificacao: e.target.value })}
+                                    placeholder="Digite a descrição" />
+                            </FormGroup>
+
 
                             <button onClick={this.buscar}
                                 type="button"

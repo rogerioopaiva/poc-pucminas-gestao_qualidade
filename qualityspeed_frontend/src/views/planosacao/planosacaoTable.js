@@ -56,8 +56,8 @@ export default (props) => {
                     <th scope="col">Porque</th>
                     <th scope="col">Onde</th>
                     <th scope="col">Quem</th>
-                    <th scope="col">Situação</th>
-                    <th scope="col">Ações</th>
+                    {/* <th scope="col">Situação</th>
+                    <th scope="col">Ações</th> */}
                 </tr>
             </thead>
             <tbody>{rows}</tbody>

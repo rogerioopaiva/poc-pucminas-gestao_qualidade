@@ -15,10 +15,10 @@ public interface ColaboradorService {
 
     List<Colaborador> buscar( Colaborador colaboradorFiltro);
 
+    List<Colaborador> buscarTodos();
+
     void validar(Colaborador colaborador);
 
     Optional<Colaborador>obterPorId(Long id);
-
-    List<Colaborador>obterNomeColaborador(String colaborador);
 
 }

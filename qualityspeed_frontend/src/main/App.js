@@ -15,17 +15,16 @@ import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 
 class App extends React.Component {
-
-    render(){
-        return(
-            <ProvedorAutenticacao>
-                <Navbar />
-                <div className="container">
-                    <Rotas />
-                </div>
-            </ProvedorAutenticacao>
-        )
-    }
+  render() {
+    return (
+      <ProvedorAutenticacao>
+        <Navbar />
+        <div className="container">
+          <Rotas />
+        </div>
+      </ProvedorAutenticacao>
+    );
+  }
 }
 
 export default App
