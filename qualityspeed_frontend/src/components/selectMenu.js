@@ -4,15 +4,15 @@ export default (props) => {
 
     const options = props.lista.map( (option, item) => {
         return (
-          <option key={item.id} value={item.valor}>
+          <option key={item} value={option.id}>
             {option.nomecolaborador}
           </option>
         );
     })
 
-    return (    
-        <select {...props} >
-            {options}
-        </select>
+    return (
+      <select {...props} >
+        {options}
+      </select>    
     )
 }

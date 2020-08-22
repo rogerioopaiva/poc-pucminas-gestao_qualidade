@@ -15,8 +15,8 @@ import { Button } from 'primereact/button'
 class ConsultaDocumentos extends React.Component{
 
     state = {
-        descricao: '',
-        nomedocumento: '',
+        descricaoDocumento: '',
+        nomeDocumento: '',
         classificacao: '',
         showConfirmDialog: false,
         documentoDeletar: {},
@@ -29,14 +29,14 @@ class ConsultaDocumentos extends React.Component{
     }
 
     buscar = () => {
-        if(!this.state.descricao){
-            messages.mensagemErro('O preenchimento do campo Descrição é obrigatório.')
+        if(!this.state.descricaoDocumento){
+            messages.mensagemErro('O preenchimento do campo Descrição do documento é obrigatório.')
             return false;
         }
 
         const documentoFiltro = {
-            descricao: this.state.descricao,
-            nomedocumento: this.state.nomedocumento,
+            descricaoDocumento: this.state.descricaoDocumento,
+            nomeDocumento: this.state.nomeDocumento,
             classificacao: this.state.classificacao
         }
 
@@ -117,8 +117,10 @@ class ConsultaDocumentos extends React.Component{
                                 <input type="text"
                                     className="form-control"
                                     id="inputDescricao"
-                                    value={this.state.descricao}
-                                    onChange={e => this.setState({descricao: e.target.value})}
+                                    value={this.state.descricaoDocumento
+                        }
+                                    onChange={e => this.setState({descricaoDocumento
+                        : e.target.value})}
                                     placeholder="Digite a Descrição" />
                             </FormGroup>
 
@@ -126,8 +128,8 @@ class ConsultaDocumentos extends React.Component{
                                 <input type="text"
                                     className="form-control"
                                     id="inputClass"
-                                    value={this.state.nomedocumento}
-                                    onChange={e => this.setState({nomedocumento: e.target.value})}
+                                    value={this.state.nomeDocumento}
+                                    onChange={e => this.setState({nomeDocumento: e.target.value})}
                                     placeholder="Digite o nome do documento" />
                             </FormGroup>
 

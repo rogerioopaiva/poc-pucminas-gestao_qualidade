@@ -17,14 +17,13 @@ class CadastroDocumentos extends React.Component {
     descricao: "",
     nomedocumento: "",
     classificacao: "",
-    id_colaborador: "",
+    id_colaborador: 0,
     ultimarevisao: new Date("2020-06-09T00:00:00.000Z"),
-    proximarevisao: new Date("2020-06-09T00:00:00.000Z"),
+    proxrevisao: new Date("2020-06-09T00:00:00.000Z"),
     status: "",
     usuario: null,
     atualizando: false,
     lista: [],
-    itemSelecionado: {},
   };
 
   constructor() {
@@ -58,7 +57,7 @@ class CadastroDocumentos extends React.Component {
       classificacao,
       id_colaborador,
       ultimarevisao,
-      proximarevisao,
+      proxrevisao,
     } = this.state;
     const documento = {
       descricao,
@@ -66,7 +65,7 @@ class CadastroDocumentos extends React.Component {
       classificacao,
       id_colaborador,
       ultimarevisao,
-      proximarevisao,
+      proxrevisao,
     };
 
     try {
@@ -122,7 +121,6 @@ class CadastroDocumentos extends React.Component {
   handleChange = (event) => {
     const value = event.target.value;
     const name = event.target.name;
-
     this.setState({ [name]: value });
   };
 
@@ -159,7 +157,7 @@ class CadastroDocumentos extends React.Component {
       >
         <div className="row">
           <div className="col-md-12">
-            <FormGroup id="inputDescricao" label="Descrição: *">
+            <FormGroup id="inputDescricao" label="Descrição do documento: *">
               <input
                 id="inputDescricao"
                 type="text"
@@ -200,9 +198,9 @@ class CadastroDocumentos extends React.Component {
             <FormGroup id="inputResponsavel" label=" Nome do Responsável: *">
               <SelectMenu
                 lista={this.state.lista}
-                id="inputnomeresponsavel"
-                name="nomeresponsavel"
-                value={this.state.itemSelecionado}
+                id="inputResponsavel"
+                name="id_colaborador"
+                value={this.state.id_colaborador}
                 onChange={this.handleChange}
                 className="form-control"
               />
