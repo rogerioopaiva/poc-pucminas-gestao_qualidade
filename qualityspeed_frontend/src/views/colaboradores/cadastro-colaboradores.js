@@ -18,7 +18,8 @@ class CadastroColaboradores extends React.Component {
         cargo: '',
         dataadmissao: new Date('2020-06-09T00:00:00.000Z'),
         status: '',
-        atualizando: false,
+        usuario: null,
+        atualizando: false
     }
 
     constructor(){
@@ -28,7 +29,7 @@ class CadastroColaboradores extends React.Component {
 
     componentDidMount(){
         const params = this.props.match.params
-        console.log(params)
+
         if(params.id){
             this.service
             .obterPorId(params.id)
@@ -164,7 +165,7 @@ class CadastroColaboradores extends React.Component {
                   </button>
                 )}
                 <button
-                  onClick={(e) => this.props.history.push("/home")}
+                  onClick={e => this.props.history.push("/consulta-colaboradores")}
                   className="btn btn-danger"
                 >
                   <i className="pi pi-times"></i> Cancelar

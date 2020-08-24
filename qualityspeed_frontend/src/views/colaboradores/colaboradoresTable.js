@@ -7,7 +7,6 @@ export default props => {
         return (
             <tr key={colaborador.id}>
             <td>{colaborador.nomecolaborador}</td>
-                {/* <td>{ currencyFormatter.format(colaborador.valor, { locale: 'pt-BR'})}</td> */}
                 <td>{colaborador.setor}</td>
                 <td>{colaborador.cargo}</td>
                 <td>{colaborador.dataadmissao}</td>

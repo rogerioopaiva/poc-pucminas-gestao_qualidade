@@ -26,7 +26,7 @@ export default class documentoService extends ApiService {
                 }
 
                 if (!documento.classificacao) {
-                    erros.push("Informe a classificacao.");
+                    erros.push("Informe a classificaçao.");
                 }
 
                 if(erros && erros.length > 0){
@@ -43,27 +43,27 @@ export default class documentoService extends ApiService {
                  }
 
                  consultar(documentoFiltro) {
-                   let params = `?ano=${documentoFiltro.ano}`;
+                   let params = `?nomeDocumento=${documentoFiltro.nomeDocumento}`;
 
                    if (documentoFiltro.mes) {
-                     params = `${params}&mes=${documentoFiltro.mes}`;
+                     params = `${params}&classificacao=${documentoFiltro.classificacao}`;
                    }
 
                    if (documentoFiltro.tipoDocumento) {
-                     params = `${params}&tipo=${documentoFiltro.tipoDocumento}`;
+                     params = `${params}&ultimarevisao=${documentoFiltro.ultimarevisao}`;
                    }
 
-                   if (documentoFiltro.status) {
-                     params = `${params}&status=${documentoFiltro.status}`;
-                   }
+                  //  if (documentoFiltro.status) {
+                  //    params = `${params}&status=${documentoFiltro.status}`;
+                  //  }
 
-                   if (documentoFiltro.usuario) {
-                     params = `${params}&usuario=${documentoFiltro.usuario}`;
-                   }
+                  //  if (documentoFiltro.usuario) {
+                  //    params = `${params}&usuario=${documentoFiltro.usuario}`;
+                  //  }
 
-                   if (documentoFiltro.descricao) {
-                     params = `${params}&descricao=${documentoFiltro.descricao}`;
-                   }
+                  //  if (documentoFiltro.descricao) {
+                  //    params = `${params}&descricao=${documentoFiltro.descricao}`;
+                  //  }
 
                    return this.get(params);
                  }

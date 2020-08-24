@@ -7,9 +7,10 @@ export default props => {
         return (
             <tr key={documento.id}>
                 <td>{documento.descricao}</td>
-                {/* <td>{ currencyFormatter.format(documento.valor, { locale: 'pt-BR'})}</td> */}
                 <td>{documento.nomedocumento}</td>
                 <td>{documento.classificacao}</td>
+                <td>{documento.ultimarevisao}</td>
+                <td>{documento.colaborador.nomecolaborador}</td>
                 <td>{documento.status}</td>
                 <td>
                     <button className="btn btn-success" title="Aprovar"
@@ -18,12 +19,6 @@ export default props => {
                             type="button">
                             <i className="pi pi-check"></i>
                     </button>
-                    {/* <button className="btn btn-warning" title="Cancelar"
-                            disabled={ documento.status !== 'PENDENTE'}
-                            onClick={e => props.alterarStatus(documento, 'CANCELADO')}
-                            type="button">
-                            <i className="pi pi-times"></i>
-                    </button> */}
                     <button type="button" 
                             className="btn btn-primary" title="Editar"
                             onClick={e => props.editarAction(documento.id)}>
@@ -40,19 +35,18 @@ export default props => {
     })
 
     return (
-        <table className="table table-hover">
-            <thead>
-                <tr>
-                    <th scope="col">Descrição</th>
-                    <th scope="col">Nome do documento</th>
-                    {/* <th scope="col">Data</th> */}
-                    <th scope="col">Classificação</th>
-                    <th scope="col">Responsável documento</th>
-                </tr>
-            </thead>
-        <tbody>
-            {rows}
-        </tbody>
-        </table>
+      <table className="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Descrição</th>
+            <th scope="col">Nome do documento</th>
+            <th scope="col">Classificação</th>
+            <th scope="col">Última Revisão</th>
+            <th scope="col">Responsável documento</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>{rows}</tbody>
+      </table>
     );
 }

@@ -17,7 +17,7 @@ class CadastroDocumentos extends React.Component {
     descricao: "",
     nomedocumento: "",
     classificacao: "",
-    id_colaborador: 0,
+    id_colaborador: {},
     ultimarevisao: new Date("2020-06-09T00:00:00.000Z"),
     proxrevisao: new Date("2020-06-09T00:00:00.000Z"),
     status: "",
@@ -92,8 +92,9 @@ class CadastroDocumentos extends React.Component {
       descricao,
       nomedocumento,
       classificacao,
-      revisoes,
-      usuario,
+      id_colaborador,
+      ultimarevisao,
+      proxrevisao,
       status,
       id,
     } = this.state;
@@ -101,8 +102,9 @@ class CadastroDocumentos extends React.Component {
       descricao,
       nomedocumento,
       classificacao,
-      revisoes,
-      usuario,
+      id_colaborador,
+      ultimarevisao,
+      proxrevisao,
       status,
       id,
     };
@@ -125,28 +127,7 @@ class CadastroDocumentos extends React.Component {
   };
 
   render() {
-    // this.colaboradorService
-    //   .obterPorResponsaveis
-    //   .then((resposta) => {
-    //     debugger;
-    //     const lista2 = resposta.data;
-    //     for (var i = 0; i < lista2.length; i++) {
-    //       var obj = lista2[i];
-    //       console.log(obj.id);
-    //     }
-    //     this.setState({ atualizando: true })
-    //   })
-    //   .catch((erros) => {
-    //     messages.mensagemErro(erros.response.data);
-    //   });
-    // let lista2 = colaboradorService.obterPorResponsaveis();
-
-    // const lista = [
-    //   { label: "Selecione...", value: "" },
-    //   { label: "Cabral Couto", value: 4 },
-    //   { label: "José Couto", value: 5 },
-    // ];
-
+    
     return (
       <Card
         title={
@@ -206,18 +187,6 @@ class CadastroDocumentos extends React.Component {
               />
             </FormGroup>
           </div>
-          {/* <div className="col-md-6">
-            <FormGroup id="inputResponsavel" label=" Nome do Responsável: *">
-              <SelectMenu
-                lista={lista}
-                id="inputnomeresponsavel"
-                name="nomeresponsavel"
-                value={this.state.lista}
-                onChange={this.handleChange}
-                className="form-control"
-              />
-            </FormGroup>
-          </div> */}
           <div className="col-md-3">
             <FormGroup id="inputUltimaRevisao" label="Última revisão: *">
               <Calendar
@@ -265,7 +234,7 @@ class CadastroDocumentos extends React.Component {
               </button>
             )}
             <button
-              onClick={(e) => this.props.history.push("/home")}
+              onClick={(e) => this.props.history.push("/consulta-documentos")}
               className="btn btn-danger"
             >
               <i className="pi pi-times"></i> Cancelar
