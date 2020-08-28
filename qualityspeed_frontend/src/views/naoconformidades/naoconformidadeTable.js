@@ -5,38 +5,38 @@ export default props => {
     const rows = props.naoconformidades.map(naoconformidade => {
         return (
           <tr key={naoconformidade.id}>
-            <td>{naoconformidade.descricao}</td>
+            <td>{naoconformidade.titulo}</td>
             <td>{naoconformidade.setor}</td>
-            <td>{naoconformidade.acaocorretiva}</td>
-            <td>{naoconformidade.responsavelcorretiva}</td>
+            <td>{naoconformidade.causa}</td>
             <td>{naoconformidade.status}</td>
             <td>
               <button
-                className="btn btn-success"
+                className="btn btn-warning"
                 title="Efetivar"
                 disabled={naoconformidade.status !== "PENDENTE"}
                 onClick={(e) =>
-                  props.alterarStatus(naoconformidade, "EFETIVADO")
+                  props.alterarStatus(naoconformidade, "EMANALISE")
                 }
                 type="button"
               >
-                <i className="pi pi-check"></i>
+                <i className="pi pi-bell"></i>
               </button>
               <button
-                className="btn btn-warning"
-                title="Cancelar"
-                disabled={naoconformidade.status !== "PENDENTE"}
+                className="btn btn-success"
+                title="Finalizar"
+                disabled={naoconformidade.status !== "EMANALISE"}
                 onClick={(e) =>
-                  props.alterarStatus(naoconformidade, "CANCELADO")
+                  props.alterarStatus(naoconformidade, "FINALIZADO")
                 }
                 type="button"
               >
-                <i className="pi pi-times"></i>
+                <i className="pi pi pi-check"></i>
               </button>
               <button
                 type="button"
                 className="btn btn-primary"
                 title="Editar"
+                disabled={naoconformidade.status === "FINALIZADO"}
                 onClick={(e) => props.editarAction(naoconformidade.id)}
               >
                 <i className="pi pi-pencil"></i>
@@ -58,13 +58,10 @@ export default props => {
         <table className="table table-hover">
             <thead>
                 <tr>
-                    <th scope="col">Descrição</th>
-                    {/* <th scope="col">Valor</th> */}
+                    <th scope="col">Título</th>
                     <th scope="col">Setor</th>
-                    <th scope="col">Ação Corretiva</th>
-                    <th scope="col">Responsável Corretiva</th>
-                    {/* <th scope="col">Situação</th>
-                    <th scope="col">Ações</th> */}
+                    <th scope="col">Causa</th>
+                    <th scope="col">Status</th>
                 </tr>
             </thead>
             <tbody>

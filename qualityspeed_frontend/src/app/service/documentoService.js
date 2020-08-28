@@ -18,7 +18,7 @@ export default class documentoService extends ApiService {
                     const erros = [];
 
                 if (!documento.descricao) {
-                    erros.push("Informe a descrição.")
+                    erros.push("Informe a descrição do documento.")
                 }
 
                 if (!documento.nomedocumento) {
@@ -43,14 +43,18 @@ export default class documentoService extends ApiService {
                  }
 
                  consultar(documentoFiltro) {
-                   let params = `?nomeDocumento=${documentoFiltro.nomeDocumento}`;
+                   let params = `?`;
 
-                   if (documentoFiltro.mes) {
-                     params = `${params}&classificacao=${documentoFiltro.classificacao}`;
+                   if (documentoFiltro.descricao) {
+                     params = `${params}&descricao=${documentoFiltro.descricao}`;
                    }
 
-                   if (documentoFiltro.tipoDocumento) {
-                     params = `${params}&ultimarevisao=${documentoFiltro.ultimarevisao}`;
+                   if (documentoFiltro.nomedocumento) {
+                     params = `${params}&nomedocumento=${documentoFiltro.nomedocumento}`;
+                   }
+
+                   if (documentoFiltro.classificacao) {
+                     params = `${params}&classificacao=${documentoFiltro.classificacao}`;
                    }
 
                   //  if (documentoFiltro.status) {

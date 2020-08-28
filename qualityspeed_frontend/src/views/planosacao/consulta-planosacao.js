@@ -15,10 +15,9 @@ class ConsultaPlanosAcao extends React.Component {
         oque: '',
         porque: '',
         onde: '',
-        quem: '',
         showConfirmDialog: false,
         planosacaoDeletar: {},
-        planosacaos: [],
+        planoacoes: [],
     };
 
     constructor() {
@@ -37,9 +36,8 @@ class ConsultaPlanosAcao extends React.Component {
 
         const planosacaoFiltro = {
             oque: this.state.oque,
-            porque: this.state.porque,
-            onde: this.state.onde,
-            quem: this.state.quem,
+            como: this.state.porque,
+            porque: this.state.onde,
             usuario: usuarioLogado.id,
         };
 
@@ -50,7 +48,7 @@ class ConsultaPlanosAcao extends React.Component {
                 if (lista.length < 1) {
                     messages.mensagemAlerta("Nenhum resultado encontrado.");
                 }
-                this.setState({ planosacaos: lista });
+                this.setState({ planoacoes: lista });
             })
             .catch((error) => {
                 console.log(error);
@@ -73,10 +71,10 @@ class ConsultaPlanosAcao extends React.Component {
         this.service
             .deletar(this.state.planosacaoDeletar.id)
             .then((response) => {
-                const planosacaos = this.state.planosacaos;
-                const index = planosacaos.indexOf(this.state.planosacaoDeletar);
-                planosacaos.splice(index, 1);
-                this.setState({ planosacaos, showConfirmDialog: false });
+                const planoacoes = this.state.planoacoes;
+                const index = planoacoes.indexOf(this.state.planosacaoDeletar);
+                planoacoes.splice(index, 1);
+                this.setState({ planoacoes, showConfirmDialog: false });
                 messages.mensagemSucesso("Plano de ação deletada com sucesso!");
             })
             .catch((error) => {
@@ -90,8 +88,8 @@ class ConsultaPlanosAcao extends React.Component {
 
     alterarStatus = (planosacao, status) => {
         this.service.alterarStatus(planosacao.id, status).then((response) => {
-            const planosacaos = this.state.planosacaos;
-            const index = planosacaos.indexOf(planosacao);
+            const planoacoes = this.state.planoacoes;
+            const index = planoacoes.indexOf(planosacao);
             if (index !== -1) {
                 planosacao["status"] = status;
                 planosacao[index] = planosacao;
@@ -120,51 +118,38 @@ class ConsultaPlanosAcao extends React.Component {
                 <div className="row">
                     <div className="col-md-6">
                         <div className="bs-component">
-                            <FormGroup htmlFor="inputOque" label="O que: *">
+                            <FormGroup htmlFor="inputOque" label="O que?: *">
                                 <input
                                     type="text"
                                     className="form-control"
-                                    id="inputoque"
+                                    id="inputOque"
                                     value={this.state.oque}
                                     onChange={(e) => this.setState({ oque: e.target.value })}
-                                    placeholder="Digite o que aconteceu"
+                                    placeholder="Informe o que aconteceu."
                                 />
                             </FormGroup>
 
-                            <FormGroup htmlFor="inputPorque" label="Porque: *">
+                            <FormGroup htmlFor="inputPorque" label="porque?: *">
                                 <input
                                     type="text"
                                     className="form-control"
-                                    id="inputporque"
+                                    id="inputPorque"
                                     value={this.state.porque}
                                     onChange={(e) => this.setState({ porque: e.target.value })}
-                                    placeholder="Digite o porque"
+                                    placeholder="Informe o porque."
                                 />
                             </FormGroup>
 
-                            <FormGroup htmlFor="inputOnde" label="Onde: *">
+                            <FormGroup htmlFor="inputOnde" label="Onde?: *">
                                 <input
                                     type="text"
                                     className="form-control"
-                                    id="inputonde"
+                                    id="inputOnde"
                                     value={this.state.onde}
                                     onChange={(e) =>
                                         this.setState({ onde: e.target.value })
                                     }
-                                    placeholder="Digite onde"
-                                />
-                            </FormGroup>
-
-                            <FormGroup htmlFor="inputQuem" label="Quem: *">
-                                <input
-                                    type="text"
-                                    className="form-control"
-                                    id="inputonde"
-                                    value={this.state.quem}
-                                    onChange={(e) =>
-                                        this.setState({ quem: e.target.value })
-                                    }
-                                    placeholder="Digite quem"
+                                    placeholder="Informe onde."
                                 />
                             </FormGroup>
 
@@ -190,7 +175,7 @@ class ConsultaPlanosAcao extends React.Component {
                     <div className="col-md-12">
                         <div className="bs-component">
                             <PlanosAcaoTable
-                                planosacaos={this.state.planosacaos}
+                                planoacoes={this.state.planoacoes}
                                 deleteAction={this.abrirConfirmacao}
                                 editarAction={this.editar}
                                 alterarStatus={this.alterarStatus}

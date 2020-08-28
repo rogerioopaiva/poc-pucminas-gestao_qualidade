@@ -6,30 +6,33 @@ import { Calendar } from "primereact/calendar";
 import { withRouter } from 'react-router-dom'
 import FormGroup from '../../components/form-group'
 import * as messages from '../../components/toastr'
-import SelectMenu from "../../components/selectMenu";
+//import SelectMenu from "../../components/selectMenu";
+import ColaboradorService from "../../app/service/colaboradorService";
 import NaoConformidadeService from '../../app/service/naoConformidadeService'
 import { ptBr } from "../../app/service/dateConfig";
 
 class CadastroNaoConformidade extends React.Component {
   state = {
     id: null,
-    dataocorrencia: new Date("2020-06-09T00:00:00.000Z"),
-    descricao: "",
+    dataocorrencia: new Date("dd-MM-YYYY"),
+    titulo: "",
     setor: "",
-    responsavelcorretiva:"",
+    //id_colaboradorcorretiva: {},
     causa: "",
     acaocorretiva: "",
     status: "",
-    prazoconclusao: new Date("2020-06-09T00:00:00.000Z"),
+    prazoconclusao: new Date("dd-MM-YYYY"),
     usuario: null,
     atualizando: false,
+    lista: [],
   };
 
   constructor() {
     super();
-    debugger;
     this.service = new NaoConformidadeService();
   }
+
+  colaboradorService = new ColaboradorService();
 
   componentDidMount() {
     const params = this.props.match.params;
@@ -44,14 +47,33 @@ class CadastroNaoConformidade extends React.Component {
           messages.mensagemErro(erros.response.data);
         });
     }
+    this.colaboradorService
+      .obterPorResponsaveis()
+      .then((response) => this.setState({ lista: response.data }));
   }
 
   submit = () => {
-    const { dataocorrencia, descricao, setor, responsavelcorretiva, causa, acaocorretiva, prazoconclusao } = this.state;
-    const documento = { dataocorrencia, descricao, setor, responsavelcorretiva, causa, acaocorretiva, prazoconclusao };
+    const {
+      dataocorrencia,
+      titulo,
+      setor,
+      //id_colaboradorcorretiva,
+      causa,
+      acaocorretiva,
+      prazoconclusao,
+    } = this.state;
+    const naoconformidades = {
+      dataocorrencia,
+      titulo,
+      setor,
+      //id_colaboradorcorretiva,
+      causa,
+      acaocorretiva,
+      prazoconclusao,
+    };
 
     try {
-      this.service.validar(documento);
+      this.service.validar(naoconformidades);
     } catch (erro) {
       const mensagens = erro.mensagens;
       mensagens.forEach((msg) => messages.mensagemErro(msg));
@@ -59,9 +81,9 @@ class CadastroNaoConformidade extends React.Component {
     }
 
     this.service
-      .salvar(documento)
+      .salvar(naoconformidades)
       .then((response) => {
-        this.props.history.push("/cadastro-naoconformidades");
+        this.props.history.push("/consulta-naoconformidades");
         messages.mensagemSucesso("Não conformidade cadastrado com sucesso!");
       })
       .catch((error) => {
@@ -70,11 +92,11 @@ class CadastroNaoConformidade extends React.Component {
   };
 
   atualizar = () => {
-    const { descricao, setor, acaocorretiva, usuario, status, id } = this.state;
-    const documento = { descricao, setor, acaocorretiva, usuario, status, id };
+    const { titulo, setor, causa, status, id } = this.state;
+    const naoconformidade = { titulo, setor, causa, status, id };
 
     this.service
-      .atualizar(documento)
+      .atualizar(naoconformidade)
       .then((response) => {
         this.props.history.push("/consulta-naoconformidades");
         messages.mensagemSucesso("Não conformidade atualizada com sucesso!");
@@ -87,17 +109,10 @@ class CadastroNaoConformidade extends React.Component {
   handleChange = (event) => {
     const value = event.target.value;
     const name = event.target.name;
-
     this.setState({ [name]: value });
   };
 
   render() {
-    const lista = [
-      { label: "Selecione...", value: "" },
-      { label: "Cabral Couto", value: 4 },
-      { label: "José Couto", value: 5 },
-    ];
-
     return (
       <Card
         title={
@@ -107,38 +122,50 @@ class CadastroNaoConformidade extends React.Component {
         }
       >
         <div className="row">
-        <div className="col-md-3">
-          <FormGroup id="inputDataOcorrencia" label="Data da Ocorrência: *">
-            <Calendar
-              value={this.state.dataocorrencia}
-              onChange={(e) => this.setState({ dataocorrencia: e.value.toLocaleDateString().replace(/\//g, '-') })}
-              showIcon={true}
-              dateFormat="dd/mm/yy"
-              locale={ptBr}
-            />
-          </FormGroup>
-        </div>
           <div className="col-md-3">
-            <FormGroup id="inputPrazoConclusao" label="Prazo para Conclusão: *">
+            <FormGroup id="inputDataOcorrencia" label="Data da Ocorrência: *">
               <Calendar
-                value={this.state.prazoconclusao}
-                onChange={(e) => this.setState({ prazoconclusao: e.value.toLocaleDateString().replace(/\//g, '-') })}
+                value={this.state.dataocorrencia}
+                onChange={(e) =>
+                  this.setState({
+                    dataocorrencia: e.value
+                      .toLocaleDateString()
+                      .replace(/\//g, "-"),
+                  })
+                }
                 showIcon={true}
                 dateFormat="dd/mm/yy"
                 locale={ptBr}
               />
             </FormGroup>
           </div>
+          {/* <div className="col-md-3">
+            <FormGroup id="inputPrazoConclusao" label="Prazo para Conclusão: *">
+              <Calendar
+                value={this.state.prazoconclusao}
+                onChange={(e) =>
+                  this.setState({
+                    prazoconclusao: e.value
+                      .toLocaleDateString()
+                      .replace(/\//g, "-"),
+                  })
+                }
+                showIcon={true}
+                dateFormat="dd/mm/yy"
+                locale={ptBr}
+              />
+            </FormGroup>
+          </div> */}
         </div>
         <div className="row">
           <div className="col-md-8">
-            <FormGroup id="inputDescricao" label="Descrição: *">
+            <FormGroup id="inputTitulo" label="Título: *">
               <input
-                id="inputDescricao"
+                id="inputTitulo"
                 type="text"
                 className="form-control"
-                name="descricao"
-                value={this.state.descricao}
+                name="titulo"
+                value={this.state.titulo}
                 onChange={this.handleChange}
               />
             </FormGroup>
@@ -158,24 +185,27 @@ class CadastroNaoConformidade extends React.Component {
             </FormGroup>
           </div>
         </div>
-        <div className="row">
+        {/* <div className="row">
           <div className="col-md-4">
-            <FormGroup id="inputResponsavelCorretiva" label="Responsável corretiva: *" >
+            <FormGroup
+              id="inputid_colaboradorcorretiva"
+              label="Responsável corretiva: *"
+            >
               <SelectMenu
-                lista={lista}
+                lista={this.state.lista}
                 id="inputnomeresponsavel"
-                name="responsavelcorretiva"
-                value={this.state.responsavelcorretiva}
+                name="id_colaboradorcorretiva"
+                value={this.state.id_colaboradorcorretiva}
                 onChange={this.handleChange}
                 className="form-control"
               />
             </FormGroup>
           </div>
-        </div>
+        </div> */}
         <div className="row">
           <div className="col-md-8">
             <FormGroup id="inputCausa" label="Causa: *">
-              <input
+              <textarea
                 id="inputCausa"
                 type="text"
                 className="form-control"
@@ -186,7 +216,7 @@ class CadastroNaoConformidade extends React.Component {
             </FormGroup>
           </div>
         </div>
-        <div className="row">
+        {/* <div className="row">
           <div className="col-md-12">
             <FormGroup id="inputAcaoCorretiva" label="Ação corretiva: *">
               <input
@@ -199,7 +229,7 @@ class CadastroNaoConformidade extends React.Component {
               />
             </FormGroup>
           </div>
-        </div>
+        </div> */}
         <div className="row">
           <div className="col-md-6">
             {this.state.atualizando ? (
@@ -212,7 +242,9 @@ class CadastroNaoConformidade extends React.Component {
               </button>
             )}
             <button
-              onClick={(e) => this.props.history.push("/home")}
+              onClick={(e) =>
+                this.props.history.push("/consulta-naoconformidades")
+              }
               className="btn btn-danger"
             >
               <i className="pi pi-times"></i> Cancelar

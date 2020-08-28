@@ -7,31 +7,33 @@ import { withRouter } from "react-router-dom";
 import FormGroup from "../../components/form-group";
 import * as messages from "../../components/toastr";
 import SelectMenu from "../../components/selectMenu";
+import SelectType from "../../components/selectType";
 import planosAcaoService from "../../app/service/planosAcaoService";
+import ColaboradorService from "../../app/service/colaboradorService";
 import { ptBr } from "../../app/service/dateConfig";
 
 class CadastroPlanosAcao extends React.Component {
   state = {
     id: null,
-    dataocorrencia: new Date("2020-06-09T00:00:00.000Z"),
+    comeco: new Date("dd-MM-YYYY"),
+    termino: new Date("dd-MM-YYYY"),
+    tipoacao: "",
     oque: "",
     porque: "",
     onde: "",
-    quem: "",
-    quando: new Date("2020-06-09T00:00:00.000Z"),
     como: "",
-    quantocusta: "",
-    termino: new Date("2020-06-09T00:00:00.000Z"),
-    naoconformidade: "",
-    responsavelacao: "",
+    quem: {},
     status: null,
     atualizando: false,
+    lista: [],
   };
 
   constructor() {
     super();
     this.service = new planosAcaoService();
   }
+
+  colaboradorService = new ColaboradorService();
 
   componentDidMount() {
     const params = this.props.match.params;
@@ -46,34 +48,31 @@ class CadastroPlanosAcao extends React.Component {
           messages.mensagemErro(erros.response.data);
         });
     }
+    this.colaboradorService
+      .obterPorResponsaveis()
+      .then((response) => this.setState({ lista: response.data }));
   }
 
   submit = () => {
     const {
-      dataocorrencia,
+      comeco,
+      termino,
+      tipoacao,
       oque,
       porque,
       onde,
-      quem,
-      quando,
       como,
-      quantocusta,
-      termino,
-      naoconformidade,
-      responsavelacao
+      quem,
     } = this.state;
     const planoacao = {
-      dataocorrencia,
+      comeco,
+      termino,
+      tipoacao,
       oque,
       porque,
       onde,
-      quem,
       como,
-      quando,
-      quantocusta,
-      termino,
-      naoconformidade,
-      responsavelacao
+      quem,
     };
 
     try {
@@ -87,7 +86,7 @@ class CadastroPlanosAcao extends React.Component {
     this.service
       .salvar(planoacao)
       .then((response) => {
-        this.props.history.push("/cadastro-planosacao");
+        this.props.history.push("/consulta-planosacao");
         messages.mensagemSucesso("Plano ação cadastrado com sucesso!");
       })
       .catch((error) => {
@@ -96,8 +95,8 @@ class CadastroPlanosAcao extends React.Component {
   };
 
   atualizar = () => {
-    const { dataocorrencia, oque, porque, onde, quem, id } = this.state;
-    const planoacao = { dataocorrencia, oque, porque, onde, quem, id };
+    const { comeco, termino, tipoacao, oque, porque, onde, como, quem, id } = this.state;
+    const planoacao = { comeco, termino, tipoacao, oque, porque, onde, como, quem, id };
 
     this.service
       .atualizar(planoacao)
@@ -118,7 +117,7 @@ class CadastroPlanosAcao extends React.Component {
   };
 
   render() {
-    const lista = [{ label: "Selecione...", value: "" }];
+    const tipoacao = this.service.obterListaTipoAcao();
 
     return (
       <Card
@@ -130,14 +129,12 @@ class CadastroPlanosAcao extends React.Component {
       >
         <div className="row">
           <div className="col-md-3">
-            <FormGroup id="inputDataOcorrencia" label="Data ocorrência: *">
+            <FormGroup id="inputComeco" label="Quando começa: *">
               <Calendar
-                value={this.state.dataocorrencia}
+                value={this.state.comeco}
                 onChange={(e) =>
                   this.setState({
-                    dataocorrencia: e.value
-                      .toLocaleDateString()
-                      .replace(/\//g, "-"),
+                    quando: e.value.toLocaleDateString().replace(/\//g, "-"),
                   })
                 }
                 showIcon={true}
@@ -146,10 +143,37 @@ class CadastroPlanosAcao extends React.Component {
               />
             </FormGroup>
           </div>
+          <div className="col-md-3">
+            <FormGroup id="inputQuando" label="Quando termina: *">
+              <Calendar
+                value={this.state.termino}
+                onChange={(e) =>
+                  this.setState({
+                    quando: e.value.toLocaleDateString().replace(/\//g, "-"),
+                  })
+                }
+                showIcon={true}
+                dateFormat="dd/mm/yy"
+                locale={ptBr}
+              />
+            </FormGroup>
+          </div>
+          <div className="col-md-4">
+            <FormGroup id="selectTipoAcao" label="Tipo de ação: *">
+              <SelectType
+                lista={tipoacao}
+                id="selectTipoAcao"
+                name="tipoacao"
+                value={this.state.tipoacao}
+                onChange={this.handleChange}
+                className="form-control"
+              />
+            </FormGroup>
+          </div>
           <div className="col-md-12">
-            <FormGroup id="inputoque" label="O que ocorreu: *">
+            <FormGroup id="inputOque" label="O que deve ser feito: *">
               <input
-                id="inputoque"
+                id="inputOque"
                 type="text"
                 className="form-control"
                 name="oque"
@@ -158,12 +182,24 @@ class CadastroPlanosAcao extends React.Component {
               />
             </FormGroup>
           </div>
+          <div className="col-md-10">
+            <FormGroup id="inputComo" label="Como fazer: *">
+              <input
+                id="inputComo"
+                type="text"
+                name="como"
+                value={this.state.como}
+                onChange={this.handleChange}
+                className="form-control"
+              />
+            </FormGroup>
+          </div>
         </div>
         <div className="row">
           <div className="col-md-6">
-            <FormGroup id="inputporque" label="Porque: *">
+            <FormGroup id="inputPorque" label="Porque: *">
               <input
-                id="inputAno"
+                id="inputPorque"
                 type="text"
                 name="porque"
                 value={this.state.porque}
@@ -173,9 +209,9 @@ class CadastroPlanosAcao extends React.Component {
             </FormGroup>
           </div>
           <div className="col-md-6">
-            <FormGroup id="inputonde" label="Onde: *">
+            <FormGroup id="inputOnde" label="Onde: *">
               <input
-                id="inputAno"
+                id="inputOnde"
                 type="text"
                 name="onde"
                 value={this.state.onde}
@@ -184,7 +220,7 @@ class CadastroPlanosAcao extends React.Component {
               />
             </FormGroup>
           </div>
-          <div className="col-md-6">
+          {/* <div className="col-md-6">
             <FormGroup id="inputquem" label="Quem: *">
               <input
                 id="inputQuem"
@@ -195,9 +231,33 @@ class CadastroPlanosAcao extends React.Component {
                 className="form-control"
               />
             </FormGroup>
+          </div> */}
+          <div className="col-md-4">
+            <FormGroup id="inputQuem" label="Quem? *">
+              <SelectMenu
+                lista={this.state.lista}
+                id="inputQuem"
+                name="quem"
+                value={this.state.quem}
+                onChange={this.handleChange}
+                className="form-control"
+              />
+            </FormGroup>
           </div>
+          {/* <div className="col-md-4">
+            <FormGroup id="inputquem" label="Não conformidade: *">
+              <SelectType
+                lista={naoconformidades}
+                id="inputNaoConformidade"
+                name="naoconformidade"
+                value={this.state.naoconformidade}
+                onChange={this.handleChange}
+                className="form-control"
+              />
+            </FormGroup>
+          </div> */}
         </div>
-        <div className="row">
+        {/* <div className="row">
           <div className="col-md-3">
             <FormGroup id="inputQuando" label="Quando começa: *">
               <Calendar
@@ -228,58 +288,8 @@ class CadastroPlanosAcao extends React.Component {
               />
             </FormGroup>
           </div>
-        </div>
-        <div className="row">
-          <div className="col-md-10">
-            <FormGroup id="inputquando" label="Como aconteceu: *">
-              <input
-                id="inputComo"
-                type="text"
-                name="como"
-                value={this.state.como}
-                onChange={this.handleChange}
-                className="form-control"
-              />
-            </FormGroup>
-          </div>
-          <div className="col-md-4">
-            <FormGroup id="inputquando" label="Quanto custa: *">
-              <input
-                id="inputQuantoCusta"
-                type="text"
-                name="quantoCusta"
-                value={this.state.quantocusta}
-                onChange={this.handleChange}
-                className="form-control"
-              />
-            </FormGroup>
-          </div>
-
-          <div className="col-md-4">
-            <FormGroup id="inputquem" label="Não conformidade: *">
-              <SelectMenu
-                lista={lista}
-                id="inputNaoConformidade"
-                name="naoconformidade"
-                value={this.state.naoconformidade}
-                onChange={this.handleChange}
-                className="form-control"
-              />
-            </FormGroup>
-          </div>
-          <div className="col-md-4">
-            <FormGroup id="inputquem" label="Responsável ação: *">
-              <SelectMenu
-                lista={lista}
-                id="inputresponsavelacao"
-                name="responsavelacao"
-                value={this.state.responsavelacao}
-                onChange={this.handleChange}
-                className="form-control"
-              />
-            </FormGroup>
-          </div>
-        </div>
+        </div> */}
+        <div className="row"></div>
         <div className="row">
           <div className="col-md-6">
             {this.state.atualizando ? (
@@ -292,7 +302,7 @@ class CadastroPlanosAcao extends React.Component {
               </button>
             )}
             <button
-              onClick={(e) => this.props.history.push("/home")}
+              onClick={(e) => this.props.history.push("/consulta-planosacao")}
               className="btn btn-danger"
             >
               <i className="pi pi-times"></i> Cancelar

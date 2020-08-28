@@ -21,6 +21,7 @@ export default props => {
                     </button>
                     <button type="button" 
                             className="btn btn-primary" title="Editar"
+                            disabled={ documento.status === 'APROVADO'}
                             onClick={e => props.editarAction(documento.id)}>
                             <i className="pi pi-pencil"></i>
                     </button>

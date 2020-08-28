@@ -3,77 +3,73 @@ import ApiService from '../apiservice'
 import ErroValidacao from '../exception/erroValidacao'
 
 export default class dService extends ApiService {
-    constructor() {
-        super("/api/planoacao");
-    }
+                 constructor() {
+                   super("/api/planoacoes");
+                 }
 
-    obterPorId(id) {
-        return this.get(`/${id}`);
-    }
+                 obterPorId(id) {
+                   return this.get(`/${id}`);
+                 }
 
-    alterarStatus(id, status) {
-        return this.put(`/${id}/atualiza-status`, { status })
-    }
+                 obterListaTipoAcao() {
+                   return [
+                     { value: "", label: "Selecione..." },
+                     { value: "CORRETIVA", label: "Corretiva" },
+                     { value: "PREVENTIVA", label: "Preventiva" },
+                   ];
+                 }
 
-    validar(planoacao) {
-        const erros = [];
+                 alterarStatus(id, status) {
+                   return this.put(`/${id}/atualiza-status`, { status });
+                 }
 
-        if (!planoacao.oque) {
-            erros.push("Informe o que aconteceu.")
-        }
+                 validar(planoacao) {
+                   const erros = [];
 
-        if (!planoacao.porque) {
-            erros.push("Informe o porque.");
-        }
+                   if (!planoacao.oque) {
+                     erros.push("Informe o que aconteceu.");
+                   }
 
-        if (!planoacao.onde) {
-            erros.push("Informe onde.");
-        }
+                   if (!planoacao.porque) {
+                     erros.push("Informe o porque.");
+                   }
 
-        if (!planoacao.quem) {
-            erros.push("Informe quem.");
-        }
+                   if (!planoacao.onde) {
+                     erros.push("Informe onde.");
+                   }
 
-        if (erros && erros.length > 0) {
-            throw new ErroValidacao(erros);
-        }
-    }
+                   if (!planoacao.quem) {
+                     erros.push("Informe quem.");
+                   }
 
-    salvar(planoacao) {
-        return this.post("/", planoacao);
-    }
+                   if (erros && erros.length > 0) {
+                     throw new ErroValidacao(erros);
+                   }
+                 }
 
-    atualizar(planoacao) {
-        return this.put(`/${planoacao.id}`, planoacao);
-    }
+                 salvar(planoacao) {
+                   return this.post("/", planoacao);
+                 }
 
-    consultar(planoacaoFiltro) {
-        let params = `?oque=${planoacaoFiltro.oque}`;
+                 atualizar(planoacao) {
+                   return this.put(`/${planoacao.id}`, planoacao);
+                 }
 
-        if (planoacaoFiltro.mes) {
-            params = `${params}&porque=${planoacaoFiltro.mes}`;
-        }
+                 consultar(planoacaoFiltro) {
+                   let params = `?oque=${planoacaoFiltro.oque}`;
 
-        if (planoacaoFiltro.tipoDocumento) {
-            params = `${params}&tipo=${planoacaoFiltro.tipoDocumento}`;
-        }
+                   if (planoacaoFiltro.como) {
+                     params = `${params}&como=${planoacaoFiltro.como}`;
+                   }
 
-        if (planoacaoFiltro.status) {
-            params = `${params}&status=${planoacaoFiltro.status}`;
-        }
+                   if (planoacaoFiltro.porque) {
+                     params = `${params}&porque=${planoacaoFiltro.porque}`;
+                   }
 
-        if (planoacaoFiltro.usuario) {
-            params = `${params}&usuario=${planoacaoFiltro.usuario}`;
-        }
+                   return this.get(params);
+                 }
 
-        if (planoacaoFiltro.descricao) {
-            params = `${params}&descricao=${planoacaoFiltro.descricao}`;
-        }
-
-        return this.get(params);
-    }
-
-    deletar(id) {
-        return this.delete(`/${id}`);
-    }
-}
+                 deletar(id) {
+                   return this.delete(`/${id}`);
+                 }
+               }

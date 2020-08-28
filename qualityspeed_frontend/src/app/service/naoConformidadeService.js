@@ -2,9 +2,9 @@ import ApiService from '../apiservice'
 
 import ErroValidacao from '../exception/erroValidacao'
 
-export default class dService extends ApiService {
+export default class naoConformidadeService extends ApiService {
                  constructor() {
-                   super("/api/naoconformidade");
+                   super("/api/naoconformidades");
                  }
 
                 obterPorId(id) {
@@ -18,16 +18,16 @@ export default class dService extends ApiService {
                 validar(naoconformidade){
                     const erros = [];
 
-                if (!naoconformidade.descricao) {
-                    erros.push("Informe a descrição.")
+                if (!naoconformidade.titulo) {
+                    erros.push("Informe o título.")
                 }
 
-                if (!naoconformidade.nomenaoconformidade) {
-                    erros.push("Informe o nome da não conformidade.");
+                if (!naoconformidade.setor) {
+                  erros.push("Informe o setor.");
                 }
 
-                if (!naoconformidade.classificacao) {
-                    erros.push("Informe a classificacao.");
+                if (!naoconformidade.causa) {
+                  erros.push("Informe a causa.");
                 }
 
                 if(erros && erros.length > 0){
@@ -35,36 +35,36 @@ export default class dService extends ApiService {
                 }
             }
 
-                 salvar(naoconformidade) {
-                   return this.post("/", naoconformidade);
+                 salvar(naoconformidades) {
+                   return this.post("/", naoconformidades);
                  }
 
-                 atualizar(naoconformidade) {
-                   return this.put(`/${naoconformidade.id}`, naoconformidade);
+                 atualizar(naoconformidades) {
+                   return this.put(`/${naoconformidades.id}`, naoconformidades);
                  }
 
                  consultar(naoconformidadeFiltro) {
-                   let params = `?ano=${naoconformidadeFiltro.ano}`;
+                   let params = `?titulo=${naoconformidadeFiltro.titulo}`;
 
-                   if (naoconformidadeFiltro.mes) {
-                     params = `${params}&mes=${naoconformidadeFiltro.mes}`;
+                   if (naoconformidadeFiltro.setor) {
+                     params = `${params}&setor=${naoconformidadeFiltro.setor}`;
                    }
 
-                   if (naoconformidadeFiltro.tipoDocumento) {
-                     params = `${params}&tipo=${naoconformidadeFiltro.tipoDocumento}`;
-                   }
+                  //  if (naoconformidadeFiltro.acaocorretiva) {
+                  //    params = `${params}&acaocorretiva=${naoconformidadeFiltro.acaocorretiva}`;
+                  //  }
 
-                   if (naoconformidadeFiltro.status) {
-                     params = `${params}&status=${naoconformidadeFiltro.status}`;
-                   }
+                  //  if (naoconformidadeFiltro.status) {
+                  //    params = `${params}&status=${naoconformidadeFiltro.status}`;
+                  //  }
 
-                   if (naoconformidadeFiltro.usuario) {
-                     params = `${params}&usuario=${naoconformidadeFiltro.usuario}`;
-                   }
+                  //  if (naoconformidadeFiltro.usuario) {
+                  //    params = `${params}&usuario=${naoconformidadeFiltro.usuario}`;
+                  //  }
 
-                   if (naoconformidadeFiltro.descricao) {
-                     params = `${params}&descricao=${naoconformidadeFiltro.descricao}`;
-                   }
+                  //  if (naoconformidadeFiltro.titulo) {
+                  //    params = `${params}&titulo=${naoconformidadeFiltro.titulo}`;
+                  //  }
 
                    return this.get(params);
                  }

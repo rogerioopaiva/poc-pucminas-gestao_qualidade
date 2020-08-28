@@ -8,6 +8,7 @@ import FormGroup from '../../components/form-group'
 import * as messages from '../../components/toastr'
 import ColaboradorService from '../../app/service/colaboradorService'
 import { ptBr } from '../../app/service/dateConfig'
+import { Date } from 'core-js';
 
 class CadastroColaboradores extends React.Component {
 
@@ -16,7 +17,7 @@ class CadastroColaboradores extends React.Component {
         nomecolaborador: '',
         setor: '', 
         cargo: '',
-        dataadmissao: new Date('2020-06-09T00:00:00.000Z'),
+        dataadmissao: new Date("dd-MM-YYYY"),
         status: '',
         usuario: null,
         atualizando: false
@@ -44,8 +45,8 @@ class CadastroColaboradores extends React.Component {
 
     submit = () => {
         
-      const { nomecolaborador, setor, cargo, dataadmissao} = this.state;
-      const colaborador = { nomecolaborador, setor, cargo, dataadmissao};
+      const { nomecolaborador, setor, cargo, dataadmissao } = this.state;
+      const colaborador = { nomecolaborador, setor, cargo, dataadmissao };
 
         try{
             this.service.validar(colaborador)
@@ -54,11 +55,11 @@ class CadastroColaboradores extends React.Component {
             mensagens.forEach(msg => messages.mensagemErro(msg));
             return false;
         }
-
+        debugger
         this.service
             .salvar(colaborador)
             .then(response => {
-                this.props.history.push('/cadastro-colaboradores')
+                this.props.history.push('/consulta-colaboradores')
                 messages.mensagemSucesso('Colaborador cadastrado com sucesso!')
             }).catch(error => {
                 messages.mensagemErro(error.response.data)
@@ -66,8 +67,8 @@ class CadastroColaboradores extends React.Component {
     }
 
     atualizar = () => {
-      const { nomecolaborador, setor, cargo, dataadmissao, id} = this.state;
-      const colaborador = { nomecolaborador, setor, cargo, dataadmissao, id};
+      const { nomecolaborador, setor, cargo, dataadmissao, id } = this.state;
+      const colaborador = { nomecolaborador, setor, cargo, dataadmissao, id };
 
         this.service
           .atualizar(colaborador)
@@ -87,8 +88,8 @@ class CadastroColaboradores extends React.Component {
         this.setState({ [name] : value })
     }
 
+  
     render(){
-
         return (
           <Card
             title={
@@ -136,7 +137,6 @@ class CadastroColaboradores extends React.Component {
                   />
                 </FormGroup>
               </div>
-              {console.log(this.state)}
               {
                 !this.state.atualizando && (
                 <div className="col-md-3" >
@@ -175,7 +175,6 @@ class CadastroColaboradores extends React.Component {
           </Card>
         );
     } 
-
 }
 
 export default withRouter(CadastroColaboradores);

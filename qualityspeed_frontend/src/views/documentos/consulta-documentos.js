@@ -5,9 +5,8 @@ import Card from '../../components/card'
 import FormGroup from '../../components/form-group'
 import DocumentosTable from './documentoTable'
 import documentoService from '../../app/service/documentoService'
-import { Calendar } from 'primereact/calendar'
-import { ptBr } from '../../app/service/dateConfig'
-//import LocalStorageService from '../../app/service/localstorageService'
+//import { Calendar } from 'primereact/calendar'
+//import { ptBr } from '../../app/service/dateConfig'
 
 import * as messages from '../../components/toastr'
 
@@ -16,10 +15,9 @@ import { Button } from 'primereact/button'
 
 class ConsultaDocumentos extends React.Component {
   state = {
-    //descricaoDocumento: '',
-    nomeDocumento: "",
+    descricao: "",
+    nomedocumento: "",
     classificacao: "",
-    ultimarevisao: new Date("2020-06-09T00:00:00.000Z"),
     showConfirmDialog: false,
     documentoDeletar: {},
     documentos: [],
@@ -31,17 +29,17 @@ class ConsultaDocumentos extends React.Component {
   }
 
   buscar = () => {
-    if (!this.state.nomeDocumento) {
+    if (!this.state.descricao && !this.state.nomedocumento && !this.state.classificacao) {
       messages.mensagemErro(
-        "O preenchimento do campo Nome do documento é obrigatório."
+        "O preenchimento de ao menos um campo é obrigatório."
       );
       return false;
     }
 
     const documentoFiltro = {
-      nomeDocumento: this.state.nomeDocumento,
-      classificacao: this.state.classificacao,
-      ultimarevisao: new Date("2020-06-09T00:00:00.000Z"),
+      descricao: this.state.descricao,
+      nomedocumento: this.state.nomedocumento,
+      classificacao: this.state.classificacao
     };
 
     this.service
@@ -120,25 +118,22 @@ class ConsultaDocumentos extends React.Component {
         <div className="row">
           <div className="col-md-6">
             <div className="bs-component">
-              {/* <FormGroup htmlFor="inputDescricao" label="Descrição: *">
-                                <input type="text"
-                                    className="form-control"
-                                    id="inputDescricao"
-                                    value={this.state.descricaoDocumento}
-                                    onChange={e => this.setState({descricaoDocumento: e.target.value})}
-                                    placeholder="Digite a Descrição" />
-                            </FormGroup> */}
+              <FormGroup htmlFor="inputDescricao" label="Descrição do documento: *">
+                  <input type="text"
+                      className="form-control"
+                      id="inputDescricao"
+                      value={this.state.descricao}
+                      onChange={e => this.setState({descricao: e.target.value})}
+                      placeholder="Informe a Descrição do documento" />
+              </FormGroup>
 
               <FormGroup htmlFor="inputNomeDocumento" label="Nome do documento: *">
-                <input
-                  type="text"
+                <input type="text"
                   className="form-control"
                   id="inputNomeDocumento"
-                  value={this.state.nomeDocumento}
-                  onChange={(e) =>
-                    this.setState({ nomeDocumento: e.target.value })
-                  }
-                  placeholder="Digite o nome do documento"
+                  value={this.state.nomedocumento}
+                  onChange={(e) => this.setState({ nomedocumento: e.target.value })}
+                  placeholder="Informe o nome do documento"
                 />
               </FormGroup>
 
@@ -151,11 +146,11 @@ class ConsultaDocumentos extends React.Component {
                   onChange={(e) =>
                     this.setState({ classificacao: e.target.value })
                   }
-                  placeholder="Digite a classificacao"
+                  placeholder="Informe a classificação"
                 />
               </FormGroup>
 
-            <FormGroup id="inputUltimaRevisao" label="Última revisão: *">
+            {/* <FormGroup id="inputUltimaRevisao" label="Última revisão: *">
                 <div>
                     <Calendar
                         value={this.state.ultimarevisao}
@@ -171,7 +166,7 @@ class ConsultaDocumentos extends React.Component {
                         locale={ptBr}
                     />
                 </div>
-            </FormGroup>
+            </FormGroup> */}
 
               <button
                 onClick={this.buscar}

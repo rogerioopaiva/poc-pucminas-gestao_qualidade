@@ -18,8 +18,8 @@ class CadastroDocumentos extends React.Component {
     nomedocumento: "",
     classificacao: "",
     id_colaborador: {},
-    ultimarevisao: new Date("2020-06-09T00:00:00.000Z"),
-    proxrevisao: new Date("2020-06-09T00:00:00.000Z"),
+    ultimarevisao: new Date("dd-MM-YYYY"),
+    proxrevisao: new Date("dd-MM-YYYY"),
     status: "",
     usuario: null,
     atualizando: false,
@@ -46,7 +46,8 @@ class CadastroDocumentos extends React.Component {
           messages.mensagemErro(erros.response.data);
         });
     }
-    this.colaboradorService.obterPorResponsaveis()
+    this.colaboradorService
+      .obterPorResponsaveis()
       .then((response) => this.setState({ lista: response.data }));
   }
 
@@ -67,7 +68,7 @@ class CadastroDocumentos extends React.Component {
       ultimarevisao,
       proxrevisao,
     };
-
+    debugger
     try {
       this.service.validar(documento);
     } catch (erro) {
@@ -79,7 +80,7 @@ class CadastroDocumentos extends React.Component {
     this.service
       .salvar(documento)
       .then((response) => {
-        this.props.history.push("/cadastro-documentos");
+        this.props.history.push("/consulta-documentos");
         messages.mensagemSucesso("Documento cadastrado com sucesso!");
       })
       .catch((error) => {
@@ -127,7 +128,6 @@ class CadastroDocumentos extends React.Component {
   };
 
   render() {
-    
     return (
       <Card
         title={
@@ -205,12 +205,12 @@ class CadastroDocumentos extends React.Component {
             </FormGroup>
           </div>
           <div className="col-md-3">
-            <FormGroup id="inputProximaRevisao" label="Próxima revisão: *">
+            <FormGroup id="inputProxRevisao" label="Próxima revisão: *">
               <Calendar
-                value={this.state.proximarevisao}
+                value={this.state.proxrevisao}
                 onChange={(e) =>
                   this.setState({
-                    proximarevisao: e.value
+                    proxrevisao: e.value
                       .toLocaleDateString()
                       .replace(/\//g, "-"),
                   })
