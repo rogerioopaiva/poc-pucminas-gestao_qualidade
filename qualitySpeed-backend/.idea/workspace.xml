@@ -29,7 +29,46 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac8f8563-6427-4f61-8b3e-bfd2cc09f7e7" name="Default Changelist" comment="" />
+    <list default="true" id="ac8f8563-6427-4f61-8b3e-bfd2cc09f7e7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/dto/AtualizaStatusDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/dto/AtualizaStatusDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/dto/ColaboradorDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/dto/ColaboradorDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/dto/DocumentoDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/dto/DocumentoDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/dto/NaoConformidadeDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/dto/NaoConformidadeDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/dto/PlanoacaoDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/dto/PlanoacaoDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/resource/ColaboradorResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/resource/ColaboradorResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/resource/DocumentoResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/resource/DocumentoResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/resource/NaoConformidadeResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/resource/NaoConformidadeResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/resource/PlanoAcaoResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/resource/PlanoAcaoResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/resource/UsuarioResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/api/resource/UsuarioResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/Colaborador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/Colaborador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/Documento.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/Documento.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/NaoConformidade.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/NaoConformidade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/PlanoAcao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/PlanoAcao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/model/entity/Usuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/service/impl/UsuarioServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogerioopaiva/qualitySpeed/service/impl/UsuarioServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qualitySpeed-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/qualitySpeed-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qualitySpeed-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/qualitySpeed-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.rogerioopaiva.qualitySpeed.QualitySpeedApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.rogerioopaiva.qualitySpeed.api.resource.UsuarioResourceTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.rogerioopaiva.qualitySpeed.model.repository.LancamentoRepositoryTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.rogerioopaiva.qualitySpeed.model.repository.UsuarioRepositoryTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.rogerioopaiva.qualitySpeed.service.LancamentoServiceTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.rogerioopaiva.qualitySpeed.service.UsuarioServiceTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.rogerioopaiva.qualitySpeed.QualitySpeedApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.rogerioopaiva.qualitySpeed.api.resource.UsuarioResourceTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.rogerioopaiva.qualitySpeed.model.repository.LancamentoRepositoryTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.rogerioopaiva.qualitySpeed.model.repository.UsuarioRepositoryTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.rogerioopaiva.qualitySpeed.service.LancamentoServiceTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.rogerioopaiva.qualitySpeed.service.UsuarioServiceTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/qualitySpeed.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/rogerioopaiva/qualitySpeed/service/ColaboradorServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/rogerioopaiva/qualitySpeed/service/ColaboradorServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/rogerioopaiva/qualitySpeed/service/UsuarioServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/rogerioopaiva/qualitySpeed/service/UsuarioServiceTest.class" afterDir="false" />
+    </list>
     <list id="fa6f5e7d-e749-46be-8926-75ab63a16d20" name="Revert &quot;Alteracoes no repositorio do backend&quot;" comment="Revert &quot;Alteracoes no repositorio do backend&quot;&#10;&#10;This reverts commit 2fcf24f8" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,14 +92,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
-      </MavenGeneralSettings>
-    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
