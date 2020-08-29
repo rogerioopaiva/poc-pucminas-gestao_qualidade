@@ -4,12 +4,8 @@ package com.rogerioopaiva.qualitySpeed.api.resource;
 import com.rogerioopaiva.qualitySpeed.api.dto.AtualizaStatusDTO;
 import com.rogerioopaiva.qualitySpeed.api.dto.PlanoacaoDTO;
 import com.rogerioopaiva.qualitySpeed.exception.RegraNegocioException;
-import com.rogerioopaiva.qualitySpeed.model.entity.Colaborador;
-import com.rogerioopaiva.qualitySpeed.model.entity.NaoConformidade;
 import com.rogerioopaiva.qualitySpeed.model.entity.PlanoAcao;
 import com.rogerioopaiva.qualitySpeed.model.enums.StatusPlanoAcao;
-import com.rogerioopaiva.qualitySpeed.service.ColaboradorService;
-import com.rogerioopaiva.qualitySpeed.service.NaoConformidadeService;
 import com.rogerioopaiva.qualitySpeed.service.PlanoAcaoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -24,25 +20,20 @@ import java.util.List;
 public class PlanoAcaoResource {
 
     private final PlanoAcaoService service;
-    private final ColaboradorService colaboradorService;
-    private final NaoConformidadeService naoConformidadeService;
 
     @GetMapping
     public ResponseEntity buscar(
-            @RequestParam("Oque") String oque,
+            @RequestParam(value = "oque", required = false) String oque,
             @RequestParam(value = "porque", required = false) String porque,
-            @RequestParam(value = "onde", required = false) String onde,
-            @RequestParam(value = "quem", required = false) String quem
-
+            @RequestParam(value = "onde", required = false) String onde
             ) {
         PlanoAcao planoAcaoFiltro = new PlanoAcao();
         planoAcaoFiltro.setOque(oque);
         planoAcaoFiltro.setPorque(porque);
         planoAcaoFiltro.setOnde(onde);
-        planoAcaoFiltro.setQuem(quem);
 
-        List<PlanoAcao> planoAcaos = service.buscar(planoAcaoFiltro);
-        return ResponseEntity.ok(planoAcaos);
+        List<PlanoAcao> planoAcao = service.buscar(planoAcaoFiltro);
+        return ResponseEntity.ok(planoAcao);
     }
 
     @PostMapping
@@ -98,29 +89,25 @@ public class PlanoAcaoResource {
                 new ResponseEntity("Plano de ação não encontrado na base de dados.", HttpStatus.BAD_REQUEST));
     }
 
+    @GetMapping("{id}")
+    public ResponseEntity getPorId( @PathVariable("id") Long id ) {
+        if(service.obterPorId(id).isPresent()) {
+            return new ResponseEntity(service.obterPorId(id).get(), HttpStatus.ACCEPTED);
+        }else {
+            return new ResponseEntity("Colaborador não encontrado na base de dados.", HttpStatus.BAD_REQUEST);
+        }
+    }
+
     private PlanoAcao converter(PlanoacaoDTO dto) {
         PlanoAcao planoAcao = new PlanoAcao();
-        planoAcao.setDataocorrencia(dto.getDataocorrencia());
+        planoAcao.setComeco(dto.getComeco());
+        planoAcao.setTermino(dto.getTermino());
+        planoAcao.setTipoacao(dto.getTipoacao());
         planoAcao.setOque(dto.getOque());
+        planoAcao.setComo(dto.getComo());
         planoAcao.setPorque(dto.getPorque());
         planoAcao.setOnde(dto.getOnde());
         planoAcao.setQuem(dto.getQuem());
-        planoAcao.setQuando(dto.getQuando());
-        planoAcao.setComo(dto.getComo());
-        planoAcao.setQuantocusta(dto.getQuantocusta());
-        planoAcao.setTermino(dto.getTermino());
-
-        Colaborador colaborador = colaboradorService
-                .obterPorId(dto.getId_responsavelacao())
-                .orElseThrow( () -> new RegraNegocioException("Responsável não existente para o Id informado."));
-
-        planoAcao.setColaborador(colaborador);
-
-            NaoConformidade naoConformidade = naoConformidadeService
-                .obterPorId(dto.getId_naoconformidade())
-                .orElseThrow( () -> new RegraNegocioException("Não conformidade não existente para o id informado."));
-
-            planoAcao.setNaoconformidade(naoConformidade);
 
         if(dto.getStatus() != null) {
             planoAcao.setStatus(StatusPlanoAcao.valueOf(dto.getStatus()));

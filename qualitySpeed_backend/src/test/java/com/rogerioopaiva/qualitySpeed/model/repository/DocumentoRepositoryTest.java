@@ -31,7 +31,6 @@ public class DocumentoRepositoryTest {
                                     .descricao("Licitação de produtos de limpeza")
                                     .nomedocumento("Documento de licitação")
                                     .classificacao("Recursos Humanos")
-                                    .revisoes(Long.valueOf(1))
                                     .ultimarevisao(Date.from(Instant.parse("2020-09-03")))
                                     .proxrevisao(Date.from(Instant.parse("2020-03-09")))
                                     .status(StatusDocumento.PENDENTE)

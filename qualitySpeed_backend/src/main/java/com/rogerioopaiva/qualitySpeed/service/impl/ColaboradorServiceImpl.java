@@ -77,7 +77,6 @@ public class ColaboradorServiceImpl implements ColaboradorService {
 
     @Override
     public Optional<Colaborador> obterPorId(Long id) {
-
         return repository.findById(id);
     }
 

@@ -62,8 +62,8 @@ public class NaoConformidadeServiceImpl implements NaoConformidadeService {
 
     @Override
     public void validar(NaoConformidade naoConformidade) {
-        if(naoConformidade.getDescricao() == null || naoConformidade.getDescricao().trim().equals("")) {
-            throw new RegraNegocioException("Informe a descrição.");
+        if(naoConformidade.getTitulo() == null || naoConformidade.getTitulo().trim().equals("")) {
+            throw new RegraNegocioException("Informe o titulo.");
         }
 
         if (naoConformidade.getSetor() == null || naoConformidade.getSetor().trim().equals("")) {

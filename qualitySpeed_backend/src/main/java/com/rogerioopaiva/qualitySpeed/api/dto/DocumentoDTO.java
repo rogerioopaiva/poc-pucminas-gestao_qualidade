@@ -19,7 +19,6 @@ public class DocumentoDTO {
     private String nomedocumento;
     private String classificacao;
     private Long id_colaborador;
-    private Long revisoes;
     @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
     private Date ultimarevisao;
     @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")

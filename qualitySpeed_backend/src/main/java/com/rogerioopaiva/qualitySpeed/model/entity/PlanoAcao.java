@@ -17,12 +17,22 @@ public class PlanoAcao {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "dataocorrencia")
+    @Column(name = "comeco")
     @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
-    private Date dataocorrencia;
+    private Date comeco;
+
+    @Column(name = "termino")
+    @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
+    private Date termino;
+
+    @Column(name = "tipoacao")
+    private String tipoacao;
 
     @Column(name = "oque")
     private String oque;
+
+    @Column(name = "como")
+    private String como;
 
     @Column(name = "porque")
     private String porque;
@@ -31,31 +41,9 @@ public class PlanoAcao {
     private String onde;
 
     @Column(name = "quem")
-    private String quem;
-
-    @Column(name = "quando")
-    @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
-    private Date quando;
-
-    @Column(name = "como")
-    private String como;
-
-    @Column(name = "quantocusta")
-    private Double quantocusta;
-
-    @Column(name = "termino")
-    @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
-    private Date termino;
+    private Long quem;
 
     @Column(name = "status")
     @Enumerated(value = EnumType.STRING)
     private StatusPlanoAcao status;
-
-    @ManyToOne
-    @JoinColumn(name = "id_naoconformidade")
-    private NaoConformidade naoconformidade;
-
-    @ManyToOne
-    @JoinColumn(name = "id_responsavelacao")
-    private Colaborador colaborador;
 }

@@ -16,19 +16,14 @@ public class PlanoacaoDTO {
 
     private Long id;
     @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
-    private Date dataocorrencia;
-    private String oque;
-    private String porque;
-    private String onde;
-    private String quem;
-    @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
-    private Date quando;
-    private String como;
-    private Double quantocusta;
+    private Date comeco;
     @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
     private Date termino;
+    private String tipoacao;
+    private String oque;
+    private String como;
+    private String porque;
+    private String onde;
+    private Long quem;
     private String Status;
-    private Long id_naoconformidade;
-    private Long id_responsavelacao;
-
 }

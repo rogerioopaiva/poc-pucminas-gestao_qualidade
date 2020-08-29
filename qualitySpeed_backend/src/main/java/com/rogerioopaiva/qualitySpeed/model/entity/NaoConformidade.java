@@ -21,27 +21,19 @@ public class NaoConformidade {
     @JsonFormat(pattern="dd-MM-yyyy")
     private Date dataocorrencia;
 
-    @Column(name = "descricao")
-    private String descricao;
+    @Column(name = "titulo")
+    private String titulo;
 
     @Column(name = "setor")
     private String setor;
 
-    @ManyToOne
-    @JoinColumn(name = "id_colaboradorcorretiva")
-    private Colaborador colaboradorcorretiva;
 
     @Column(name = "causa")
     private String causa;
 
-    @Column(name = "acaocorretiva")
-    private String acaocorretiva;
 
     @Column(name = "status")
     @Enumerated(value = EnumType.STRING)
     private StatusNaoConformidade status;
 
-    @Column(name = "prazoconclusao")
-    @JsonFormat(pattern="dd-MM-yyyy")
-    private Date prazoconclusao;
 }

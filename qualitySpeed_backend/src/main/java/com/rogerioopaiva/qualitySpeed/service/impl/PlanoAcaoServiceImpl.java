@@ -56,36 +56,24 @@ public class PlanoAcaoServiceImpl implements PlanoAcaoService {
 
     @Override
     public void validar(PlanoAcao planoAcao) {
-        if(planoAcao.getDataocorrencia() == null || planoAcao.getDataocorrencia().toString().equals("")) {
-            throw new RegraNegocioException("Informe a data da ocorrência.");
+        if(planoAcao.getOque() == null || planoAcao.getOque().trim().equals("")) {
+            throw new RegraNegocioException("Informe o que deve ser feito.");
         }
 
-        if (planoAcao.getOque() == null || planoAcao.getOque().trim().equals("")) {
-            throw new RegraNegocioException("Informe o que aconteceu.");
+        if (planoAcao.getComo() == null || planoAcao.getComo().trim().equals("")) {
+            throw new RegraNegocioException("Informe como fazer.");
         }
 
         if (planoAcao.getPorque() == null || planoAcao.getPorque().trim().equals("")) {
-            throw new RegraNegocioException("Informe o por que.");
+            throw new RegraNegocioException("Informe o porque.");
         }
 
         if (planoAcao.getOnde() == null || planoAcao.getOnde().trim().equals("")) {
             throw new RegraNegocioException("Informe Onde.");
         }
 
-        if (planoAcao.getQuem() == null || planoAcao.getQuem().trim().equals("")) {
-            throw new RegraNegocioException("Informe Quem.");
-        }
-
-        if (planoAcao.getQuando() == null || planoAcao.getQuando().toString().equals("")) {
-            throw new RegraNegocioException("Informe Quando.");
-        }
-
         if (planoAcao.getComo() == null || planoAcao.getComo().trim().equals("")) {
             throw new RegraNegocioException("Informe Como.");
-        }
-
-        if (planoAcao.getQuantocusta() == null || planoAcao.getQuantocusta().toString().equals("")) {
-            throw new RegraNegocioException("Informe quanto custa.");
         }
 
         if (planoAcao.getTermino() == null || planoAcao.getTermino().toString().equals("")) {

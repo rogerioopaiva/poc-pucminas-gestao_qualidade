@@ -16,7 +16,7 @@ import java.util.Date;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Documento {
+public class    Documento {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,12 +32,8 @@ public class Documento {
     @Column(name = "classificacao")
     private String classificacao;
 
-    @ManyToOne
-    @JoinColumn(name = "id_colaborador")
-    private Colaborador colaborador;
-
-    @Column(name = "revisoes")
-    private Long revisoes;
+    @Column(name = "id_colaborador")
+    private Long id_colaborador;
 
     @Column(name = "ultimarevisao")
     @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")

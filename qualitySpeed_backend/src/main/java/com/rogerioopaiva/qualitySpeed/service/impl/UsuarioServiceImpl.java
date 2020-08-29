@@ -1,5 +1,6 @@
 package com.rogerioopaiva.qualitySpeed.service.impl;
 
+import com.rogerioopaiva.qualitySpeed.exception.ErroAutenticacao;
 import com.rogerioopaiva.qualitySpeed.exception.RegraNegocioException;
 import com.rogerioopaiva.qualitySpeed.model.entity.Usuario;
 import com.rogerioopaiva.qualitySpeed.model.repository.UsuarioRepository;
@@ -25,11 +26,11 @@ public class UsuarioServiceImpl implements UsuarioService {
         Optional<Usuario> usuario = repository.findByEmail(email);
 
         if(!usuario.isPresent()) {
-            throw new RegraNegocioException("Usuário não encontrado para o email informado.");
+            throw new ErroAutenticacao("Usuário não encontrado para o email informado.");
         }
 
         if(!usuario.get().getSenha().equals(senha)) {
-            throw new RegraNegocioException("Senha inválida.");
+            throw new ErroAutenticacao("Senha inválida.");
         }
 
         return usuario.get();

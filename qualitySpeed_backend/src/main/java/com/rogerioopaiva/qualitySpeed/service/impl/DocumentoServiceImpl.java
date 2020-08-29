@@ -20,9 +20,10 @@ public class DocumentoServiceImpl implements DocumentoService {
 
     private DocumentoRepository repository;
 
+
     public DocumentoServiceImpl(DocumentoRepository repository) {
         this.repository = repository;
-    }
+  }
 
     @Override
     @Transactional
@@ -33,6 +34,7 @@ public class DocumentoServiceImpl implements DocumentoService {
     }
 
     @Override
+    @Transactional
     public Documento atualizar(Documento documento) {
         Objects.requireNonNull(documento.getId());
         validar(documento);
@@ -75,10 +77,6 @@ public class DocumentoServiceImpl implements DocumentoService {
             throw new RegraNegocioException("Informe a classificação.");
         }
 
-        if (documento.getRevisoes() == null || documento.getRevisoes().toString().equals("")) {
-            throw new RegraNegocioException("Informe o número de Revisões.");
-        }
-
         if (documento.getUltimarevisao() == null || documento.getUltimarevisao().toString().equals("")) {
             throw new RegraNegocioException("Informe o data da última Revisão.");
         }
@@ -92,6 +90,4 @@ public class DocumentoServiceImpl implements DocumentoService {
     public Optional<Documento> obterPorId(Long id) {
         return repository.findById(id);
     }
-
-
 }

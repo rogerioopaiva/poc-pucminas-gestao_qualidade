@@ -18,12 +18,8 @@ public class NaoConformidadeDTO {
     private Long id;
     @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
     private Date dataocorrencia;
-    private String descricao;
+    private String titulo;
     private String setor;
-    private Long id_colaboradorcorretiva;
     private String causa;
-    private String acaocorretiva;
     private String status;
-    @JsonFormat(pattern = "dd-MM-yyyy", timezone="GMT-3")
-    private Date prazoconclusao;
 }
