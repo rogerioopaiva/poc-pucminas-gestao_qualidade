@@ -1,8 +1,0 @@
-com/rogerioopaiva/qualitySpeed/QualitySpeedApplicationTest.class
-com/rogerioopaiva/qualitySpeed/model/entity/UsuarioTest.class
-com/rogerioopaiva/qualitySpeed/service/UsuarioServiceTest.class
-com/rogerioopaiva/qualitySpeed/model/repository/DocumentoRepositoryTest.class
-com/rogerioopaiva/qualitySpeed/model/repository/ColaboradorRepositoryTest.class
-com/rogerioopaiva/qualitySpeed/model/repository/UsuarioRepositoryTest.class
-com/rogerioopaiva/qualitySpeed/api/resource/UsuarioResourceTest.class
-com/rogerioopaiva/qualitySpeed/service/ColaboradorServiceTest.class
