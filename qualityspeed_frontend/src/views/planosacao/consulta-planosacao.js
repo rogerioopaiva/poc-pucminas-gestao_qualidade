@@ -26,14 +26,13 @@ class ConsultaPlanosAcao extends React.Component {
     }
 
     buscar = () => {
-        if (!this.state.oque) {
-            messages.mensagemErro(
-                "O preenchimento do campo o que é obrigatório."
-            );
-            return false;
+        if (!this.state.oque && !this.state.porque && !this.state.onde) {
+          messages.mensagemErro(
+            "O preenchimento de ao menos um campo é obrigatório."
+          );
+          return false;
         }
         const usuarioLogado = LocalSotrageService.obterItem("_usuario_logado");
-
         const planosacaoFiltro = {
             oque: this.state.oque,
             como: this.state.porque,

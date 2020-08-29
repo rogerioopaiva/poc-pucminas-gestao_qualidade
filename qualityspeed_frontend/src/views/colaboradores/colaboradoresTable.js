@@ -1,5 +1,4 @@
 import React from 'react'
-//import currencyFormatter from 'currency-formatter'
 
 export default props => {
 
@@ -11,18 +10,6 @@ export default props => {
                 <td>{colaborador.cargo}</td>
                 <td>{colaborador.dataadmissao}</td>
                 <td>
-                    {/* <button className="btn btn-success" title="Efetivar"
-                            disabled={ colaborador.status !== 'PENDENTE'}
-                            onClick={e => props.alterarStatus(colaborador, 'EFETIVADO')}
-                            type="button">
-                            <i className="pi pi-check"></i>
-                    </button>
-                    <button className="btn btn-warning" title="Cancelar"
-                            disabled={ colaborador.status !== 'PENDENTE'}
-                            onClick={e => props.alterarStatus(colaborador, 'CANCELADO')}
-                            type="button">
-                            <i className="pi pi-times"></i>
-                    </button> */}
                     <button type="button" 
                             className="btn btn-primary" title="Editar"
                             onClick={e => props.editarAction(colaborador.id)}>

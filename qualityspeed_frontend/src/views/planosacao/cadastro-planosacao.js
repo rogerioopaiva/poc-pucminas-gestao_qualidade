@@ -2,7 +2,6 @@ import React from "react";
 
 import Card from "../../components/card";
 
-import { Calendar } from "primereact/calendar";
 import { withRouter } from "react-router-dom";
 import FormGroup from "../../components/form-group";
 import * as messages from "../../components/toastr";
@@ -10,19 +9,19 @@ import SelectMenu from "../../components/selectMenu";
 import SelectType from "../../components/selectType";
 import planosAcaoService from "../../app/service/planosAcaoService";
 import ColaboradorService from "../../app/service/colaboradorService";
-import { ptBr } from "../../app/service/dateConfig";
+
 
 class CadastroPlanosAcao extends React.Component {
   state = {
     id: null,
-    comeco: new Date("dd-MM-YYYY"),
-    termino: new Date("dd-MM-YYYY"),
+    comeco: "",
+    termino: "",
     tipoacao: "",
     oque: "",
     porque: "",
     onde: "",
     como: "",
-    quem: {},
+    quem: null,
     status: null,
     atualizando: false,
     lista: [],
@@ -37,7 +36,6 @@ class CadastroPlanosAcao extends React.Component {
 
   componentDidMount() {
     const params = this.props.match.params;
-
     if (params.id) {
       this.service
         .obterPorId(params.id)
@@ -74,7 +72,6 @@ class CadastroPlanosAcao extends React.Component {
       como,
       quem,
     };
-
     try {
       this.service.validar(planoacao);
     } catch (erro) {
@@ -128,33 +125,27 @@ class CadastroPlanosAcao extends React.Component {
         }
       >
         <div className="row">
-          <div className="col-md-3">
+          <div className="col-md-2">
             <FormGroup id="inputComeco" label="Quando começa: *">
-              <Calendar
+              <input
+                id="inputComeco"
+                type="text"
+                className="form-control"
+                name="comeco"
                 value={this.state.comeco}
-                onChange={(e) =>
-                  this.setState({
-                    quando: e.value.toLocaleDateString().replace(/\//g, "-"),
-                  })
-                }
-                showIcon={true}
-                dateFormat="dd/mm/yy"
-                locale={ptBr}
+                onChange={this.handleChange}
               />
             </FormGroup>
           </div>
-          <div className="col-md-3">
-            <FormGroup id="inputQuando" label="Quando termina: *">
-              <Calendar
+          <div className="col-md-2">
+            <FormGroup id="inputTermino" label="Quando termina: *">
+              <input
+                id="inputTermino"
+                type="text"
+                className="form-control"
+                name="termino"
                 value={this.state.termino}
-                onChange={(e) =>
-                  this.setState({
-                    quando: e.value.toLocaleDateString().replace(/\//g, "-"),
-                  })
-                }
-                showIcon={true}
-                dateFormat="dd/mm/yy"
-                locale={ptBr}
+                onChange={this.handleChange}
               />
             </FormGroup>
           </div>
@@ -220,18 +211,6 @@ class CadastroPlanosAcao extends React.Component {
               />
             </FormGroup>
           </div>
-          {/* <div className="col-md-6">
-            <FormGroup id="inputquem" label="Quem: *">
-              <input
-                id="inputQuem"
-                type="text"
-                name="quem"
-                value={this.state.quem}
-                onChange={this.handleChange}
-                className="form-control"
-              />
-            </FormGroup>
-          </div> */}
           <div className="col-md-4">
             <FormGroup id="inputQuem" label="Quem? *">
               <SelectMenu
@@ -244,51 +223,7 @@ class CadastroPlanosAcao extends React.Component {
               />
             </FormGroup>
           </div>
-          {/* <div className="col-md-4">
-            <FormGroup id="inputquem" label="Não conformidade: *">
-              <SelectType
-                lista={naoconformidades}
-                id="inputNaoConformidade"
-                name="naoconformidade"
-                value={this.state.naoconformidade}
-                onChange={this.handleChange}
-                className="form-control"
-              />
-            </FormGroup>
-          </div> */}
         </div>
-        {/* <div className="row">
-          <div className="col-md-3">
-            <FormGroup id="inputQuando" label="Quando começa: *">
-              <Calendar
-                value={this.state.quando}
-                onChange={(e) =>
-                  this.setState({
-                    quando: e.value.toLocaleDateString().replace(/\//g, "-"),
-                  })
-                }
-                showIcon={true}
-                dateFormat="dd/mm/yy"
-                locale={ptBr}
-              />
-            </FormGroup>
-          </div>
-          <div className="col-md-3">
-            <FormGroup id="inputQuando" label="Quando termina: *">
-              <Calendar
-                value={this.state.termino}
-                onChange={(e) =>
-                  this.setState({
-                    quando: e.value.toLocaleDateString().replace(/\//g, "-"),
-                  })
-                }
-                showIcon={true}
-                dateFormat="dd/mm/yy"
-                locale={ptBr}
-              />
-            </FormGroup>
-          </div>
-        </div> */}
         <div className="row"></div>
         <div className="row">
           <div className="col-md-6">

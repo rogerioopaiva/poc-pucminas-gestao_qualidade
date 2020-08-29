@@ -2,14 +2,12 @@ import React from 'react'
 
 import Card from '../../components/card'
 
-import { Calendar } from 'primereact/calendar';
 import { withRouter } from 'react-router-dom'
 import FormGroup from '../../components/form-group'
 import * as messages from '../../components/toastr'
 import DocumentoService from '../../app/service/documentoService'
 import ColaboradorService from "../../app/service/colaboradorService";
 import SelectMenu from "../../components/selectMenu";
-import { ptBr } from '../../app/service/dateConfig'
 
 class CadastroDocumentos extends React.Component {
   state = {
@@ -17,9 +15,9 @@ class CadastroDocumentos extends React.Component {
     descricao: "",
     nomedocumento: "",
     classificacao: "",
-    id_colaborador: {},
-    ultimarevisao: new Date("dd-MM-YYYY"),
-    proxrevisao: new Date("dd-MM-YYYY"),
+    id_colaborador: null,
+    ultimarevisao: "",
+    proxrevisao: "",
     status: "",
     usuario: null,
     atualizando: false,
@@ -68,7 +66,6 @@ class CadastroDocumentos extends React.Component {
       ultimarevisao,
       proxrevisao,
     };
-    debugger
     try {
       this.service.validar(documento);
     } catch (erro) {
@@ -187,37 +184,27 @@ class CadastroDocumentos extends React.Component {
               />
             </FormGroup>
           </div>
-          <div className="col-md-3">
+          <div className="col-md-2">
             <FormGroup id="inputUltimaRevisao" label="Última revisão: *">
-              <Calendar
+              <input
+                id="inputUltimaRevisao"
+                type="text"
+                className="form-control"
+                name="ultimarevisao"
                 value={this.state.ultimarevisao}
-                onChange={(e) =>
-                  this.setState({
-                    ultimarevisao: e.value
-                      .toLocaleDateString()
-                      .replace(/\//g, "-"),
-                  })
-                }
-                showIcon={true}
-                dateFormat="dd/mm/yy"
-                locale={ptBr}
+                onChange={this.handleChange}
               />
             </FormGroup>
           </div>
-          <div className="col-md-3">
+          <div className="col-md-2">
             <FormGroup id="inputProxRevisao" label="Próxima revisão: *">
-              <Calendar
+              <input
+                id="inputProxRevisao"
+                type="text"
+                className="form-control"
+                name="proxrevisao"
                 value={this.state.proxrevisao}
-                onChange={(e) =>
-                  this.setState({
-                    proxrevisao: e.value
-                      .toLocaleDateString()
-                      .replace(/\//g, "-"),
-                  })
-                }
-                showIcon={true}
-                dateFormat="dd/mm/yy"
-                locale={ptBr}
+                onChange={this.handleChange}
               />
             </FormGroup>
           </div>

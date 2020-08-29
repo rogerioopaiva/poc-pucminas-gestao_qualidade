@@ -2,26 +2,21 @@ import React from 'react'
 
 import Card from '../../components/card'
 
-import { Calendar } from "primereact/calendar";
 import { withRouter } from 'react-router-dom'
 import FormGroup from '../../components/form-group'
 import * as messages from '../../components/toastr'
-//import SelectMenu from "../../components/selectMenu";
 import ColaboradorService from "../../app/service/colaboradorService";
 import NaoConformidadeService from '../../app/service/naoConformidadeService'
-import { ptBr } from "../../app/service/dateConfig";
 
 class CadastroNaoConformidade extends React.Component {
   state = {
     id: null,
-    dataocorrencia: new Date("dd-MM-YYYY"),
+    dataocorrencia: "",
     titulo: "",
     setor: "",
-    //id_colaboradorcorretiva: {},
     causa: "",
     acaocorretiva: "",
     status: "",
-    prazoconclusao: new Date("dd-MM-YYYY"),
     usuario: null,
     atualizando: false,
     lista: [],
@@ -122,9 +117,17 @@ class CadastroNaoConformidade extends React.Component {
         }
       >
         <div className="row">
-          <div className="col-md-3">
+          <div className="col-md-2">
             <FormGroup id="inputDataOcorrencia" label="Data da Ocorrência: *">
-              <Calendar
+              <input
+                id="inputDataOcorrencia"
+                type="text"
+                className="form-control"
+                name="dataocorrencia"
+                value={this.state.dataocorrencia}
+                onChange={this.handleChange}
+              />
+              {/* <Calendar
                 value={this.state.dataocorrencia}
                 onChange={(e) =>
                   this.setState({
@@ -136,7 +139,7 @@ class CadastroNaoConformidade extends React.Component {
                 showIcon={true}
                 dateFormat="dd/mm/yy"
                 locale={ptBr}
-              />
+              /> */}
             </FormGroup>
           </div>
           {/* <div className="col-md-3">

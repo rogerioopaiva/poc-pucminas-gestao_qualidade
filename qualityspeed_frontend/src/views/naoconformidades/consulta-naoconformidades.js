@@ -26,9 +26,9 @@ class ConsultaNaoConformidade extends React.Component {
   }
 
   buscar = () => {
-    if (!this.state.titulo) {
+    if (!this.state.titulo && !this.state.setor) {
       messages.mensagemErro(
-        "O preenchimento do campo Título é obrigatório."
+        "O preenchimento de ao menos um campo é obrigatório."
       );
       return false;
     }

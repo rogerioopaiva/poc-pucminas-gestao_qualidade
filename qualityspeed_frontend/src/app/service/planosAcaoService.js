@@ -14,8 +14,8 @@ export default class dService extends ApiService {
                  obterListaTipoAcao() {
                    return [
                      { value: "", label: "Selecione..." },
-                     { value: "CORRETIVA", label: "Corretiva" },
-                     { value: "PREVENTIVA", label: "Preventiva" },
+                     { value: "Corretiva", label: "Corretiva" },
+                     { value: "Creventiva", label: "Preventiva" },
                    ];
                  }
 
@@ -56,7 +56,11 @@ export default class dService extends ApiService {
                  }
 
                  consultar(planoacaoFiltro) {
-                   let params = `?oque=${planoacaoFiltro.oque}`;
+                  let params = `?`;
+
+                  if (planoacaoFiltro.oque) {
+                    params = `${params}&oque=${planoacaoFiltro.oque}`;
+                  }
 
                    if (planoacaoFiltro.como) {
                      params = `${params}&como=${planoacaoFiltro.como}`;

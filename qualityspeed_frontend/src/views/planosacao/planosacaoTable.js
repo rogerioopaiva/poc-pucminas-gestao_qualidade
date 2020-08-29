@@ -7,7 +7,6 @@ export default (props) => {
             <td>{planosacao.oque}</td>
             <td>{planosacao.porque}</td>
             <td>{planosacao.onde}</td>
-            <td>{planosacao.colaborador.nomecolaborador}</td>
             <td>{planosacao.status}</td>
             <td>
               <button
@@ -57,7 +56,6 @@ export default (props) => {
                     <th scope="col">O que</th>
                     <th scope="col">Porque</th>
                     <th scope="col">Onde</th>
-                    <th scope="col">Quem</th>
                     <th scope="col">Status</th>
                 </tr>
             </thead>

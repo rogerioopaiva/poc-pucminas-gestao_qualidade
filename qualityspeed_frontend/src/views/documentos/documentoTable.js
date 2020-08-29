@@ -1,5 +1,4 @@
 import React from 'react'
-//import currencyFormatter from 'currency-formatter'
 
 export default props => {
 
@@ -10,7 +9,6 @@ export default props => {
                 <td>{documento.nomedocumento}</td>
                 <td>{documento.classificacao}</td>
                 <td>{documento.ultimarevisao}</td>
-                <td>{documento.colaborador.nomecolaborador}</td>
                 <td>{documento.status}</td>
                 <td>
                     <button className="btn btn-success" title="Aprovar"

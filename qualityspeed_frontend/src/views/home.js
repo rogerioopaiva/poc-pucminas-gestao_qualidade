@@ -5,26 +5,10 @@ import { AuthContext } from '../main/provedorAutenticacao'
 
 class Home extends React.Component{
 
-    // state = {
-    //     saldo: 0
-    // }
-
     constructor(){
         super();
         this.usuarioService = new UsuarioService();
     }
-
-    // componentDidMount(){  
-    //     const usuarioLogado = this.context.usuarioAutenticado
-
-    //     this.usuarioService
-    //         .obterSaldoPorUsuario(usuarioLogado.id)
-    //         .then( response => {
-    //             this.setState({saldo: response.data})
-    //         }).catch(error => {
-    //             console.error(error.response)
-    //         });
-    // }
 
     render(){
         return (

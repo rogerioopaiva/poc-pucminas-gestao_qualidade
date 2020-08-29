@@ -44,27 +44,15 @@ export default class naoConformidadeService extends ApiService {
                  }
 
                  consultar(naoconformidadeFiltro) {
-                   let params = `?titulo=${naoconformidadeFiltro.titulo}`;
+                  let params = `?`;
+
+                  if (naoconformidadeFiltro.titulo) {
+                    params = `${params}&titulo=${naoconformidadeFiltro.titulo}`;
+                  }
 
                    if (naoconformidadeFiltro.setor) {
                      params = `${params}&setor=${naoconformidadeFiltro.setor}`;
                    }
-
-                  //  if (naoconformidadeFiltro.acaocorretiva) {
-                  //    params = `${params}&acaocorretiva=${naoconformidadeFiltro.acaocorretiva}`;
-                  //  }
-
-                  //  if (naoconformidadeFiltro.status) {
-                  //    params = `${params}&status=${naoconformidadeFiltro.status}`;
-                  //  }
-
-                  //  if (naoconformidadeFiltro.usuario) {
-                  //    params = `${params}&usuario=${naoconformidadeFiltro.usuario}`;
-                  //  }
-
-                  //  if (naoconformidadeFiltro.titulo) {
-                  //    params = `${params}&titulo=${naoconformidadeFiltro.titulo}`;
-                  //  }
 
                    return this.get(params);
                  }

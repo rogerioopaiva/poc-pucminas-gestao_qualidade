@@ -5,8 +5,6 @@ import Card from '../../components/card'
 import FormGroup from '../../components/form-group'
 import DocumentosTable from './documentoTable'
 import documentoService from '../../app/service/documentoService'
-//import { Calendar } from 'primereact/calendar'
-//import { ptBr } from '../../app/service/dateConfig'
 
 import * as messages from '../../components/toastr'
 
@@ -149,25 +147,6 @@ class ConsultaDocumentos extends React.Component {
                   placeholder="Informe a classificação"
                 />
               </FormGroup>
-
-            {/* <FormGroup id="inputUltimaRevisao" label="Última revisão: *">
-                <div>
-                    <Calendar
-                        value={this.state.ultimarevisao}
-                        onChange={(e) =>
-                        this.setState({
-                            ultimarevisao: e.value
-                            .toLocaleDateString()
-                            .replace(/\//g, "-"),
-                        })
-                        }
-                        showIcon={true}
-                        dateFormat="dd/mm/yy"
-                        locale={ptBr}
-                    />
-                </div>
-            </FormGroup> */}
-
               <button
                 onClick={this.buscar}
                 type="button"

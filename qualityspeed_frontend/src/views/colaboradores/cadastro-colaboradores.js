@@ -2,13 +2,10 @@ import React from 'react'
 
 import Card from '../../components/card'
 
-import { Calendar } from 'primereact/calendar';
 import { withRouter } from 'react-router-dom'
 import FormGroup from '../../components/form-group'
 import * as messages from '../../components/toastr'
 import ColaboradorService from '../../app/service/colaboradorService'
-import { ptBr } from '../../app/service/dateConfig'
-import { Date } from 'core-js';
 
 class CadastroColaboradores extends React.Component {
 
@@ -17,7 +14,7 @@ class CadastroColaboradores extends React.Component {
         nomecolaborador: '',
         setor: '', 
         cargo: '',
-        dataadmissao: new Date("dd-MM-YYYY"),
+        dataadmissao: "",
         status: '',
         usuario: null,
         atualizando: false
@@ -55,7 +52,6 @@ class CadastroColaboradores extends React.Component {
             mensagens.forEach(msg => messages.mensagemErro(msg));
             return false;
         }
-        debugger
         this.service
             .salvar(colaborador)
             .then(response => {
@@ -137,21 +133,20 @@ class CadastroColaboradores extends React.Component {
                   />
                 </FormGroup>
               </div>
-              {
-                !this.state.atualizando && (
-                <div className="col-md-3" >
+              {!this.state.atualizando && (
+                <div className="col-md-2">
                   <FormGroup id="inputDataadmissao" label="Data de admissão: *">
-                    <Calendar
-                        value={this.state.dataadmissao}
-                        onChange={(e) => this.setState({ dataadmissao: e.value.toLocaleDateString().replace(/\//g, '-') })}
-                      showIcon={true}
-                      dateFormat="dd/mm/yy"
-                      locale={ptBr}
+                    <input
+                      id="inputDataadmissao"
+                      type="text"
+                      className="form-control"
+                      name="dataadmissao"
+                      value={this.state.dataadmissao}
+                      onChange={this.handleChange}
                     />
                   </FormGroup>
                 </div>
-                )
-              }
+              )}
             </div>
             <div className="row">
               <div className="col-md-6">
@@ -165,7 +160,9 @@ class CadastroColaboradores extends React.Component {
                   </button>
                 )}
                 <button
-                  onClick={e => this.props.history.push("/consulta-colaboradores")}
+                  onClick={(e) =>
+                    this.props.history.push("/consulta-colaboradores")
+                  }
                   className="btn btn-danger"
                 >
                   <i className="pi pi-times"></i> Cancelar
