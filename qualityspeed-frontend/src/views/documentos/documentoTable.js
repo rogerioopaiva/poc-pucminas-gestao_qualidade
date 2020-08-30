@@ -41,7 +41,6 @@ export default props => {
             <th scope="col">Nome do documento</th>
             <th scope="col">Classificação</th>
             <th scope="col">Última Revisão</th>
-            <th scope="col">Responsável documento</th>
             <th scope="col">Status</th>
           </tr>
         </thead>
