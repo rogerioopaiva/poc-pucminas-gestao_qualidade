@@ -1,5 +1,5 @@
-# Prova de Conceito - Arquitetura de Software - PUC MINAS
-##QualitySpeed - Sistema Gestão da Qualidade
+# Prova de Conceito - Arquitetura de Software - PUC MINAS<br/>
+## QualitySpeed - Sistema Gestão da Qualidade<br/>
 
 Repositório com o código backend e frontend da aplicação desenvolvida para o trabalho de conclusão<br/>
 de curso da pós graduação de Arquitetura de Sistemas.<br/>
